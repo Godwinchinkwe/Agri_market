@@ -27,12 +27,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background:rebeccapurple */
+    
     
 
 }
 .NavTab{
-    width: 30%;
+    width: 37%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -55,9 +55,14 @@
     font-size: 15px;
 }
 .butt:hover {
-    background-color: #0C764C;
+    background-color: hsl(156, 54%, 81%);
     color: white;
     cursor: pointer;
+}
+.butt2:hover{
+    background-color: #091e16;
+    color: white;
+    cursor: pointer; 
 }
 .butt2{
     width:70px;
@@ -69,14 +74,38 @@
     border: none;
     cursor: pointer;
 }
-/* .Burger {
+.linkz{
+    text-decoration: none;
+    color: #0C764C;
+    position: relative;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.linkz:hover{
+    transform: scale(1.1);
+    opacity: .9;
+    background-color:#0C764C;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
+}
+.Burger {
     display: none;
   }
-@media screen and (max-width: 767px) {
-    .NavTab{
+@media screen and (max-width: 760px) {
+    /* .NavTab{
       display: none;
+    } */
+    .new{
+        display:none;
     }
     .Burger {
       display: flex;
     }
-} */
+}
+@media screen and (max-width: 700px){
+    .NavTab{
+        display: none;
+    }
+}
