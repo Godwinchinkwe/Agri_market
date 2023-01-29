@@ -39,6 +39,14 @@
     justify-content: space-around;
     
 }
+.images{
+    width: 150px;
+    height: 50px;
+}
+.ape{
+    width:148px;
+    height:49px;
+}
 .new{
     width:150px;
     height: 100%;

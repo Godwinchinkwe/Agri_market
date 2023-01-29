@@ -5,10 +5,8 @@ import "./Header.css";
 
 function Nav() {
   let activeStyle = {
-    // color: "white",
     textDecoration: "underline",
-    // backgroundColor:"#0C764C",
-    // borderRadius:"8px",
+    
   };
 
   return (

@@ -1,9 +1,13 @@
 import React from 'react'
+import Carousel from '../Carousel/Carousel'
 
 function MarketPlace() {
   return (
-    <div>
-        <h1> market place page</h1>
+    <div className='market'>
+      <div className='mk'>
+      <Carousel />
+      </div>
+         
     </div>
   )
 }
