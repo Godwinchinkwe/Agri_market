@@ -52,7 +52,12 @@ text-align: center;
 .zaw{
     width: 150px;
     height: 30px;
-    background: green;
+    background:#0C764C;
     color:aliceblue;
     border-radius: 12px;
+}
+.sign_wrap_text{
+    width:75%;
+    height: fit-content;
+    text-align: center;
 }
