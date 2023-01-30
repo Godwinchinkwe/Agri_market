@@ -1,0 +1,17 @@
+*{
+    padding:0%;
+    margin:0%;
+    box-sizing: border-box;
+}
+.Cart_main{
+    width:100%;
+    height:90vh;
+    background: rgb(66, 193, 66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartempty{
+    width: 60%;
+    height: 70%;
+}

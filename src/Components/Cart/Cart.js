@@ -1,11 +1,12 @@
 import React from 'react'
+import "./Cart.css"
 
 function Cart() {
   return (
-    <div>
-        <h1>
-            My Cart page
-        </h1>
+    <div className='Cart_main'>
+        <div className='cartempty' >
+          <img src="" alt=""/>
+        </div>
     </div>
   )
 }
