@@ -35,14 +35,20 @@ const handChange=(e)=>{
 
   
   return (
-    <div>
-      <form>
-        <h3>Login</h3>
+    <div className='login_main'>
+      
+      <form className='login_wrap'>
+        <div className="logim_wrap_text">
+        <h2>welcome Back</h2>
+        </div>
+        <div className='lgnp'>
+        <p>Fill the information below to login to Agri-Market</p>
         {inputs.map((e)=>
         <LoginInputs key={e.id} {...e}  handChange={handChange}/>
         )}
-
-           <button>Submit</button>
+<button className="login_button">Submit</button>
+        </div>
+           <p>forgot password?</p>
       </form>
     </div>
   )
