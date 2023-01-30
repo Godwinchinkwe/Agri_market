@@ -13,7 +13,7 @@ function SignUp() {
 
   const inputs = [{
     id:1,
-    placeholder: "Name",
+    placeholder: "First Name",
     type: "text",
     name: "Name",
     value: value.name,
@@ -73,12 +73,14 @@ const receiveValues =(i)=>{
     <div className='sign_main'>
       <form onSubmit={receiveValues} className='sign_form'>
         <h2>SignUp</h2>
-          {inputs.map((i)=>
+         <div className=" mnbv">
+         {inputs.map((i)=>
            <SignUpInput key={i.id} {...i} handChange={handChange}
            value={value[i.name]} />
           )}
+         </div>
         
-        <button>Submit</button>
+        <button className='zaw'>Submit</button>
       </form>
 
     </div>

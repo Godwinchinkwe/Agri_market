@@ -8,9 +8,9 @@ function SignIUpInput(props) {
 
     
   return (
-    <div>
+    <div className='tryuu'>
         <label></label>
-        <input
+        <input className="zxc"
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}
@@ -19,10 +19,10 @@ function SignIUpInput(props) {
         focus={focused.toString()}
         onBlur={doFocused}
         onFocus={()=> props.name === "confirmPassword" && setFocused(true)}
-         className="input"
+        
         onChange={(e)=> props.handleChange(e)} />
     </div>
   )
 }
 
-export default SignIUpInput
+export default SignIUpInput 
