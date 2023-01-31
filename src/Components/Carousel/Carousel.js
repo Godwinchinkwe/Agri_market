@@ -6,7 +6,7 @@ import "./Carousel.css";
 import chick from "./pic/chick.jpg";
 import cut from "./pic/cut.jpg";
 import fis from "./pic/fis.jpg";
-import hen from "./pic/hen.jpeg";
+import wytchic from "./pic/wytchic.jpg";
 
 
 
@@ -75,7 +75,7 @@ function Carousel() {
 
 <div className='slider-div'>
 <h3> Hens</h3>
-<img src={hen} alt="" className='cont'  />
+<img src={wytchic} alt="" className='cont'  />
 </div>
 
 </Slider>

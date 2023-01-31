@@ -1,16 +1,16 @@
 import React from 'react'
 import "./Landcont.css"
-import Pou from "./pie/poult.jpg"
+// import Pou from "./pie/poult.jpg"
 
-function Landcont() {
+function Landcont(props) {
   return (
     <div className='landcont_main'>
         <div className='landcont_img'>
-            <img src={Pou} alt="" className='njio' />
+            <img src={props.img} alt="" className='njio' />
         </div>
         <div className='landcont_text'>
-            <p>Shop By Species of Catfish<br/><br/>You can view our list of catfish species and shop for the species that suits your meals...
-</p> <br/>
+            <h4>{props.ftext}</h4><br/>
+            <p>{props.text}</p> <br/>
 <div><button className='vbnt'>Shop Now</button></div>
 
         </div>

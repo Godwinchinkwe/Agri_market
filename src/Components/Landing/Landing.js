@@ -1,10 +1,13 @@
 import React from 'react'
 import "./Landing.css"
 import Carousel from '../Carousel/Carousel'
-import hen from "./pie/poult.jpg"
+import poult from "./pie/poult.jpg"
 import {useNavigate} from "react-router-dom"
 import Landcont from './Landcont'
-// import cat from "./pie/egg.jpeg"
+import katti from "./pie/katti.jpg"
+import hen from "./pie/hen.jpeg"
+import catti from "./pie/catti.jpg"
+import t1 from "./pie/t1.png"
 
 
 function Landing() {
@@ -26,17 +29,33 @@ function Landing() {
         </div>
         
         <div className='piccont'>
-                  <img src={hen} alt="" className='peesu' />
+                  <img src={poult} alt="" className='peesu' />
                 </div>
  </div>
      <Carousel /> 
      <div className="landing_body">
       <h2>We ALWAYS want you to order for QUALITY Products</h2>
-      <Landcont />
-      <Landcont />
-      <Landcont />
+      <Landcont 
+      ftext="Shop Different Species of Catfish"
+      text="You can view our list of catfish species and shop for the species that suits your meals..."
+      img={katti}/>
+      <Landcont 
+      ftext="Chicken  based on their breeds"
+      text="Your health is a priority to us and we  have a list of healthy food items that will help you manage certain health conditions"
+      img={hen}/>
+      
+      <Landcont
+      img={catti}
+       />
      </div>
      <div className='land_delivery'>
+      <div className='land_delivery_text'>
+        <h2>We Deliver All Your livestock Products
+        to your location in 24 Hours</h2>
+      </div>
+      <div  className='land_div_img'>
+        <img src={t1} alt="" className='land_delivery_image'/>
+      </div>
 
      </div>
     </div>

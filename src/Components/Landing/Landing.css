@@ -89,6 +89,31 @@
     min-height: 50vh;
     margin-top: 25px;
     background:green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("./pie/t1.png");
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: 40%; */
+  }
+  .land_delivery_text{
+    color: aliceblue;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .land_div_img{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .land_delivery_image{
+    width: 80%;
   }
   
   @media screen and (max-width: 700px){
@@ -112,6 +137,24 @@ width: 100%;
     .smalltip{
       text-align: center;
       width: 100%;
+    }
+    .land_delivery{
+      display: flex;
+      flex-direction: column;
+    }
+    .land_delivery_text{
+      width: 90%;
+      padding-top: 20px;
+
+    }
+    .land_div_img{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .land_delivery_image{
+      width: 80%;
     }
 }
   
