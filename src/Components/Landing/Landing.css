@@ -46,13 +46,58 @@
     border-radius: 10px;
     margin-top: 10px;
   }
+
+  .vbnt{
+    width:130px;
+    height:30px;
+    background: none;
+    border: 1px solid #0C764C;
+    border-radius: 6px;
+    font-size: 15px;
+    color:snow;
+    background:green ;
+    position: relative;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  .vbnt:hover{
+    transform: scale(1.1);
+    opacity: 9;
+    background-color:rgb(3, 65, 3);
+    color: whitesmoke;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
+  }
+  .landing_body{
+    width:100%;
+    min-height: 50vh;
+    margin-top: 25px;
+    /* background: snow; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* color: aliceblue; */
+    justify-content: center;
+    align-items: center;
+  }
+  .landing_body_wrap{
+    display: flex;
+  }
+  .land_delivery{
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 25px;
+    background:green;
+  }
+  
   @media screen and (max-width: 700px){
     .main_wrap{
         flex-direction: column;
         flex-wrap: wrap;
     }
     .Textxx{
-        text-align: center;
+width: 100%;        
     }
     .Agri-Main{
         display: flex;
@@ -63,8 +108,10 @@
     .rele{ 
       justify-content: center;
       align-items: center;
-
-
+    }
+    .smalltip{
+      text-align: center;
+      width: 100%;
     }
 }
   
