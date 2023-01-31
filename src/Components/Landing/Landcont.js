@@ -11,7 +11,7 @@ function Landcont(props) {
         <div className='landcont_text'>
             <h4>{props.ftext}</h4><br/>
             <p>{props.text}</p> <br/>
-<div><button className='vbnt'>Shop Now</button></div>
+<div className='ghjk'><button className='vbnt'>Shop Now</button></div>
 
         </div>
 

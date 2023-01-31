@@ -10,10 +10,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* From https://css.glass */
+background: rgba(24, 219, 79, 0.36);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.7px);
+-webkit-backdrop-filter: blur(10.7px);
+border: 1px solid rgba(24, 219, 79, 0.81);
     
 }
 .login_wrap{
-    width: 50%;
+    width: 40%;
     height:60%;
     display: flex;
     justify-content: center;

@@ -8,6 +8,9 @@ import katti from "./pie/katti.jpg"
 import hen from "./pie/hen.jpeg"
 import catti from "./pie/catti.jpg"
 import t1 from "./pie/t1.png"
+import feedbe from "./pie/feedbe.jpeg"
+
+import Footer from './Footer/Footer'
 
 
 function Landing() {
@@ -56,8 +59,26 @@ function Landing() {
       <div  className='land_div_img'>
         <img src={t1} alt="" className='land_delivery_image'/>
       </div>
+    </div>
 
+     <div className='feedback_landing'>
+     <h3>FeedBack</h3>
+     <div className='feedback_wrap'>
+     <div className='first_feedback'>
+      <img src={feedbe} alt="" className='feedback_imag' />
+      <p>Great Service!<br/> Great product!</p>
+       </div>
+     <div className='first_feedback'>
+      <img src={feedbe} alt="" className='feedback_imag' />
+       <p>The process for placing an <br/> order was very simple.</p>
      </div>
+     <div className='first_feedback'>
+      <img src={feedbe} alt="" className='feedback_imag' />
+      <p> Great App <br/> Lovly user interface</p>
+     </div>
+     </div> 
+   </div>
+  <Footer />
     </div>
   )
 }

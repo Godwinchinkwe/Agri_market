@@ -86,7 +86,7 @@
   }
   .land_delivery{
     width: 100%;
-    min-height: 50vh;
+    min-height: 35vh;
     margin-top: 25px;
     background:green;
     display: flex;
@@ -103,6 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     
   }
   .land_div_img{
@@ -115,6 +116,47 @@
   .land_delivery_image{
     width: 80%;
   }
+  .feedback_landing{
+    width: 90%;
+    min-height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background:grey; */
+  }
+  .feedback_wrap{
+    width: 85%;
+    height:fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 25px;
+    background:snow;
+    /* background:peru; */
+  }
+  .first_feedback{
+    width:fit-content;
+    height: fit-content;
+    border-radius: 120px;
+    /* background:whitesmoke; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
+  }
+  .feedback_imag{
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    display: flex;
+    justify-content:center;
+
+  }
+
+ 
   
   @media screen and (max-width: 700px){
     .main_wrap{
@@ -155,6 +197,15 @@ width: 100%;
     }
     .land_delivery_image{
       width: 80%;
+    }
+    .feedback_wrap{
+      display: flex;
+      flex-wrap: wrap;
+      /* padding-bottom: 25px; */
+    }
+    .first_feedback{
+      padding-bottom: 25px;
+
     }
 }
   
