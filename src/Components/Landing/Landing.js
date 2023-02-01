@@ -23,7 +23,7 @@ function Landing() {
                 <h1 className='big_text'>LIVESTOCK PRODUCT AT YOUR FINGERTIPS</h1>
             
                 <p className='smalltip'>We make livestock products available for you at the comfort of your warehouse. Don't have to stress yourself, just order for the products you want and we'll get it delivered. <br/><br/>
-                We make livestock products available for you at the comfort of your warehouse. Don't have to stress yourself, just order for the products you want and we'll get it delivered.</p>
+                </p>
                 </div>
                 <br/>
                 <div className='rele'>

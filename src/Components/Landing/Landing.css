@@ -38,7 +38,7 @@
     min-height: 20vh;
   }
   .big_text{
-    color:green
+    color:#24835d;
   }
 
   .peesu{
@@ -55,7 +55,7 @@
     border-radius: 6px;
     font-size: 15px;
     color:snow;
-    background:green ;
+    background:#24835d ;
     position: relative;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
@@ -64,7 +64,7 @@
   .vbnt:hover{
     transform: scale(1.1);
     opacity: 9;
-    background-color:rgb(3, 65, 3);
+    background-color:#24835d;
     color: whitesmoke;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
@@ -88,7 +88,7 @@
     width: 100%;
     min-height: 35vh;
     margin-top: 25px;
-    background:green;
+    background:#24835d;
     display: flex;
     justify-content: center;
     align-items: center;
