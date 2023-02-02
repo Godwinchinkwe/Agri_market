@@ -11,7 +11,7 @@ function Login() {
 
   const inputs = [{
     id:1,
-    placeholder: "E-mail",
+    placeholder: "  email",
         type: "text",
         name:"E-mail",
         value: value.email,
@@ -20,7 +20,7 @@ function Login() {
   },
 {
   id:2,
-  placeholder: "Password",
+  placeholder: "  Password",
   type: "password",
   name:"Password",
   errMsg: "must all be numbers",
@@ -39,7 +39,8 @@ const handChange=(e)=>{
       
       <form className='login_wrap'>
         <div className="logim_wrap_text">
-        <h2>welcome Back</h2>
+        <h2>Login</h2>
+        <h5>Welcome Back</h5>
         </div>
         <div className='lgnp'>
         <p>Fill the information below to login to Agri-Market</p>

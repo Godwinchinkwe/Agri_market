@@ -11,17 +11,17 @@
     align-items: center;
     flex-direction: column;
     /* From https://css.glass */
-background: rgba(24, 219, 79, 0.36);
+/* background: rgba(24, 219, 79, 0.36);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(10.7px);
 -webkit-backdrop-filter: blur(10.7px);
-border: 1px solid rgba(24, 219, 79, 0.81);
+border: 1px solid rgba(24, 219, 79, 0.81); */
     
 }
 .login_wrap{
-    width: 40%;
-    height:60%;
+    width: 55%;
+    height:65%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,11 +46,14 @@ border: 1px solid rgba(24, 219, 79, 0.81);
 }
 .loginInput{
     width:100%;
-    height: 35px;
+    height: 40px;
     box-shadow: rgba(105, 54, 54, 0.24) 0px 3px 8px;
   border-radius: 5px;
   outline: 8px;
   border: 4px;
+  margin-left: 10px;
+  /* margin: 8px; */
+  /* background-color: red; */
 
 }
 .lgnp{
@@ -64,9 +67,12 @@ flex-direction: column;
 text-align: center;
 }
 .login_button{
-    width: 150px;
-    height: 30px;
-    background: green;
+    width: 80%;
+    height: 40px;
+    background: #24835d;
     color:aliceblue;
+    border: none;
+    margin-top: 10px;
     border-radius: 12px;
+    cursor: pointer;
 }

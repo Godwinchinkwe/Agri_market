@@ -11,12 +11,9 @@
     align-items: center;
     flex-direction: column;
     /* From https://css.glass */
-background: rgba(24, 219, 79, 0.36);
-border-radius: 16px;
+    border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10.7px);
--webkit-backdrop-filter: blur(10.7px);
-border: 1px solid rgba(24, 219, 79, 0.81);
+/* border: 1px solid rgba(24, 219, 79, 0.81); */
 }
 .sign_form{
     width: 40%;
@@ -61,7 +58,8 @@ text-align: center;
     height: 30px;
     background:#0C764C;
     color:aliceblue;
-    border-radius: 12px;
+    border-radius: 8px;
+  border: none;
 }
 .sign_wrap_text{
     width:75%;

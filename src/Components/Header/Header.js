@@ -30,7 +30,7 @@ function Header() {
              </div> 
             <Nav />
             <div className='new'>
-                <button className="butt" onClick={()=> navigate('/SignUp')}>sign up</button>
+                <button className="butt" onClick={()=> navigate('/Choose')}>sign up</button>
                 <button className='butt2'onClick={()=> navigate('/Login')}>Login</button>
             </div>
             <div className='Burger'>
