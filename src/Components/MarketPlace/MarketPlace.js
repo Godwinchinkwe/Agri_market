@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Marketplace.css"
+import "./MarketPlace.css"
 import Landcont from '../Landing/Landcont'
 import Carousel from '../Carousel/Carousel'
 
