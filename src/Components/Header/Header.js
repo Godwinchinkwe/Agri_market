@@ -5,15 +5,23 @@ import Nav from './Nav'
 import {useNavigate} from "react-router-dom"
 import {ImMenu3  } from 'react-icons/im'
 import {FaTimes} from 'react-icons/fa'
+import Dropdown from './Dropdown'
 
 
 function Header() {
   const navigate = useNavigate();
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
-  const handleToggle = () => { setToggle(!toggle) }
-  const ImMenu  = (<ImMenu3 fontSize={"30px"} color="#0C764C" onClick={handleToggle} />)
-  const FaTime = (<FaTimes fontSize={"30px"} color="#0C764C" onClick={handleToggle} /> )
+
+  // const [isOpen, setIsOpen] = useState(false)
+
+  const handlechange = () => { 
+    setToggle(!toggle) 
+  }
+
+  // const handlechange = () => { setToggle(!toggle) }
+  // const ImMenu  = (<ImMenu3 fontSize={"30px"} color="#0C764C" onClick={handlechange} />)
+  // const FaTime = (<FaTimes fontSize={"30px"} color="#0C764C" onClick={handlechange} /> )
 
 
 
@@ -22,20 +30,21 @@ function Header() {
     <div className="Header_Container">
        <div className="Main">
           < div className="Head_Content">
-             <div className="images" >
-             
+             <div className="images" >         
                <img src={agi} alt="" className='ape'
                 onClick={() => navigate('/')} />
+             </div>
 
-             </div> 
-            <Nav />
-            <div className='new'>
+              <Nav />
+               <div className='new'>
                 <button className="butt" onClick={()=> navigate('/Choose')}>sign up</button>
                 <button className='butt2'onClick={()=> navigate('/Login')}>Login</button>
             </div>
-            <div className='Burger'>
-              {toggle ? ImMenu : FaTime}
 
+            <div className='Burger'>
+               
+              {toggle ? <FaTimes fontSize={"30px"} color="#0C764C" onClick={handlechange}/>: <ImMenu3 fontSize={"30px"} color="#0C764C" onClick={handlechange}/>}
+              {toggle ? <Dropdown props={handlechange}/>: null}
             </div>
           </div>
         </div>

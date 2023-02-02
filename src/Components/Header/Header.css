@@ -13,6 +13,7 @@
     justify-content:center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
 }
 .Main{
     width: 95%;
@@ -101,6 +102,29 @@
 .Burger {
     display: none;
   }
+  .drop_wrap{
+    /* position:absolute; */
+    right:5%;
+    /* left: 0; */
+  }
+  .drop_main{
+    position:absolute;
+    right:0%;
+    top:100%;
+    background:#0C764C;
+    color:white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width:250px;
+    box-shadow:0 0 1px rgba(0, 0, 0, 24)0px 3px 8px ;
+  }
+  .dipdrop{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 @media screen and (max-width: 760px) {
     /* .NavTab{
       display: none;

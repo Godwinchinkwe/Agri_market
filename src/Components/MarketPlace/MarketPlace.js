@@ -14,15 +14,15 @@ function MarketPlace() {
       <h2>Livestock at your finger tips</h2>
     <p>Forget the hustle, lets go to the market for you!!!</p>
       <div className='markt_cont'>
-      <Landcont className="goods"/>
-      <Landcont className="goods"/>
+      <Landcont />
+      <Landcont />
       </div>
 
       </div>
       <Carousel />
-      <div className="markt_cont" >
-        <Landcont className="goods" />
-        <Landcont className="goods"/>
+      <div className="markt_cont">
+        <Landcont />
+        <Landcont />
       
       </div>
       
