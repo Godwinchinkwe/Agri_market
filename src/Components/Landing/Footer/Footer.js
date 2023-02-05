@@ -55,6 +55,11 @@ function Footer() {
       </div>
 
     </div>
+    <div className='footer_bottom'>
+      <h4>Privacy Policy</h4> 
+      <h4>Terms of Service</h4>
+      <h4>2023 Agri_Market</h4>
+    </div>
 
    </footer>
     

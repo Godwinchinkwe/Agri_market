@@ -62,26 +62,45 @@
     border: 1px solid #0C764C;
     border-radius: 6px;
     font-size: 15px;
-}
-.butt:hover {
-    background-color: hsl(156, 54%, 81%);
-    color: white;
+    color:white;
+    background:#24835d ;
+    position: relative;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
     cursor: pointer;
 }
-.butt2:hover{
-    background-color: #091e16;
-    color: white;
-    cursor: pointer; 
+.butt:hover {
+    transform: scale(1.1);
+    opacity: 9;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
 }
+.butt2:hover{
+    transform: scale(1.1);
+    opacity: 9;
+    background-color:#24835d;
+    color: whitesmoke;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
+  }
+
 .butt2{
     width:70px;
     height:30px;
-    background-color: #0C764C;
+    background-color:white;
+    color:#24835d;
+    background: none;
+    border: 1px solid #0C764C;
     border-radius: 6px;
     font-size: 15px;
-    color: white;
-    border: none;
+    /* color:snow; */
+    /* background:#24835d ; */
+    position: relative;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
     cursor: pointer;
+    /* border: none; */
+    /* cursor: pointer; */
 }
 .linkz{
     text-decoration: none;
@@ -94,10 +113,12 @@
 .linkz:hover{
     transform: scale(1.1);
     opacity: .9;
-    background-color:#0C764C;
-    color: white;
+    /* background-color:#0C764C; */
+    color:#0C764C;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
+    /* padding-left: 5px; */
+    font-size: 19px;
 }
 .Burger {
     display: none;

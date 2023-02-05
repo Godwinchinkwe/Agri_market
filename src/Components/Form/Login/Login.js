@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import LoginInputs from "./LoginInputs"
 import "./Login.css"
+import Lg from "../SignUp/Lg.png"
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
+  const navigate = useNavigate()
 
   const [ value, setValue] = useState({
     email:"",
@@ -38,18 +41,20 @@ const handChange=(e)=>{
     <div className='login_main'>
       
       <form className='login_wrap'>
+      <img src={Lg} alt="" className='signlogo' />
         <div className="logim_wrap_text">
-        <h2>Login</h2>
-        <h5>Welcome Back</h5>
+        <h2>Welcome Back</h2><br/>
+        <p>Fill the information below to login to Agri-Market</p>
         </div>
         <div className='lgnp'>
-        <p>Fill the information below to login to Agri-Market</p>
+        
         {inputs.map((e)=>
         <LoginInputs key={e.id} {...e}  handChange={handChange}/>
         )}
-<button className="login_button">Submit</button>
+        <p className='forgotpass' onClick={()=> navigate('/Password')} >forgot password?</p>
+<button className="login_button">Login</button>
+<p>Dont have an account ? <span className='spancolor' onClick={()=> navigate('/SignUp')}>Sign up</span></p>
         </div>
-           <p>forgot password?</p>
       </form>
     </div>
   )

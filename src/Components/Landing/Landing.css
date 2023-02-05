@@ -128,7 +128,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background:grey; */
+    
   }
   .feedback_wrap{
     width: 85%;
@@ -137,14 +137,12 @@
     justify-content: space-around;
     align-items: center;
     padding-top: 25px;
-    background:snow;
-    /* background:peru; */
+   
   }
   .first_feedback{
     width:fit-content;
     height: fit-content;
     border-radius: 120px;
-    /* background:whitesmoke; */
     display: flex;
     justify-content: center;
     align-items: center;

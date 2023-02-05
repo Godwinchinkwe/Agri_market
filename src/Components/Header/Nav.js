@@ -6,6 +6,9 @@ import "./Header.css";
 function Nav() {
   let activeStyle = {
     textDecoration: "underline",
+    fontSize:"15px",
+    color:"green",
+    fontWeight:"400"
     
   };
 

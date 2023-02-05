@@ -21,18 +21,60 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 
 
 }
 .Market_top{
+    width: 60%;
     display: flex;
     gap:12px;
     margin-top: 12px;
     flex-wrap: wrap;
+    /* background: peru; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom:15px;
+}
+.marketsearch{
+    width:80%;
+    height:40px;
+    display: flex;
+    border-radius: 12px;
+  
+}
+.market_load{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+.marketbutt{
+    width:70px;
+    height:30px;
+    /* background: none; */
+    /* border: 1px solid #0C764C;                                                                        */
+    border-radius: 6px;
+    font-size: 15px;
+    color:white;
+    background:#24835d ;
+    /* position: relative; */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    border: none;
 }
 .markt_cont{
     width:85%;
     height: fit-content;
     display: flex;
     flex-direction: column;
+}
+@media screen and (max-width: 700px){
+    .Market_wrap{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }   
 }

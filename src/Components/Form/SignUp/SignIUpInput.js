@@ -22,6 +22,7 @@ function SignIUpInput(props) {
         
         onChange={(e)=> props.handleChange(e)} />
     </div>
+    
   )
 }
 
