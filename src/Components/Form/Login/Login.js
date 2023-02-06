@@ -53,7 +53,7 @@ const handChange=(e)=>{
         )}
         <p className='forgotpass' onClick={()=> navigate('/Password')} >forgot password?</p>
 <button className="login_button">Login</button>
-<p>Dont have an account ? <span className='spancolor' onClick={()=> navigate('/SignUp')}>Sign up</span></p>
+<p className="noaccount">Dont have an account ? <span className='spancolor' onClick={()=> navigate('/SignUp')}>Sign up</span></p>
         </div>
       </form>
     </div>

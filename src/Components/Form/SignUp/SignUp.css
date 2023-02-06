@@ -56,12 +56,15 @@ text-align: center;
 }
 .zaw{
     width: 250px;
-    height: 35px;
+    height: 40px;
     background:#0C764C;
     color:aliceblue;
     border-radius: 5px;
   border: none;
   margin-bottom: 15px;
+  -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+  cursor: pointer;
 }
 .zaw:hover{
     transform: scale(1.1);
@@ -85,6 +88,10 @@ text-align: center;
     gap: 10px;
     justify-content: center;
     /* flex-wrap: wrap; */
+}
+.signlogin{
+    cursor: pointer;
+    color: #0C764C;
 }
 
 @media screen and (max-width: 760px) {

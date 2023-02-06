@@ -48,7 +48,7 @@
     display: flex;
     /* justify-content: space-around; */
     align-items: center;
-    background-color: #1B75BC;
+    /* background-color: #1B75BC; */
     color: white;
     height: 40px;
     width: 120px;
@@ -56,5 +56,10 @@
     border: none;
     outline: none;
     border-radius: 6px;
+}
+@media screen and (max-width: 600px) {
+    .choose_wrap{
+        width:80% ;
+    }
 }
 

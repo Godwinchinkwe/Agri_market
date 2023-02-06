@@ -8,6 +8,8 @@ import SignUp from "./Components/Form/SignUp/SignUp"
 import Login from "./Components/Form/Login/Login"
 import Choose from './Components/Form/Decision/Choose';
 import Password from './Components/Form/Password/Password';
+import Resetpassword from './Components/Form/Password/Resetpassword';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path='/Login' element={<Login/>} />
           <Route path='/Choose' element={<Choose/>} />
           <Route path='/Password' element={<Password/>} />
+          <Route path='/Resetpassword' element={<Resetpassword/>} />
         </Routes>
       </Router>
     </div>

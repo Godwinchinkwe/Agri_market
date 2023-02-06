@@ -88,11 +88,11 @@ const receiveValues =(i)=>{
           )}
          </div>
          <div className='check_cont'>
-         <input type="checkbox"/> <p className='check_text'>I agree to the Terms of and service and privacy of policy of Agri market </p>
+         <input type="checkbox"/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
          </div>
         
         <button className='zaw'>Submit</button>
-        <p>Already have an account ? <span onClick={()=> navigate('/Login')}>Login</span></p>
+        <p>Already have an account ? <span className="signlogin" onClick={()=> navigate('/Login')}>Login</span></p>
       </form>
 
     </div>
