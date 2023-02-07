@@ -11,7 +11,7 @@ function MarketPlace() {
     <div className='Market_main'>
       <div className='Market_wrap'>
       <div className='Market_top'>
-      <input type="text" placeholder='search' className='marketsearch'/> <button className="marketbutt">Search</button>
+      <input type="text" placeholder='  search' className='marketsearch'/> <button className="marketbutt">Search</button>
       </div>
       <h2>Livestock at your finger tips</h2>
     <p>Forget the hustle, lets go to the market for you!!!</p>

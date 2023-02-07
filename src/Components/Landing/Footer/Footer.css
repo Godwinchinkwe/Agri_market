@@ -35,21 +35,29 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    
-
+    color:aliceblue;
+  }
+  .left_footer_icon{
+    /* background: blue; */
+    height: fit-content;
+    line-height: 25px;
   }
   .center_footer{
     width: 55%;
     display: flex;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction:column;
     align-items: center;
     /* background: orange; */
+    /* line-height: 12px; */
+    margin-bottom: 15px;
   }
   .right_footer{
     width:25% ;
     color:aliceblue;
     font-size:15px;
+    display: flex;
+    flex-direction: column;
     /* text-align: center; */
     /* background: blue; */
   }
@@ -58,9 +66,20 @@
     font-size: 25px;
     color:aliceblue;
   }
+  .icons{
+    font-size: 25px;
+    color:aliceblue;
+    /* margin-bottom: 8px; */
+  }
   .kora{
-    width: 180px;
-    height: 50px;
+    width: 170px;
+    height: 70px;
+    background: white;
+  }
+  .curve{
+    width: 170px;
+    height: 70px;
+    margin-bottom: 10px;
   }
   .footer_bottom{
     width:100%;
@@ -95,15 +114,21 @@
     }
     .left_footer_icon{
         display: flex;
-        /* row-gap: 4px; */
+        gap: 12px;
         justify-content: space-around;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
     .center_footer{
         width: 100%;
         display: flex;
         justify-content: center;
-        padding-top: 18px;
-        padding-bottom: 18px;
+        /* padding-top: 18px; */
+        /* padding-bottom: 18px; */
+        text-align: center;
+        flex-direction: column;
+        /* background: grey; */
+    }
+    .icons{
+      margin-bottom:0px;
     }
   }

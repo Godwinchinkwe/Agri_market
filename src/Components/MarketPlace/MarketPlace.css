@@ -76,5 +76,8 @@
         display:flex;
         justify-content: center;
         align-items: center;
-    }   
+    } 
+    .marketsearch{
+        width: 85%;
+    }  
 }

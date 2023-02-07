@@ -6,11 +6,12 @@ import {FaTwitterSquare } from 'react-icons/fa';
 import {BsLinkedin } from 'react-icons/bs';
 import { SiInstagram} from 'react-icons/si';
 import {IoLogoYoutube } from 'react-icons/io';
-// import {SiWhatsapp } from 'react-icons/si';
+import {SiWhatsapp } from 'react-icons/si';
 import {MdAlternateEmail } from 'react-icons/md';
 import {HiLocationMarker } from 'react-icons/hi';
 import {MdContactPage } from 'react-icons/md';
-import kora from "./kora.png"
+import Koraa from "./koraa.png"
+import Curve from "./curve.png"
 
 
 function Footer() {
@@ -21,33 +22,43 @@ function Footer() {
       <div className='left_footer'>
 <h4>follow us on:</h4> <br/>
 <div className='left_footer_icon' >
-<ImFacebook2 className='icon'/>
+<ImFacebook2 className='icons'/>
 <br/>
-<FaTwitterSquare className='icon'/>
+<FaTwitterSquare className='icons'/>
 <br/>
-<BsLinkedin className='icon'/>
+<BsLinkedin className='icons'/>
 <br/>
-<SiInstagram className='icon'/>
+<SiInstagram className='icons'/>
 <br/>
 <IoLogoYoutube className='icon'/>
-</div>
+</div><br/> <br/>
+
+<SiWhatsapp className="icon"/>
+        <p>whatsapp</p>
+        <p>08064318819</p><br/> <br/>
 
       </div>
 
       <div className='center_footer' >
-        <h4>Our partners</h4>
-        <img src={kora} alt="" className='kora' />
+        <h4>Our Sponsors</h4><br/>
+        <img src={Koraa} alt="" className='kora' /><br/>
+        <img src={Curve} alt="" className='curve' /><br/><br/>
+        <h4>About us page</h4>
 
       </div>
       <div className='right_footer'>
         <MdAlternateEmail className='icon'/>
         <p>Gmail</p>
         <p>info@agri_market.com</p> <br/><br/> 
+{/* 
+        <SiWhatsapp className="icon"/>
+        <p>whatsapp</p>
+        <p>08064318819</p><br/> <br/> */}
         
         
 <HiLocationMarker className='icon'/>
-<p>location logo</p>
-<p>location address</p> <br/> <br/> 
+<p>location address</p>
+<p>33 Apena Stree street</p> <br/> <br/> 
 
 <MdContactPage className='icon'/>
 <p>contact</p>
@@ -56,8 +67,8 @@ function Footer() {
 
     </div>
     <div className='footer_bottom'>
-      <h4>Privacy Policy</h4> 
-      <h4>Terms of Service</h4>
+      <h4>Privacy Policy</h4> |
+      <h4>Terms of Service</h4> |
       <h4>2023 Agri_Market</h4>
     </div>
 

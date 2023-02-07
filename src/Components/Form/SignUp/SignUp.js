@@ -6,20 +6,23 @@ import { useNavigate } from 'react-router-dom'
 
 function SignUp() {
   const navigate = useNavigate()
+
   const [ value, setValues] = useState({
     name: "",
     email: "",
     address: "",
     password:"",
     confirmPassword: "",
-  })
+    admin: false,
+  });
+ 
 
   const inputs = [{
     id:1,
     placeholder: "  Name",
     type: "text",
     name: "Name",
-    value: value.name,
+    // value: value.name,
     errMsg: "it has to be at least 4 characters and not more than 20 characters",
     required: true,
     pattern: `[a-zA-Z][a-zA-Z0-9-_. ]{3,20}`
@@ -30,17 +33,19 @@ function SignUp() {
   placeholder: "  E-mail",
   type: "text",
   name:"E-mail",
-  value: value.email,
+  // value: value.email,
   errMsg: "must be a valid email",
   required: true,
 },
 {
   id:3,
-  placeholder: "  Address",
-  type: "Address",
-  name:"Address",
-  value: value.address,
+  placeholder: "  Phone Number",
+  type: "Number",
+  name:"phone Number",
+  // value: value.address,
   required: true,
+  errMsg:"Must be a valid phone number",
+  pattern: "[0-9]{3}-[0-9]{2}-[0-9]{3}",
 },
 {
   id:4,
@@ -48,7 +53,7 @@ function SignUp() {
   type: "password",
   name:"Password",
   errMsg: "must all be numbers",
-  value: value.password,
+  // value: value.password,
   required: true,
   pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$` 
 },
@@ -57,19 +62,23 @@ function SignUp() {
   placeholder: "  Confirm password",
   type: "password",
   name:"Confirm password",
-  value: value.confirmPassword,
+  // value: value.confirmPassword,
   errMsg: "it has to match password",
   required: true,
   pattern: value.password,
 }]
 
-const handChange=(i)=>{
+const handleChange=(i)=>{
   setValues({...value, [i.target.name]:i.target.value})
 }
 
 const receiveValues =(i)=>{
-  i.preventDefault()
+  i.preventDefault();
+  console.log(value)
+  window.location.reload()
 }
+
+
 
 
   return (
@@ -83,15 +92,15 @@ const receiveValues =(i)=>{
          <div className=" mnbv">
          
          {inputs.map((i)=>
-           <SignUpInput key={i.id} {...i} handChange={handChange}
+           <SignUpInput key={i.id} {...i} handleChange={handleChange}
            value={value[i.name]} />
           )}
          </div>
          <div className='check_cont'>
-         <input type="checkbox"/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
+         <input type="checkbox" onChange={() => setValues ({...value, admin:true})}/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
          </div>
         
-        <button className='zaw'>Submit</button>
+        <button type='submit' className='zaw'>Submit</button>
         <p>Already have an account ? <span className="signlogin" onClick={()=> navigate('/Login')}>Login</span></p>
       </form>
 

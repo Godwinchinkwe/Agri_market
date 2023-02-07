@@ -93,6 +93,22 @@ text-align: center;
     margin-top: 12px;
     font-size: 15px;
 }
+.errr {
+    font-size: 0.8rem;
+    color: rgb(250, 6, 6);
+    display: none;
+
+  }
+
+.input:invalid[focus = "true"] ~.errr {
+    display: block;
+}
+.input:invalid[focus = "true"] {      
+    border: 1px solid rgb(218, 0, 0);
+
+  }
+
+
 @media screen and (max-width: 760px) {
     .login_wrap{
         width:80%

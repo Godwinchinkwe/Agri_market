@@ -10,9 +10,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* border-radius: 16px; */
-/* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-/* border: 1px solid rgba(24, 219, 79, 0.81); */
+   
 }
 .sign_form{
     width: 40%;
@@ -22,8 +20,6 @@
     align-items: center;
     background: white;
     flex-direction: column;
-    /* border-radius: 15px; */
-    /* box-shadow: rgba(105, 54, 54, 0.24) 0px 3px 8px; */
 }
 .tryuu{
     width: 80%;
@@ -37,17 +33,12 @@
 .zxc{
     width:100%;
     height: 35px;
-    /* box-shadow: rgba(105, 54, 54, 0.24) 0px 3px 8px; */
   border-radius: 5px;
-  /* outline: 8px; */
-  /* border: 4px; */
   border-color: #0C764C;
-  margin-bottom: 15px;
 }
 .mnbv{
     width:90%;
     height:60%;
-/* background:green; */
 display: flex;
 justify-content: center;
 align-items: center;
@@ -93,6 +84,21 @@ text-align: center;
     cursor: pointer;
     color: #0C764C;
 }
+.err {
+    font-size: 0.8rem;
+    color: rgb(250, 6, 6);
+    display: none;
+
+  }
+
+.input:invalid[focus = "false"] .err {
+    display: block;
+}
+.input:invalid[focus = "true"] {      
+    border: 1px solid rgb(218, 0, 0);
+
+  }
+
 
 @media screen and (max-width: 760px) {
     .sign_form{

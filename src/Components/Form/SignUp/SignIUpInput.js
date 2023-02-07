@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
+import "./SignUp.css";
 
 function SignIUpInput(props) {
     const [focused, setFocused] = useState(false);
+
   const doFocused =()=>{
     setFocused(true)
   }
@@ -9,18 +11,20 @@ function SignIUpInput(props) {
     
   return (
     <div className='tryuu'>
-        <label></label>
+        
         <input className="zxc"
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}
-        required={props.required}
+        onChange={props.handleChange}
         pattern={props.pattern}
+        required={props.required}
         focus={focused.toString()}
         onBlur={doFocused}
-        onFocus={()=> props.name === "confirmPassword" && setFocused(true)}
-        
-        onChange={(e)=> props.handleChange(e)} />
+        onFocus={() => props.name === "confirmPassword" && setFocused(true)}
+         />
+        <span className='err'>{props.errMsg}</span>
+       
     </div>
     
   )

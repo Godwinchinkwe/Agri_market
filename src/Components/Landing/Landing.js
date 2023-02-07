@@ -8,8 +8,10 @@ import katti from "./pie/katti.jpg"
 import hen from "./pie/hen.jpeg"
 import catti from "./pie/catti.jpg"
 import t1 from "./pie/t1.png"
-import feedbe from "./pie/feedbe.jpeg"
+import emee from "./pie/emee.jpeg"
 import Footer from './Footer/Footer'
+import makaa from "./pie/makaa.jpeg"
+import ogee from "./pie/ogee.jpeg"
 
 
 function Landing() {
@@ -67,15 +69,15 @@ function Landing() {
      <h3>FeedBack</h3>
      <div className='feedback_wrap'>
      <div className='first_feedback'>
-      <img src={feedbe} alt="" className='feedback_imag' />
+      <img src={ogee} alt="" className='feedback_imag' />
       <p>Great Service!<br/> Great product!</p>
        </div>
      <div className='first_feedback'>
-      <img src={feedbe} alt="" className='feedback_imag' />
+      <img src={emee} alt="" className='feedback_imag' />
        <p>The process for placing an <br/> order was very simple.</p>
      </div>
      <div className='first_feedback'>
-      <img src={feedbe} alt="" className='feedback_imag' />
+      <img src={makaa} alt="" className='feedback_imag' />
       <p> Great App <br/> Lovly user interface</p>
      </div>
      </div> 
