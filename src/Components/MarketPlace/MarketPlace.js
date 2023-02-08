@@ -2,7 +2,7 @@ import React from 'react'
 import "./MarketPlace.css"
 import Landcont from '../Landing/Landcont'
 import Carousel from '../Carousel/Carousel'
-import Dashboard from "../DashBoard/Dashboard"
+// import Dashboard from "../DashBoard/Dashboard"
 import katti from "../Landing/pie/katti.jpg"
 import hen from "../Landing/pie/hen.jpeg"
 
@@ -30,7 +30,7 @@ function MarketPlace() {
 
       </div>
       <Carousel />
-      <Dashboard />
+      {/* <Dashboard /> */}
       
       
 

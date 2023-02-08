@@ -21,7 +21,6 @@ function SignIUpInput(props) {
         required={props.required}
         focus={focused.toString()}
         onBlur={doFocused}
-        onFocus={() => props.name === "confirmPassword" && setFocused(true)}
          />
         <span className='err'>{props.errMsg}</span>
        

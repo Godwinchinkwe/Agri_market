@@ -113,3 +113,23 @@ text-align: center;
         margin-top: 20px;
     }
 }
+.back {
+    width: 90px;
+    background: none;
+    border: 1px solid #0C764C;
+    /* background-color: #0C764C; */
+    color: black;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0s;
+    transition-duration: 0.5s;
+    margin-top: 10px;
+}.back:hover {
+    background-color: #0C764C;
+    color: white;
+    transform: scale(1.1);
+    /* opacity: .9; */
+    box-shadow: 0 0 1px rgba(0, 0, 0, 24) 0px 3px 8px;
+}

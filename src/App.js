@@ -9,6 +9,9 @@ import Login from "./Components/Form/Login/Login"
 import Choose from './Components/Form/Decision/Choose';
 import Password from './Components/Form/Password/Password';
 import Resetpassword from './Components/Form/Password/Resetpassword';
+import About from './Components/Landing/About/About';
+import User from './Components/Form/Decision/User/User';
+import Admin from './Components/Form/Decision/Admin/Admin'
 
 
 function App() {
@@ -24,8 +27,11 @@ function App() {
           <Route path='/SignUp' element={<SignUp/>} />
           <Route path='/Login' element={<Login/>} />
           <Route path='/Choose' element={<Choose/>} />
+          <Route path='/User' element={<User />}/>
+          <Route path='/Admin' element={<Admin />}/>
           <Route path='/Password' element={<Password/>} />
           <Route path='/Resetpassword' element={<Resetpassword/>} />
+          <Route path='/About' element={<About/>} />
         </Routes>
       </Router>
     </div>

@@ -43,17 +43,14 @@ function Footer() {
         <h4>Our Sponsors</h4><br/>
         <img src={Koraa} alt="" className='kora' /><br/>
         <img src={Curve} alt="" className='curve' /><br/><br/>
-        <h4>About us page</h4>
+        {/* <h4>About us page</h4> */}
 
       </div>
       <div className='right_footer'>
         <MdAlternateEmail className='icon'/>
         <p>Gmail</p>
         <p>info@agri_market.com</p> <br/><br/> 
-{/* 
-        <SiWhatsapp className="icon"/>
-        <p>whatsapp</p>
-        <p>08064318819</p><br/> <br/> */}
+
         
         
 <HiLocationMarker className='icon'/>

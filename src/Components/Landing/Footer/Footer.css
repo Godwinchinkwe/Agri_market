@@ -83,11 +83,12 @@
   }
   .footer_bottom{
     width:100%;
-    min-height: 20px;
+    min-height: 50px;
     display: flex;
     background:white;
     gap:10px;
     justify-content:center;
+    align-items: center;
     flex-wrap: wrap;
     font-size: 12px;
   }

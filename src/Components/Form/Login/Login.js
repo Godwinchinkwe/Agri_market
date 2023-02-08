@@ -3,6 +3,7 @@ import LoginInputs from "./LoginInputs"
 import "./Login.css"
 import Lg from "../SignUp/Lg.png"
 import { useNavigate } from 'react-router-dom'
+import axios from "axios"
 
 function Login() {
   const navigate = useNavigate()
@@ -32,15 +33,29 @@ function Login() {
   pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$`
 }]
 
+const handleLogin = (email, password) => {
+  const response = axios.post('https://agri-market.onrender.com/api/login', {
+    email,
+    password
+  })
+
+console.log(response)
+}
+
 const handChange=(e)=>{
   setValue({...value, [e.target.name]:e.target.value})
 }
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  handleLogin();
+};
 
   
   return (
     <div className='login_main'>
       
-      <form className='login_wrap'>
+      <form onSubmit={handleSubmit} className='login_wrap'>
       <img src={Lg} alt="" className='signlogo' />
         <div className="logim_wrap_text">
         <h2>Welcome Back</h2><br/>

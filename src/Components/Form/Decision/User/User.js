@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import SignUpInput from "./SignIUpInput";
-import "./SignUp.css"
-import Lg from "../SignUp/Lg.png"
+import SignUpInput from '../../SignUp/SignIUpInput'
+import "./User.css"
+import Lg from '../../SignUp/Lg.png'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
 
@@ -18,7 +18,7 @@ function SignUp() {
     admin: false,
   });
 
-  const {firstName, lastName, email, phoneNumber, location, password} = value
+  
  
 
   const inputs = [{
@@ -77,23 +77,25 @@ function SignUp() {
   errMsg: "must all be numbers",
   // value: value.password,
   required: true,
-  pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$` 
+  // pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$` 
 },
 ]
 
 const handleSubmit = async (event) => {
   try {
     event.preventDefault();
-  console.log("Created")
-    const response = await axios.post("https://agri-market.onrender.com/api/admin", {firstName: firstName, lastName: lastName, phoneNumber: phoneNumber, location: location, email: email, password:  password});
-    console.log(response);
+    // console.log("start")
+    const {firstName, lastName, email, phoneNumber, location, password} = value
+  // console.log({firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password})
+    const response = await axios.post("https://agri-market.onrender.com/api/user", {firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password});
+    console.log(response.data);
   } catch (error) {
-
+      console.log(error.message)
   }
 };
 
-useEffect(() => {   
-}, [value])
+// useEffect(() => {   
+// }, [value])
 const handleChange=(i)=>{
   setValues({...value, [i.target.name]:i.target.value})
 }
@@ -109,11 +111,11 @@ const receiveValues =(i)=>{
 
   return (
     <div className='sign_main'>
-      <form onSubmit={receiveValues} className='sign_form'>
+      <form  className='sign_form' onSubmit={handleSubmit}>
         <img src={Lg} alt="" className='signlogo' />
       <div className="sign_wrap_text">
-        <h2>Sign up</h2><br/>
-        <p fontsize="12px">Please complete the registration form to be an Agri Market Customer</p><br/>
+        <h2>Sign up as a buyer</h2><br/>
+        <p fontsize="12px">Please complete the registration form to purchase livestock product on Agri-Market platform</p><br/>
         </div>
          <div className=" mnbv">
          
@@ -123,13 +125,13 @@ const receiveValues =(i)=>{
           )}
          </div>
          <div className='check_cont'>
-         <input type="checkbox" onChange={() => setValues ({...value, admin:true})}/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
+         <input type="checkbox" onChange={() => setValues({...value, admin:true})}/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
          </div>
         
-        <button type='submit' className='zaw' onClick={handleSubmit}>Submit</button>
+        <button type='submit' className='zaw'>Submit</button>
         <p>Already have an account ? <span className="signlogin" onClick={()=> navigate('/Login')}>Login</span></p>
       </form>
-
+      <button className='back' onClick={() => navigate('/Choose')}>Go Back</button>
     </div>
   )
 }
