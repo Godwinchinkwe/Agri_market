@@ -2,9 +2,10 @@ import React from 'react'
 import "./MarketPlace.css"
 import Landcont from '../Landing/Landcont'
 import Carousel from '../Carousel/Carousel'
-// import Dashboard from "../DashBoard/Dashboard"
+// import Addpage from "../DashBoard/Addpage"
 import katti from "../Landing/pie/katti.jpg"
 import hen from "../Landing/pie/hen.jpeg"
+import Goods from './Goods'
 
 function MarketPlace() {
   return (                                 
@@ -30,6 +31,8 @@ function MarketPlace() {
 
       </div>
       <Carousel />
+      <Goods />
+      {/* <Addpage /> */}
       {/* <Dashboard /> */}
       
       

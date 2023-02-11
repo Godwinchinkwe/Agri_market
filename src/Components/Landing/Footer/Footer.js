@@ -17,7 +17,7 @@ import Curve from "./curve.png"
 function Footer() {
   return (
     <footer className='Footer_main'>
-    <img src={AG} alt="" className='AG' />
+    
     <div className='footer_wrap'>
       <div className='left_footer'>
 <h4>follow us on:</h4> <br/>
@@ -40,6 +40,8 @@ function Footer() {
       </div>
 
       <div className='center_footer' >
+      <img src={AG} alt="" className='AG' />
+      
         <h4>Our Sponsors</h4><br/>
         <img src={Koraa} alt="" className='kora' /><br/>
         <img src={Curve} alt="" className='curve' /><br/><br/>
@@ -66,7 +68,7 @@ function Footer() {
     <div className='footer_bottom'>
       <h4>Privacy Policy</h4> |
       <h4>Terms of Service</h4> |
-      <h4>2023 Agri_Market</h4>
+      <h4> ©2023 Agri_Market</h4>
     </div>
 
    </footer>

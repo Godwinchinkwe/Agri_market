@@ -30,13 +30,13 @@ function Login() {
   errMsg: "must all be numbers",
   value: value.password,
   required: true,
-  pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$`
+  // pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$`
 }]
 
 const handleLogin = (email, password) => {
   const response = axios.post('https://agri-market.onrender.com/api/login', {
     email,
-    password
+    password,config
   })
 
 console.log(response)
@@ -45,7 +45,11 @@ console.log(response)
 const handChange=(e)=>{
   setValue({...value, [e.target.name]:e.target.value})
 }
-
+const config = {
+  headers:{
+    "Content-Type":"application/json"
+  }
+}
 const handleSubmit = (e) => {
   e.preventDefault();
   handleLogin();

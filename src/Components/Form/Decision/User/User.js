@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, } from 'react'
 import SignUpInput from '../../SignUp/SignIUpInput'
 import "./User.css"
 import Lg from '../../SignUp/Lg.png'
@@ -77,18 +77,21 @@ function SignUp() {
   errMsg: "must all be numbers",
   // value: value.password,
   required: true,
-  // pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$` 
 },
 ]
 
 const handleSubmit = async (event) => {
   try {
+
     event.preventDefault();
-    // console.log("start")
-    const {firstName, lastName, email, phoneNumber, location, password} = value
-  // console.log({firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password})
-    const response = await axios.post("https://agri-market.onrender.com/api/user", {firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password});
+    const config = {
+      headers:{
+        "Content-Type":"application/json"
+      }
+    }
+    const response = await axios.post("https://agri-market.onrender.com/api/user", value, config);
     console.log(response.data);
+     navigate('/Login');
   } catch (error) {
       console.log(error.message)
   }
@@ -100,12 +103,13 @@ const handleChange=(i)=>{
   setValues({...value, [i.target.name]:i.target.value})
 }
 
-const receiveValues =(i)=>{
-  i.preventDefault();
-  console.log(value)
+// const receiveValues =(i)=>{
+  // i.preventDefault();
+  // console.log(value)
   // window.location.reload()
-}
+// }
 
+console.log(value)
 
 
 

@@ -75,7 +75,8 @@ function Landing() {
     </div>
 
      <div className='feedback_landing'>
-     <h3>FeedBack</h3>
+     <h3>What Clients Say About Us</h3>
+     <p className='fidtext'>Check out these feedbacks from some of our satisfied customers.</p>
      <div className='feedback_wrap'>
      <div className='first_feedback'>
       <img src={ogee} alt="" className='feedback_imag' />

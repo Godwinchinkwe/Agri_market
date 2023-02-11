@@ -7,6 +7,32 @@ function SignIUpInput(props) {
   const doFocused =()=>{
     setFocused(true)
   }
+  // const [ value, setValues] = useState({
+  //   firstName: "",
+  //    lastName: "",
+  //    email: "",
+  //    phoneNumber: "",
+  //    location:"",
+  //    password:"",
+  //    admin: false,
+  //  });
+  // const [ firsName, setFirstName] = useState('')
+  // const [ vlastNamealue, setlastName] = useState('')
+  // const [ userEmail, setuserEmail] = useState('')
+  // const [ userPhoneNumber, setuserPhoneNumber] = useState('')
+ 
+  //  const {firstName, lastName, email, phoneNumber, location, password} = value
+ 
+  //  const setDetail = (e) => {
+  //   const fN = e.target.value
+  //   setFirstName(fN)
+  //   setlastName(fN)
+  //   setuserEmail(fN)
+  //   setuserPhoneNumber(fN)
+  //  }
+   
+ 
+  //  console.log(props, "value")
 
     
   return (

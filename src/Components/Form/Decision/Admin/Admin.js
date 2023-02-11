@@ -85,24 +85,25 @@ const handleSubmit = async (event) => {
   try {
     event.preventDefault();
   console.log({firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password})
-    // const response = await axios.post("https://agri-market.onrender.com/api/admin", {firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password});
-    // console.log(response.data.message);
+    const response = await axios.post("https://agri-market.onrender.com/api/admin", {firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password});
+    console.log(response.data.message);
+    navigate('/Login');
   } catch (error) {
     console.log(error.message)
   }
 };
 
-// useEffect(() => {   
-// }, [value])
+useEffect(() => {   
+}, [value])
 const handleChange=(i)=>{
   setValues({...value, [i.target.name]:i.target.value})
 }
 
-const receiveValues =(i)=>{
-  i.preventDefault();
+// const receiveValues =(i)=>{
+  // i.preventDefault();
   console.log(value)
   // window.location.reload()
-}
+// }
 
 
 
