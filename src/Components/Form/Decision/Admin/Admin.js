@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import SignUpInput from '../../SignUp/SignIUpInput'
 import "./Admin.css"
-import Lg from '../../SignUp/Lg.png'
+// import Lg from '../../SignUp/Lg.png'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
 
@@ -111,10 +111,10 @@ const handleChange=(i)=>{
   return (
     <div className='sign_main'>
       <form className='sign_form' onSubmit={handleSubmit}>
-        <img src={Lg} alt="" className='signlogo' />
+        {/* <img src={Lg} alt="" className='signlogo' /> */}
       <div className="sign_wrap_text">
-        <h2>Sign up as a seller</h2><br/>
-        <p fontsize="12px">Please complete the registration form to become a seller on Agri-Market platform</p><br/>
+        <h2>Sign up Merchant</h2>
+        <p className='admin_write_up'>Please complete the registration form to become a seller on Agri-Market platform</p><br/>
         </div>
          <div className=" mnbv">
          

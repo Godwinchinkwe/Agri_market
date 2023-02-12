@@ -12,9 +12,13 @@ import {HiLocationMarker } from 'react-icons/hi';
 import {MdContactPage } from 'react-icons/md';
 import Koraa from "./koraa.png"
 import Curve from "./curve.png"
+import {useNavigate} from 'react-router-dom';
 
 
 function Footer() {
+
+  const navigate = useNavigate();
+  
   return (
     <footer className='Footer_main'>
     
@@ -34,34 +38,34 @@ function Footer() {
 </div><br/> <br/>
 
 <SiWhatsapp className="icon"/>
-        <p>whatsapp</p>
-        <p>08064318819</p><br/> <br/>
+        <p className='futtex'>whatsapp</p>
+        <p className='futtex'>08064318819</p><br/> <br/>
 
       </div>
 
       <div className='center_footer' >
-      <img src={AG} alt="" className='AG' />
+      <img src={AG} alt="" className='AG' onClick={() => navigate('/')} />
       
         <h4>Our Sponsors</h4><br/>
         <img src={Koraa} alt="" className='kora' /><br/>
         <img src={Curve} alt="" className='curve' /><br/><br/>
-        {/* <h4>About us page</h4> */}
+        
 
       </div>
       <div className='right_footer'>
         <MdAlternateEmail className='icon'/>
-        <p>Gmail</p>
-        <p>info@agri_market.com</p> <br/><br/> 
+        <p className='futtex'>Gmail</p>
+        <p className='futtex'>info@agri_market.com</p> <br/><br/> 
 
         
         
 <HiLocationMarker className='icon'/>
-<p>location address</p>
-<p>33 Apena Stree street</p> <br/> <br/> 
+<p className='futtex'>location address</p>
+<p className='futtex'>33 Apena Stree street</p> <br/> <br/> 
 
 <MdContactPage className='icon'/>
-<p>contact</p>
- <p>08064318819</p>
+<p className='futtex'>contact</p>
+ <p className='futtex'>08064318819</p>
       </div>
 
     </div>

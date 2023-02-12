@@ -12,7 +12,7 @@ function Dropdown(prop) {
      <div className='drop_wrap'>
 <p className='dipdrop' onClick={() => {props(); navigate('/')}}>Home</p><br/>
 <p className='dipdrop' onClick={() => {props(); navigate('/MarketPlace')}}>Market Place</p><br/>
-<p className='dipdrop' onClick={() => {props(); navigate('/Cart')}}>Cart</p><br/>
+<p className='dipdrop' onClick={() => {props(); navigate('/Emptycart')}}>Cart</p><br/>
 <p className='dipdrop' onClick={() => {props(); navigate('/Choose')}}>Sign up</p><br/>
 <p className='dipdrop' onClick={() => {props(); navigate('/login')}}>Log in</p><br/>
     </div>

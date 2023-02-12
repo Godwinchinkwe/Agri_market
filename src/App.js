@@ -3,7 +3,7 @@ import Header from './Components/Header/Header';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Landing from './Components/Landing/Landing';
 import MarketPlace from "./Components/MarketPlace/MarketPlace";
-import Cart from "./Components/Cart/Cart"
+// import Cart from "./Components/Cart/Cart"
 // import SignUp from "./Components/Form/SignUp/SignUp"
 import Login from "./Components/Form/Login/Login"
 import Choose from './Components/Form/Decision/Choose';
@@ -14,6 +14,7 @@ import User from './Components/Form/Decision/User/User';
 import Admin from './Components/Form/Decision/Admin/Admin'
 import Dashboard from './Components/DashBoard/Dashboard';
 import Detail from './Components/Details/Detail';
+import Emptycart from './Components/Cart/Emptycart';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
     <Routes>
           <Route path='/' element={<Landing/>} />
           <Route path='/MarketPlace' element={<MarketPlace/>} />
-          <Route path='/Cart' element={<Cart/>} />
+          {/* <Route path='/Cart' element={<Cart/>} /> */}
           <Route path='/Login' element={<Login/>} />
           <Route path='/Choose' element={<Choose/>} />
           <Route path='/User' element={<User />}/>
@@ -35,6 +36,7 @@ function App() {
           <Route path='/About' element={<About/>} />
           <Route path='/Dashboard' element={<Dashboard/>} />
           <Route path='/Detail:_id' element={<Detail/>} />
+          <Route path='/Emptycart' element={<Emptycart/>} />
         </Routes>
       </Router>
     </div>

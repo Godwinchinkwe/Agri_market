@@ -62,8 +62,8 @@ const handleSubmit = (e) => {
       <form onSubmit={handleSubmit} className='login_wrap'>
       <img src={Lg} alt="" className='signlogo' />
         <div className="logim_wrap_text">
-        <h2>Welcome Back</h2><br/>
-        <p>Fill the information below to login to Agri-Market</p>
+        <h2>Welcome Back</h2>
+        <p className='logintexts'>Fill the information below to login to Agri-Market</p><br/>
         </div>
         <div className='lgnp'>
         
@@ -72,7 +72,7 @@ const handleSubmit = (e) => {
         )}
         <p className='forgotpass' onClick={()=> navigate('/Password')} >forgot password?</p>
 <button className="login_button">Login</button>
-<p className="noaccount">Dont have an account ? <span className='spancolor' onClick={()=> navigate('/SignUp')}>Sign up</span></p>
+<p className="noaccount">Dont have an account ? <span className='spancolor' onClick={()=> navigate('/Choose')}>Sign up</span></p>
         </div>
       </form>
     </div>

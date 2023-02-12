@@ -93,6 +93,9 @@
     flex-wrap: wrap;
     font-size: 12px;
   }
+  .futtex{
+    color:aliceblue
+  }
   @media screen and (max-width: 600px){
     .footer_wrap{
         display: flex;

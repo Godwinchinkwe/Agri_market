@@ -94,14 +94,10 @@
     border: 1px solid #0C764C;
     border-radius: 6px;
     font-size: 15px;
-    /* color:snow; */
-    /* background:#24835d ; */
     position: relative;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     cursor: pointer;
-    /* border: none; */
-    /* cursor: pointer; */
 }
 .linkz{
     text-decoration: none;
@@ -110,6 +106,9 @@
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     cursor: pointer;
+}
+.headercenter{
+    color:#0C764C ;
 }
 .linkz:hover{
     transform: scale(1.1);
@@ -145,6 +144,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    color: aliceblue;
   }
 
 @media screen and (max-width: 760px) {

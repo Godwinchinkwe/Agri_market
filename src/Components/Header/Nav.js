@@ -19,21 +19,21 @@ function Nav() {
         className="linkz"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        <p> HOME</p>
+        <p className="headercenter"> HOME</p>
       </NavLink>
       <NavLink
         to={"MarketPlace/"}
         className="linkz"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        <p>MARKET PLACE</p>
+        <p className="headercenter" >MARKET PLACE</p>
       </NavLink>
       <NavLink
-        to={"Cart/"}
+        to={"Emptycart/"}
         className="linkz"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        <p>
+        <p className="headercenter">
           CART
           <BsCart4 />
         </p>
