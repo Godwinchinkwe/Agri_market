@@ -22,7 +22,7 @@ export default function Addpage() {
   const handleChange = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
-    // console.log(reader)
+   
     reader.onloadend = () => {
       setProduct(reader.result);
       setProduct({ ...product, image: reader.result });

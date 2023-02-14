@@ -176,12 +176,12 @@
   .about_button{
     width:130px;
     height:30px;
+    background-color:white;
+    color:#24835d;
     background: none;
     border: 1px solid #0C764C;
     border-radius: 6px;
     font-size: 15px;
-    color:snow;
-    background:#24835d ;
     position: relative;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;

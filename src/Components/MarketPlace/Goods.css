@@ -8,15 +8,18 @@
 .shadow{
     width: 250px;
     /* height: 360px; */
-    color:white;
+    color:#222e2a;
     padding: 8px;
-    background: #0C764C;
-    border-radius: 12px;
+    background: whitesmoke;
+    /* border-radius: 12px; */
     margin: 12px;
     text-decoration: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    cursor: pointer;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .shadow:hover{

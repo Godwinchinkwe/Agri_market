@@ -2,6 +2,7 @@ import React from "react";
 import { BsCart4 } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+import { useSelector } from "react-redux";
 
 function Nav() {
   let activeStyle = {
@@ -11,6 +12,8 @@ function Nav() {
     fontWeight:"400"
     
   };
+  
+  const amount = useSelector((state) => state.commerce.amount);
 
   return (
     <div className="NavTab">
@@ -29,13 +32,13 @@ function Nav() {
         <p className="headercenter" >MARKET PLACE</p>
       </NavLink>
       <NavLink
-        to={"Emptycart/"}
+        to={"Cart/"}
         className="linkz"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
         <p className="headercenter">
           CART
-          <BsCart4 />
+          <BsCart4 />{amount}
         </p>
       </NavLink>
     </div>

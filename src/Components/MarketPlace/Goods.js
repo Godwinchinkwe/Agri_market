@@ -57,11 +57,11 @@ function Goods() {
           <img src={i.image} className='wed' alt="" /> 
       </div>
       <div className='card-text'>
-        <p>Product Name: {i.productName}</p>
-        <h4> Qty {i.quantity} </h4>
-        <p> Desc {i.desc}</p>
-        <p> Categories: {i.categories}</p>  
-        <h4>price : {i.price}</h4>
+        <h4>Product Name: {i.productName}</h4>
+        <h5> Qty: {i.quantity} </h5>
+        <h5> Desc: {i.desc}</h5>
+        <h5> Categories: {i.categories}</h5>  
+        <h4>Price : {i.price}</h4>
     </div>
     </Link>
       ))}

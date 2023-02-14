@@ -10,10 +10,10 @@ function Emptycart() {
     <div className='emptycart_main'>
         <div className='emptycart_wrap'>
             <h4 className='emptcuart'>SHOPPING CART</h4>
-       <div className='emptycart_logo'> <HiOutlineShoppingCart fontSize={120} color={'#F68B1F'} /></div>
+       <div className='emptycart_logo'> <HiOutlineShoppingCart fontSize={120} color={'White'} /></div>
         <h2 className='emptcuart'> Your Cart is Currently Empty </h2>
         <span>Your shopping cart is empty, but it doesn't have to be.
-        chect out our market place toShop now   </span>
+        Check out our marketplace to Shop now.  </span>
 
         <button className='emptybotton' onClick={()=> navigate('/MarketPlace')}>Shop Now</button>
 
