@@ -77,7 +77,7 @@ function SignUp() {
   errMsg: "must all be numbers",
   // value: value.password,
   required: true,
-  pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$` 
+  // pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$` 
 },
 ]
 

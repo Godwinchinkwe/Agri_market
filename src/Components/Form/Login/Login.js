@@ -3,10 +3,15 @@ import LoginInputs from "./LoginInputs"
 import "./Login.css"
 import Lg from "../SignUp/Lg.png"
 import { useNavigate } from 'react-router-dom'
-import axios from "axios"
+import axios from 'axios'
 
 function Login() {
   const navigate = useNavigate()
+
+  const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    // const [error, setError] = useState(null);
+  
 
   const [ value, setValue] = useState({
     email:"",
@@ -21,6 +26,7 @@ function Login() {
         value: value.email,
         errMsg: "must be a valid email",
         required: true,
+        
   },
 {
   id:2,
@@ -33,27 +39,19 @@ function Login() {
   // pattern: `^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$`
 }]
 
-const handleLogin = (email, password) => {
-  const response = axios.post('https://agri-market.onrender.com/api/login', {
-    email,
-    password,config
-  })
 
-console.log(response)
-}
+const handleSubmit = async (event) => {
+
+
+      event.preventDefault();
+
+      axios.post("https://agri-market.onrender.com/api/login", {
+        email, password }) 
+      };
 
 const handChange=(e)=>{
   setValue({...value, [e.target.name]:e.target.value})
 }
-const config = {
-  headers:{
-    "Content-Type":"application/json"
-  }
-}
-const handleSubmit = (e) => {
-  e.preventDefault();
-  handleLogin();
-};
 
   
   return (
@@ -62,17 +60,21 @@ const handleSubmit = (e) => {
       <form onSubmit={handleSubmit} className='login_wrap'>
       <img src={Lg} alt="" className='signlogo' />
         <div className="logim_wrap_text">
-        <h2>Welcome Back</h2>
-        <p className='logintexts'>Fill the information below to login to Agri-Market</p><br/>
+        <h2>Welcome Back</h2><br/>
+        <p>Fill the information below to login to Agri-Market</p>
         </div>
         <div className='lgnp'>
         
         {inputs.map((e)=>
-        <LoginInputs key={e.id} {...e}  handChange={handChange}/>
+        <LoginInputs key={e.id} {...e}  handChange={handChange}
+          onChange={(event) => setEmail(event.target.value)}
+          onChange2={(event) => setPassword (event.target.value)}
+        />
         )}
+
         <p className='forgotpass' onClick={()=> navigate('/Password')} >forgot password?</p>
 <button className="login_button" onClick={() => navigate('/')}>Login</button>
-<p className="noaccount">Dont have an account ? <span className='spancolor' onClick={()=> navigate('/Choose')}>Sign up</span></p>
+<p className="noaccount">Dont have an account ? <span className='spancolor' onClick={()=> navigate('/SignUp')}>Sign up</span></p>
         </div>
       </form>
     </div>
