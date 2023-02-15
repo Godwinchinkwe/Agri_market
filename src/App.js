@@ -35,12 +35,12 @@ function App() {
           <Route path='/Resetpassword' element={<Resetpassword/>} />
           <Route path='/About' element={<About/>} />
           <Route path='/Dashboard' element={<Dashboard/>} />
-          <Route path='/Detail/:id' element={<Detail/>} />
+          <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
         </Routes>
       </Router>
     </div>
-  )
+  ) 
 }
 
 export default App

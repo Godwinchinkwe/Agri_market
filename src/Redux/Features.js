@@ -24,12 +24,19 @@ const features = createSlice({
             }
         },
         minusItem: (state, { payload }) =>{
+            console.log(state.amount)
+            console.log(state.cart)
+            console.log(payload)
             const checkCart = state.cart.findIndex((el) => el.id === payload.id);
+            console.log(state.cart[checkCart].QTY)
             const check = state.cart[checkCart].QTY
+            // state.amount -= 1
             if(check > 1){
                 state.cart[checkCart].QTY -= 1
-            }else if (check === 1){
+            }
+            else if (check === 1){
                 const remove = state.cart.filter(el => el.id !== payload.id)
+            console.log(remove)
             state.cart = remove
             }
         },

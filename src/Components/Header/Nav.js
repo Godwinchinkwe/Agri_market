@@ -12,8 +12,10 @@ function Nav() {
     fontWeight:"400"
     
   };
+  const cart = useSelector((state) => state.commerce.cart);
   
-  const amount = useSelector((state) => state.commerce.amount);
+  // const amount = useSelector((state) => state.commerce.amount);
+  console.log(cart[0] === undefined ? 0 : cart[0].QTY, "My nav")
 
   return (
     <div className="NavTab">
@@ -38,7 +40,7 @@ function Nav() {
       >
         <p className="headercenter">
           CART
-          <BsCart4 />{amount}
+          <BsCart4 />{cart[0] === undefined ? 0 : cart[0].QTY}
         </p>
       </NavLink>
     </div>

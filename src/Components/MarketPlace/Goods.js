@@ -7,12 +7,9 @@ import { Link } from 'react-router-dom'
 
 
 function Goods() {
-
     const [products, setProducts] = useState([])
     const [load, setLoad] =useState(false)
   
-
-   
 
     async function getProducts(){
         try{
@@ -59,9 +56,9 @@ function Goods() {
       <div className='card-text'>
         <h4>Product Name: {i.productName}</h4>
         <h5> Qty: {i.quantity} </h5>
-        <h5> Desc: {i.desc}</h5>
+        <h5> Description: {i.decs}</h5>
         <h5> Categories: {i.categories}</h5>  
-        <h4>Price : {i.price}</h4>
+        <h4>Price :₦ {i.price}</h4>
     </div>
     </Link>
       ))}

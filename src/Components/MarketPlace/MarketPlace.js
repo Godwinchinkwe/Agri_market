@@ -6,6 +6,7 @@ import Carousel from '../Carousel/Carousel'
 import katti from "../Landing/pie/katti.jpg"
 import hen from "../Landing/pie/hen.jpeg"
 import Goods from './Goods'
+import Footer from "../Landing/Footer/Footer"
 
 function MarketPlace() {
   return (                                 
@@ -32,6 +33,7 @@ function MarketPlace() {
       </div>
       <Carousel />
       <Goods />
+      <Footer />
       {/* <Addpage /> */}
       {/* <Dashboard /> */}
       
