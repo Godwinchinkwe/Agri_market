@@ -71,7 +71,7 @@ const handleSubmit = (e) => {
         <LoginInputs key={e.id} {...e}  handChange={handChange}/>
         )}
         <p className='forgotpass' onClick={()=> navigate('/Password')} >forgot password?</p>
-<button className="login_button">Login</button>
+<button className="login_button" onClick={() => navigate('/')}>Login</button>
 <p className="noaccount">Dont have an account ? <span className='spancolor' onClick={()=> navigate('/Choose')}>Sign up</span></p>
         </div>
       </form>

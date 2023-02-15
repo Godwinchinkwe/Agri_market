@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import SignUpInput from '../../SignUp/SignIUpInput'
+import AdminInput from '../Admin/AdminInput'
 import "./Admin.css"
 // import Lg from '../../SignUp/Lg.png'
 import { useNavigate } from 'react-router-dom'
@@ -119,7 +119,7 @@ const handleChange=(i)=>{
          <div className=" mnbv">
          
          {inputs.map((i)=>
-           <SignUpInput key={i.id} {...i} handleChange={handleChange}
+           <AdminInput key={i.id} {...i} handleChange={handleChange}
            value={value[i.name]} />
           )}
          </div>

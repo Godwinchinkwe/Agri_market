@@ -1,11 +1,11 @@
 import React, {useState, } from 'react'
-import SignUpInput from '../../SignUp/SignIUpInput'
+import UserInput from '../User/UserInput'
 import "./User.css"
 // import Lg from '../../SignUp/Lg.png'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
 
-function SignUp() {
+function User() {
   const navigate = useNavigate()
 
   const [ value, setValues] = useState({
@@ -124,7 +124,7 @@ console.log(value)
          <div className=" mnbv">
          
          {inputs.map((i)=>
-           <SignUpInput key={i.id} {...i} handleChange={handleChange}
+           <UserInput key={i.id} {...i} handleChange={handleChange}
            value={value[i.name]} />
           )}
          </div>
@@ -140,4 +140,4 @@ console.log(value)
   )
 }
 
-export default SignUp
+export default User
