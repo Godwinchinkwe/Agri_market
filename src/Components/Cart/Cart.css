@@ -82,7 +82,7 @@ span{
     background-color: white;
     color:#0C764C;
     border-radius: 8px;
-    /* background: grey; */
+    background: grey;
     box-shadow:0 0 1px rgba(0, 0, 0, 24)0px 3px 8px ;
 }
 .Cart-Title{
@@ -102,6 +102,7 @@ span{
     cursor: pointer;
 }
 .Cart-Items{
+    margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -139,13 +140,15 @@ span{
     /* background-color: yellow; */
 }
 .Cart-Calc button{
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 25px; */
     border: none;
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
+    background:#24835d;
+    color:white;
 }
 .Cart-Check{
     width: 100%;

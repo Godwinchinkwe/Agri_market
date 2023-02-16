@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import { addToCart, total } from "../../Redux/Features";
 import { useDispatch } from 'react-redux';
 import {useNavigate} from "react-router-dom"
+import { BsCart4 } from "react-icons/bs";
 
 
 
@@ -76,7 +77,7 @@ function Goods() {
           showConfirmButton: false,
           timer: 1500,
         })
-      }}> Add to cart</button>
+      }}> Add to <BsCart4/> </button>
     <button className='goods_details' onClick={()=> navigate(`/Detail/${i._id}`)} >Details</button>  
     </div>
     </div>

@@ -92,10 +92,10 @@ text-align: center;
 
   }
 
-.input:invalid[focus = "false"] .err {
+.input:invalid[focused = "false"] .err {
     display: block;
 }
-.input:invalid[focus = "true"] {      
+.input:invalid[focused = "true"] {      
     border: 1px solid rgb(218, 0, 0);
 
   }

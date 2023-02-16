@@ -25,6 +25,7 @@
 .shadow:hover{
     transform: scale(1.1);
     opacity: .9;
+    
 }
 .cards{
     width:100%;
@@ -40,6 +41,7 @@
    
 
 }
+
 
 .card-wrap{
     width:95%;
@@ -62,6 +64,7 @@
     justify-content: space-around;
     width:200px;
     margin-top: 10px;
+    /* display: none; */
 }
 .goods_details{
     width:80px;
@@ -76,6 +79,7 @@
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
     cursor: pointer;
+    
 }
 .goods_cart{
     width:80px;
@@ -89,7 +93,8 @@
     position: relative;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    cursor: pointer;  
+    cursor: pointer;
+    font-size: 13px;  
 }
 .goods_details:hover{
     transform: scale(1.1);
