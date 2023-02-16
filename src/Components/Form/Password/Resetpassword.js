@@ -2,6 +2,8 @@ import React from 'react'
 import "./Resetpassword.css"
 
 function Resetpassword() {
+
+  
   return (
     <div className='reset_main'>
       <div className='reset_wrap'> 

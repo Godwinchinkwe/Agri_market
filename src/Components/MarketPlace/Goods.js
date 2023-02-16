@@ -2,13 +2,19 @@ import React, {useState, useEffect} from 'react'
 import "./Goods.css"
 import axios from 'axios'
 import Loading from "../Loading/Loading"
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
+import { addToCart, total } from "../../Redux/Features";
+import { useDispatch } from 'react-redux';
+import {useNavigate} from "react-router-dom"
 
 
 
 function Goods() {
     const [products, setProducts] = useState([])
     const [load, setLoad] =useState(false)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
   
 
     async function getProducts(){
@@ -41,7 +47,7 @@ function Goods() {
 
    
     
-  return (
+  return (  
     <div className='cards'>
         {/* Elements */}
     <div className='card-wrap'>
@@ -49,18 +55,31 @@ function Goods() {
       {
       load? <Loading /> :
       products.map((i)=>(
-    <Link key={i._id} className='shadow'to={`/Detail/${i._id}`}>
+    <div key={i._id} className='shadow'>
       <div className='image-card'>
           <img src={i.image} className='wed' alt="" /> 
       </div>
       <div className='card-text'>
         <h4>Product Name: {i.productName}</h4>
-        <h5> Qty: {i.quantity} </h5>
-        <h5> Description: {i.decs}</h5>
+        {/* <h5> Qty: {i.quantity} </h5> */}
+        {/* <h5> Description: {i.decs}</h5> */}
         <h5> Categories: {i.categories}</h5>  
         <h4>Price :₦ {i.price}</h4>
     </div>
-    </Link>
+    <div className='Goods_decision'>
+    <button className='goods_cart' 
+     onClick={()=>{dispatch(addToCart(i)); dispatch(total());
+      Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'item has been added',
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      }}> Add to cart</button>
+    <button className='goods_details' onClick={()=> navigate(`/Detail/${i._id}`)} >Details</button>  
+    </div>
+    </div>
       ))}
      </div>
     </div>    

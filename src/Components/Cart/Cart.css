@@ -69,9 +69,13 @@ span{
     justify-content: center;
     flex-direction: column;
 }
+.Cart-Box h2{
+    color:#0C764C
+}
 .Cart-Box{
     width: 60%;
-    height: 40%;
+    min-height: 40%;
+    text-align: center;
     /* border: 1px solid; */
     display: flex;
     flex-direction: column;
@@ -87,8 +91,10 @@ span{
     position: sticky;
     top: 150px;
     justify-content: space-between;
-    background-color: white;
+    background-color:#0C764C;
     width: 100%;
+    color: aliceblue;
+    /* background: red; */
 }
 .Cart-Title h4:hover{
     color: red;

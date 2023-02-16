@@ -15,7 +15,8 @@ const features = createSlice({
             state.products = payload;
         },
         addToCart: (state, {payload})=>{
-            const check = state.cart.findIndex((i) => i.id === payload.id);
+            const check = state.cart.findIndex((i) => i._id === payload._id);
+            // console,log
             if(check >= 0){
                 state.cart[check].QTY += 1;
             } else {
@@ -24,24 +25,24 @@ const features = createSlice({
             }
         },
         minusItem: (state, { payload }) =>{
-            console.log(state.amount)
-            console.log(state.cart)
-            console.log(payload)
-            const checkCart = state.cart.findIndex((el) => el.id === payload.id);
-            console.log(state.cart[checkCart].QTY)
+            // console.log(state.amount)
+            // console.log(state.cart)
+            // console.log(payload)
+            const checkCart = state.cart.findIndex((el) => el._id === payload._id);
+            // console.log(state.cart[checkCart].QTY)
             const check = state.cart[checkCart].QTY
             // state.amount -= 1
             if(check > 1){
                 state.cart[checkCart].QTY -= 1
             }
             else if (check === 1){
-                const remove = state.cart.filter(el => el.id !== payload.id)
-            console.log(remove)
+                const remove = state.cart.filter(el => el._id !== payload._id)
+            // console.log(remove)
             state.cart = remove
             }
         },
         removeItem: (state, {payload})=>{
-            const remove = state.cart.filter((i)=> i.id !== payload.id);
+            const remove = state.cart.filter((i)=> i._id !== payload._id);
             state.cart = remove;
             let total = 0;
             let amount = 0;
