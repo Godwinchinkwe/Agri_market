@@ -82,7 +82,7 @@ span{
     background-color: white;
     color:#0C764C;
     border-radius: 8px;
-    background: grey;
+    /* background: grey; */
     box-shadow:0 0 1px rgba(0, 0, 0, 24)0px 3px 8px ;
 }
 .Cart-Title{

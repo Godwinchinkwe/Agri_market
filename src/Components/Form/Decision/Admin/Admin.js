@@ -85,6 +85,7 @@ const handleSubmit = async (event) => {
   try {
     event.preventDefault();
   console.log({firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password})
+  
     const response = await axios.post("https://agri-market.onrender.com/api/admin", {firstName: firstName, lastName: lastName,  email: email, phoneNumber: phoneNumber, location: location, password:  password});
     console.log(response.data.message);
     navigate('/Login');
@@ -127,7 +128,8 @@ const handleChange=(i)=>{
          <input type="checkbox" onChange={() => setValues({...value, admin:true})}/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
          </div>
         
-        <button type='submit' className='zaw'>Submit</button>
+        <button type='submit' className='zaw'> Submit</button>
+
         <p>Already have an account ? <span className="signlogin" onClick={()=> navigate('/Login')}>Login</span></p>
       </form>
       <button className='back' onClick={() => navigate('/Choose')}>Go Back</button>

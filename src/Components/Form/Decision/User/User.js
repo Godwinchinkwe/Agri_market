@@ -80,6 +80,7 @@ function User() {
 },
 ]
 
+console.log(value)
 const handleSubmit = async (event) => {
   try {
 
@@ -90,23 +91,23 @@ const handleSubmit = async (event) => {
       }
     }
     const response = await axios.post("https://agri-market.onrender.com/api/user", value, config);
-    console.log(response.data);
-     navigate('/Login');
+    console.log(response);
+    
   } catch (error) {
       console.log(error.message)
   }
 };
 
 // useEffect(() => {   
-// }, [value])
+// }[value])
 const handleChange=(i)=>{
   setValues({...value, [i.target.name]:i.target.value})
 }
 
 // const receiveValues =(i)=>{
-  // i.preventDefault();
-  // console.log(value)
-  // window.location.reload()
+//   i.preventDefault();
+//   console.log(value)
+//   window.location.reload()
 // }
 
 console.log(value)
@@ -129,10 +130,11 @@ console.log(value)
           )}
          </div>
          <div className='check_cont'>
-         <input type="checkbox" onChange={() => setValues({...value, admin:true})}/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
+         <input type="checkbox" onChange={() => setValues({...value, admin:false})}/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
          </div>
         
         <button type='submit' className='zaw'>Submit</button>
+
         <p>Already have an account ? <span className="signlogin" onClick={()=> navigate('/Login')}>Login</span></p>
       </form>
       <button className='back' onClick={() => navigate('/Choose')}>Go Back</button>

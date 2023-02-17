@@ -25,12 +25,18 @@
     width:95%;
     height: 90vh;
     display: flex;
+    justify-content: space-between;
     background: paleturquoise;
+    margin-top: 10px;
 }
+/* h4{
+    color:white;
+    cursor: pointer;
+} */
 .dash_sidebar{
-    width:20%;
-    height: 100%    ;
-    background: peru;
+    width:18%;
+    height: 100%;
+    background:#24835d;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -41,4 +47,39 @@
     width:80%;
     height:100%; 
     background: tomato;
+}
+.dash_icon{
+    display: none;
+}
+.Dashsidemenu_main{
+    position:absolute;
+    right:100%;
+    top:100%;
+    background:#0C764C;
+    color:white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width:250px;
+    z-index:100;
+    box-shadow:0 0 1px rgba(0, 0, 0, 24)0px 3px 8px ;
+}
+.Dashsidemenu_wrap{
+    right:5
+}
+
+@media screen and (max-width: 768px) {
+    .dash_sidebar{
+        display:none;
+    }
+    .dash_maincont{
+        width:95%;
+    }
+    .dash_icon{
+        display: flex;
+    }
+    .wc{
+        display: none;
+    }
+
 }

@@ -9,13 +9,13 @@ function Nav() {
     textDecoration: "underline",
     fontSize:"15px",
     color:"green",
-    fontWeight:"400"
+    fontWeight:"700"
     
   };
   const cart = useSelector((state) => state.commerce.cart);
   
   // const amount = useSelector((state) => state.commerce.amount);
-  console.log(cart[0] === undefined ? 0 : cart[0].QTY, "My nav")
+  // console.log(cart[0] === undefined ? 0 : cart[0].QTY, "My nav")
 
   return (
     <div className="NavTab">

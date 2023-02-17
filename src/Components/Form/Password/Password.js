@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import "./Password.css"
 import { useNavigate } from 'react-router-dom';
 // import Resetpassword from './Resetpassword';
+// import axios from 'axios';
 
 function Password() {
+
 
   const [ passwordsent, openMail] = useState(false);
   const navigate = useNavigate();
