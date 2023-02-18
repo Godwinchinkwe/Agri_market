@@ -10,25 +10,28 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* background: grey; */
    
 }
 .sign_form{
     width: 40%;
-    min-height:80%;
+    height:90%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    /* background: rgb(151, 13, 13); */
     flex-direction: column;
+    border-radius: 16px;
 }
 .tryuu{
     width: 80%;
-    height:30%;
+   min-height:70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* background: red; */
     align-items: center;
+    margin-bottom: 10px;
 }
 .zxc{
     width:100%;
@@ -43,7 +46,7 @@
 }
 .mnbv{
     width:90%;
-    height:60%;
+    height:80%;
 display: flex;
 justify-content: center;
 align-items: center;

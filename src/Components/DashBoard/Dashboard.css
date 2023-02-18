@@ -53,19 +53,48 @@
 }
 .Dashsidemenu_main{
     position:absolute;
-    right:100%;
-    top:100%;
+    left: 2px;;
+    top: 22%;
     background:#0C764C;
     color:white;
-    padding: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     width:250px;
+    height:300px;
     z-index:100;
+    display:none;
     box-shadow:0 0 1px rgba(0, 0, 0, 24)0px 3px 8px ;
 }
 .Dashsidemenu_wrap{
-    right:5
+    width:200px;
+    height:250px;
+    /* background: greenyellow; */
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.dasth3{
+    
+    cursor: pointer;
+    padding: 10px;
+    color:whitesmoke;
+    /* color:black; */
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.dasth3:hover{
+    transform: scale(1.1);
+    opacity: .9;
+    /* background: rgb(134, 132, 132); */
+    background: white;
+    color:#0C764C;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -80,6 +109,9 @@
     }
     .wc{
         display: none;
+    }
+    .Dashsidemenu_main{
+        display:flex
     }
 
 }

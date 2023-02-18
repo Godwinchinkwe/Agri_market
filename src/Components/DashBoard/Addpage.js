@@ -80,7 +80,7 @@ export default function Addpage() {
       <div className='Addproduct_right'>
         <div className='Addproduct_right_top'>
           <div className='Addproduct_right_top_image1'>
-            {product.image ? <img className='' src={product.image}  alt=""/> : < FaUserCircle fontSize={300} />}
+            {product.image ? <img className='products_image' src={product.image}  alt=""/> : < FaUserCircle fontSize={200} />}
           </div>
         </div>
         <div className='Addproduct_right_buttom'>

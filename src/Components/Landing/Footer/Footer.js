@@ -61,7 +61,7 @@ function Footer() {
         
 <HiLocationMarker className='icon'/>
 <p className='futtex'>location address</p>
-<p className='futtex'>33 Apena Stree street</p> <br/> <br/> 
+<p className='futtex'>33b Apena street</p> <br/> <br/> 
 
 <MdContactPage className='icon'/>
 <p className='futtex'>contact</p>

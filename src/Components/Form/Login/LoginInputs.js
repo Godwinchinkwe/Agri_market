@@ -7,7 +7,7 @@ function LoginInputs(props) {
   const doFocused =()=>{
     setFocused(true)
   }
-  console.log(props.handChange)
+  console.log(props.handleChange)
   return (
   
     <div className="loginkkk">
@@ -15,7 +15,7 @@ function LoginInputs(props) {
         <input
          type={props.type}
          name={props.name}
-         onChange={props.handChange}
+         onChange={props.handleChange}
          placeholder={props.placeholder}
          required={props.required}
          pattern={props.pattern}

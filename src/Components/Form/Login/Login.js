@@ -4,15 +4,14 @@ import "./Login.css"
 import Lg from "../SignUp/Lg.png"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 function Login() {
+  const [spin, setSpin] =useState(false)
   
   const navigate = useNavigate()
 
-  // const [email, setEmail] = useState('');
-  //   const [password, setPassword] = useState('');
-    // const [error, setError] = useState(null);
-  
 
   const [ value, setValue] = useState({
     email:"",
@@ -42,28 +41,34 @@ function Login() {
 
 
 const handleSubmit = async (event) => {
-
-
+try{
+  setSpin(true)
       event.preventDefault();
       const config = {
         headers:{
           "Content-Type":"application/json"
         }
       }
-    const response = await axios.post("https://agri-market.onrender.com/api/login", value, config) 
-      console.log(response)
-      // response.value === value.data ? navigate("/" ): null
+   const response = await axios.post("https://agri-market.onrender.com/api/login", value, config)
+      
+      console.log(response);
+      if(response.status === 200) {
+        navigate('/')
+      }
+   }catch (error) {
+    if(error) {
+      alert(error.response.data.message)
+      window.location.reload()
+    }
+      console.log("error message",  error)
+      console.log("response error", error.response.data.message)
+  }     
 };
 
-
-
-
-const handChange=(e)=>{
+const handleChange=(e)=>{
   setValue({...value, [e.target.name]:e.target.value})
 }
-console.log(value)
 
-  
   return (
     <div className='login_main'>
       
@@ -76,16 +81,24 @@ console.log(value)
         <div className='lgnp'>
         
         {inputs.map((e)=>
-        <LoginInputs key={e.id} {...e}  handChange={handChange}
-          // onChange={(event) => setEmail(event.target.value)}
-          // onChange2={(event) => setPassword (event.target.value)}
-        />
+        <LoginInputs key={e.id} {...e}  handleChange={handleChange}
+        value={value[e.name]} />
         )}
 
         <p className='forgotpass' onClick={()=> navigate('/Password')} >forgot password?</p>
-<button type='submit' className="login_button" >Login</button>
+<button type='submit' className="login_button" >
+{spin ? (
+ <ClipLoader
+ color='#ffffff'
+ loading={spin}
+ size={15}
+ aria-label="Loading Spinner"
+ data-testid="loader"
+/>
+              ) : 'Login'}
+</button>
 
-<p className="noaccount">Dont have an account ? <span className='spancolor' onClick={()=> navigate('/SignUp')}>Sign up</span></p>
+<p className="noaccount">Dont have an account ? <span className='spancolor' >Sign up</span></p>
         </div>
       </form>
     </div>

@@ -13,6 +13,7 @@ import About from './Components/Landing/About/About';
 import User from './Components/Form/Decision/User/User';
 import Admin from './Components/Form/Decision/Admin/Admin'
 import Dashboard from './Components/DashBoard/Dashboard';
+import Addpage from './Components/DashBoard/Addpage';
 import Detail from './Components/Details/Detail';
 import Emptycart from './Components/Cart/Emptycart';
 
@@ -37,6 +38,8 @@ function App() {
           <Route path='/Dashboard' element={<Dashboard/>} />
           <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
+          <Route path='/Addpage' element={<Addpage/>} />
+
         </Routes>
       </Router>
     </div>

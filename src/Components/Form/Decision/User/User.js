@@ -4,9 +4,11 @@ import "./User.css"
 // import Lg from '../../SignUp/Lg.png'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
+import ClipLoader from "react-spinners/ClipLoader";
 
 function User() {
   const navigate = useNavigate()
+  const [spin, setSpin] =useState(false)
 
   const [ value, setValues] = useState({
    firstName: "",
@@ -83,7 +85,7 @@ function User() {
 console.log(value)
 const handleSubmit = async (event) => {
   try {
-
+    setSpin(true)
     event.preventDefault();
     const config = {
       headers:{
@@ -92,9 +94,17 @@ const handleSubmit = async (event) => {
     }
     const response = await axios.post("https://agri-market.onrender.com/api/user", value, config);
     console.log(response);
+    if(response.status === 201) {
+      navigate('/Login')
+    }
     
   } catch (error) {
-      console.log(error.message)
+    if(error) {
+      alert(error.response.data.message)
+      window.location.reload()
+    }
+      console.log("error message",  error)
+      console.log("response error", error.response.data.message)
   }
 };
 
@@ -119,7 +129,7 @@ console.log(value)
       <form  className='sign_form' onSubmit={handleSubmit}>
         {/* <img src={Lg} alt="" className='signlogo' /> */}
       <div className="sign_wrap_text">
-        <h2>User Sign up</h2>
+        <h2>User Sign Up</h2><br/>
         <p className='user_writeup'>Please complete the registration form to purchase livestock product on Agri-Market platform</p><br/>
         </div>
          <div className=" mnbv">
@@ -133,7 +143,17 @@ console.log(value)
          <input type="checkbox" onChange={() => setValues({...value, admin:false})}/> <p className='check_text'>I agree to the Terms of service and privacy of policy of Agri market </p>
          </div>
         
-        <button type='submit' className='zaw'>Submit</button>
+        <button type='submit' className='zaw'>
+        {spin ? (
+ <ClipLoader
+ color='#ffffff'
+ loading={spin}
+ size={15}
+ aria-label="Loading Spinner"
+ data-testid="loader"
+/>
+              ) : 'Submit'}
+        </button>
 
         <p>Already have an account ? <span className="signlogin" onClick={()=> navigate('/Login')}>Login</span></p>
       </form>

@@ -146,6 +146,17 @@
     justify-content: center;
     align-items: center;
     color: aliceblue;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .dipdrop:hover{
+    transform: scale(1.1);
+    opacity: .9;
+    /* background: rgb(134, 132, 132); */
+    background: white;
+    color:#0C764C;
   }
 
 @media screen and (max-width: 760px) {

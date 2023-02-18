@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
-import "./SignUp.css";
+// import React, {useState} from 'react'
+// import "./SignUp.css";
 
-function SignIUpInput(props) {
-    const [focused, setFocused] = useState(false);
+// function SignIUpInput(props) {
+//     const [focused, setFocused] = useState(false);
 
-  const doFocused =()=>{
-    setFocused(true)
-  }
+//   const doFocused =()=>{
+//     setFocused(true)
+//   }
   // const [ value, setValues] = useState({
   //   firstName: "",
   //    lastName: "",
@@ -35,24 +35,24 @@ function SignIUpInput(props) {
   //  console.log(props, "value")
 
     
-  return (
-    <div className='tryuu'>
+//   return (
+//     <div className='tryuu'>
         
-        <input className="zxc"
-        type={props.type}
-        name={props.name}
-        placeholder={props.placeholder}
-        onChange={props.handleChange}
-        pattern={props.pattern}
-        required={props.required}
-        focus={focused.toString()}
-        onBlur={doFocused}
-         />
-        <span className='err'>{props.errMsg}</span>
+//         <input className="zxc"
+//         type={props.type}
+//         name={props.name}
+//         placeholder={props.placeholder}
+//         onChange={props.handleChange}
+//         pattern={props.pattern}
+//         required={props.required}
+//         focus={focused.toString()}
+//         onBlur={doFocused}
+//          />
+//         <span className='err'>{props.errMsg}</span>
        
-    </div>
+//     </div>
     
-  )
-}
+//   )
+// }
 
-export default SignIUpInput 
+// export default SignIUpInput 
