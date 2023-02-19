@@ -28,12 +28,12 @@
 .emptybotton{
     width:105px;
     height:35px;
-    background: none;
+    /* background: none; */
     border: 1px solid #0C764C;
     border-radius: 6px;
     font-size: 15px;
-    color:black;
-    background:white ;
+    color:whitesmoke;
+    background:#e6790c ;
     position: relative;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
@@ -42,8 +42,8 @@
 .emptybotton:hover{
     transform: scale(1.1);
     opacity: 9;
-    background-color:#8f551b ;
-    color: whitesmoke;
+    background-color:#e6790c ;
+    color: rgb(199, 175, 175);;
     border-radius: 3px;
     box-shadow: 0 0 1px rgba(0, 0, 0, 24)0px 3px 8px;
 

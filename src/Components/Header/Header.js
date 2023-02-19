@@ -6,6 +6,7 @@ import {useNavigate} from "react-router-dom"
 import {ImMenu3  } from 'react-icons/im'
 import {FaTimes} from 'react-icons/fa'
 import Dropdown from './Dropdown'
+import {CgProfile} from 'react-icons/cg'
 
 
 function Header() {
@@ -24,6 +25,7 @@ function Header() {
   // const FaTime = (<FaTimes fontSize={"30px"} color="#0C764C" onClick={handlechange} /> )
 
 
+  const getResponse = JSON.parse(localStorage.getItem("response"));
 
    
   return (
@@ -36,10 +38,14 @@ function Header() {
              </div>
 
               <Nav />
-               <div className='new'>
+              {
+                getResponse ? <h4 className='login_response'> <CgProfile fontSize={"30px"}/> {getResponse.data.data.firstName}</h4> : 
+                (<div className='new'>
                 <button className="butt" onClick={()=> navigate('/Choose')}>sign up</button>
                 <button className='butt2'onClick={()=> navigate('/Login')}>Login</button>
-            </div>
+            </div>)
+              }
+           
 
             <div className='Burger'>
                

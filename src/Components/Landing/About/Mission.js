@@ -5,7 +5,7 @@ function Mission(props) {
   return (
     <div className='About_mission'>
         <img src={props.aboutimg} alt="" className='about_img' />
-        <p>{props.abouttext}</p>
+        <p className='about_small_text'>{props.abouttext}</p>
 
     </div>
   )

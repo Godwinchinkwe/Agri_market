@@ -50,7 +50,7 @@ try{
         }
       }
    const response = await axios.post("https://agri-market.onrender.com/api/login", value, config)
-      
+   localStorage.setItem("response", JSON.stringify(response));
       console.log(response);
       if(response.status === 200) {
         navigate('/')
