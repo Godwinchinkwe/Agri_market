@@ -179,4 +179,7 @@
     .NavTab{
         display: none;
     }
+    .login_response{
+        display: none;
+    }
 }

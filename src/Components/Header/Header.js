@@ -39,7 +39,7 @@ function Header() {
 
               <Nav />
               {
-                getResponse ? <h4 className='login_response'> <CgProfile fontSize={"30px"}/> {getResponse.data.data.firstName}</h4> : 
+                getResponse ? <h4 className='login_response'> {getResponse.data.data.firstName} <CgProfile fontSize={"28px"}/> </h4> : 
                 (<div className='new'>
                 <button className="butt" onClick={()=> navigate('/Choose')}>sign up</button>
                 <button className='butt2'onClick={()=> navigate('/Login')}>Login</button>

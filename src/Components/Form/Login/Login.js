@@ -98,7 +98,7 @@ const handleChange=(e)=>{
               ) : 'Login'}
 </button>
 
-<p className="noaccount">Dont have an account ? <span className='spancolor' >Sign up</span></p>
+<p className="noaccount">Dont have an account ? <span className='spancolor'onClick={()=> navigate('/Choose')} >Sign up</span></p>
         </div>
       </form>
     </div>
