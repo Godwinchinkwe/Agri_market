@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Components/Header/Header';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import Landing from './Components/Landing/Landing';
 import MarketPlace from "./Components/MarketPlace/MarketPlace";
 import Cart from "./Components/Cart/Cart"
@@ -40,7 +40,7 @@ function App() {
           <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
           <Route path='/Addpage' element={<Addpage/>} />
-          <Route path='/Verify' element={<Verify/>} />
+          <Route path='/Verify/:id' element={<Verify/>} />
 
         </Routes>
       </Router>
