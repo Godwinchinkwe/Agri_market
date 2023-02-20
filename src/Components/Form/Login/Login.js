@@ -85,7 +85,7 @@ const handleChange=(e)=>{
         value={value[e.name]} />
         )}
 
-        <p className='forgotpass' onClick={()=> navigate('/Password')} >forgot password?</p>
+        <p className='forgotpass' onClick={()=> navigate('/Verify')} >forgot password?</p>
 <button type='submit' className="login_button" >
 {spin ? (
  <ClipLoader

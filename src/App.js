@@ -16,6 +16,7 @@ import Dashboard from './Components/DashBoard/Dashboard';
 import Addpage from './Components/DashBoard/Addpage';
 import Detail from './Components/Details/Detail';
 import Emptycart from './Components/Cart/Emptycart';
+import Verify from './Components/Form/Decision/User/Verify';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
           <Route path='/Addpage' element={<Addpage/>} />
+          <Route path='/Verify' element={<Verify/>} />
 
         </Routes>
       </Router>
