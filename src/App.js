@@ -1,4 +1,4 @@
-import React from 'react'
+import  { useState } from 'react'
 import Header from './Components/Header/Header';
 import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import Landing from './Components/Landing/Landing';
@@ -17,19 +17,31 @@ import Addpage from './Components/DashBoard/Addpage';
 import Detail from './Components/Details/Detail';
 import Emptycart from './Components/Cart/Emptycart';
 import Verify from './Components/Form/Decision/User/Verify';
+import Subhead from './Components/Subhead/Subhead';
+// import { ThemeContext } from "../src/Components/API/Context"
 
 
 function App() {
+  const  [display, setDisplay] = useState(true)
+
+  const toggle = () => {
+    setDisplay(false)
+  }
+
+   const changeToggle = ()=> {
+    setDisplay(true)
+   }
   return (
     <div className='App'>
       
       <Router>
-      <Header/>
+      {display ? <Header /> : null}
+      {/* <Header /> */}
     <Routes>
-          <Route path='/' element={<Landing/>} />
+          <Route path='/' element={<Landing props={changeToggle}/>} />
           <Route path='/MarketPlace' element={<MarketPlace/>} />
           <Route path='/Cart' element={<Cart/>} />
-          <Route path='/Login' element={<Login/>} />
+          <Route path='/Login' element={<Login props={toggle}/>} />
           <Route path='/Choose' element={<Choose/>} />
           <Route path='/User' element={<User />}/>
           <Route path='/Admin' element={<Admin />}/>
@@ -41,7 +53,7 @@ function App() {
           <Route path='/Emptycart' element={<Emptycart/>} />
           <Route path='/Addpage' element={<Addpage/>} />
           <Route path='/Verify/:id' element={<Verify/>} />
-
+          <Route path='/Subhead' element={<Subhead/>} />
         </Routes>
       </Router>
     </div>

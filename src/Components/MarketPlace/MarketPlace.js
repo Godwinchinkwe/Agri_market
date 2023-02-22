@@ -8,8 +8,10 @@ import hen from "../Landing/pie/hen.jpeg"
 import Goods from './Goods'
 import Footer from "../Landing/Footer/Footer"
 
+
 function MarketPlace() {
-  return (                                 
+  return (  
+                               
     <div className='Market_main'>
       <div className='Market_wrap'>
       <div className='Market_top'>
@@ -40,6 +42,7 @@ function MarketPlace() {
       
 
     </div>
+  
   )
 }
 

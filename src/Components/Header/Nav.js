@@ -38,9 +38,10 @@ function Nav() {
         className="linkz"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        <p className="headercenter">
+        <p className="headercenter">  
+        
           CART
-          <BsCart4 />{cart[0] === undefined ? 0 : cart[0].QTY}
+         <BsCart4 />{cart[0] === undefined ? 0 : cart[0].QTY}
         </p>
       </NavLink>
     </div>

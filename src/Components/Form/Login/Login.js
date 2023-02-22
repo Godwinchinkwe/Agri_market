@@ -1,18 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect } from 'react'
 import LoginInputs from "./LoginInputs"
 import "./Login.css"
 import Lg from "../SignUp/Lg.png"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import ClipLoader from "react-spinners/ClipLoader";
+// import { ThemeContext } from "../../API/Context"
+import Subhead from "../../Subhead/Subhead"
 
-
-function Login() {
+function Login({props}) {
   const [spin, setSpin] =useState(false)
+  const [view, setView] = useState(false)
+
   
   const navigate = useNavigate()
 
-
+// console.log(props)
   const [ value, setValue] = useState({
     email:"",
     password:"",
@@ -31,7 +34,7 @@ function Login() {
 {
   id:2,
   placeholder: "  Password",
-  type: "password",
+  type:  view ? "text" : "password",
   name:"password",
   errMsg: "must all be numbers",
   value: value.password,
@@ -69,7 +72,13 @@ const handleChange=(e)=>{
   setValue({...value, [e.target.name]:e.target.value})
 }
 
+useEffect(() => {
+  props()
+}, [props])
+
   return (
+    <>
+    <Subhead />
     <div className='login_main'>
       
       <form onSubmit={handleSubmit} className='login_wrap'>
@@ -81,7 +90,7 @@ const handleChange=(e)=>{
         <div className='lgnp'>
         
         {inputs.map((e)=>
-        <LoginInputs key={e.id} {...e}  handleChange={handleChange}
+        <LoginInputs key={e.id} {...e} view={view} setView={setView} handleChange={(e)=> handleChange(e)}
         value={value[e.name]} />
         )}
 
@@ -102,6 +111,7 @@ const handleChange=(e)=>{
         </div>
       </form>
     </div>
+    </>
   )
 }
 

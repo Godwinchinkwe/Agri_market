@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect }from 'react'
 import "./Landing.css"
 import Carousel from '../Carousel/Carousel'
 import poult from "./pie/poult.jpg"
@@ -14,9 +14,16 @@ import makaa from "./pie/makaa.jpeg"
 import ogee from "./pie/ogee.jpeg"
 
 
-function Landing() {
+
+function Landing({props}) {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    props(true)
+  }, [props ])
+
   return (
+   
     <div className='Main-Body'>
       <div className='main_wrap'>
       <div className='Agri-Main'>
@@ -95,6 +102,7 @@ function Landing() {
    
   <Footer />
     </div>
+    
   )
 }
 
