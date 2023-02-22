@@ -48,7 +48,7 @@ function App() {
           <Route path='/Password' element={<Password/>} />
           <Route path='/Resetpassword' element={<Resetpassword/>} />
           <Route path='/About' element={<About/>} />
-          <Route path='/Dashboard' element={<Dashboard/>} />
+          <Route path='/Dashboard' element={<Dashboard props={toggle}/>} />
           <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
           <Route path='/Addpage' element={<Addpage/>} />

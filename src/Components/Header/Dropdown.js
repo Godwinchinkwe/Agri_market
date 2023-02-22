@@ -2,6 +2,7 @@ import React from 'react'
 import "./Header.css"
 import {useNavigate} from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
+import "./Dropps.css"
 
 function Dropdown(prop) {
 

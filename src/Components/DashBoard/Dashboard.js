@@ -4,17 +4,26 @@ import "./Dashboard.css"
 import {FaTimes} from 'react-icons/fa'
 import Dashsidemenu from "./Dashsidemenu"
 import { useNavigate } from "react-router-dom";
+import Subhead from "../Subhead/Subhead"
+import {useEffect} from "react"
 
-function Dashboard() {
+
+function Dashboard({props}) {
   const [toggle, setToggle] = useState(false);
   const navigate = useNavigate()
 
   const handlechange = () => { 
     setToggle(!toggle) 
   }
+
+  useEffect(() => {
+    props()
+  }, [props])
   
 
   return (
+    <>
+    <Subhead />
     <div className="Dashboard_origin">
       <div className="dashboard_head">
         <h3 className="wc">welcome</h3> 
@@ -40,6 +49,7 @@ function Dashboard() {
       </div>
 
     </div>
+    </>
 
   );
 }

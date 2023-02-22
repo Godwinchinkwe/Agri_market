@@ -9,7 +9,7 @@ function Subhead() {
   return (
     <div className='Subheadmain'>
         <div className='subhead_wrap'>
-            <p className='sunheader_test' onClick={() => navigate('/')}><AiOutlineHome fontSize={"30px"} color="#0C764C" /> Home</p>
+        <p className='sunheader_test' onClick={() => navigate('/')}><AiOutlineHome fontSize={"30px"} color="#0C764C" /> Home</p>
 {/* <AiOutlineHome fontSize={"30px"} color="#0C764C"  onClick={() => navigate('/')} /> */}
         </div>
 

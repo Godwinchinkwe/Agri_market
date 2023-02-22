@@ -26,4 +26,5 @@
     align-items: center;
     color:#0C764C;
     gap:5px;
+    cursor: pointer;
 }
