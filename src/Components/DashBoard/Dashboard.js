@@ -37,14 +37,20 @@ function Dashboard({props}) {
       <div className="main_dash">
         <div className="dash_sidebar">
           <h3 >Dashboard</h3>
-          <h4 className="dasth3">HOME</h4>
+          {/* <h4 className="dasth3">HOME</h4> */}
           <h4 className="dasth3" onClick={() => navigate('/MarketPlace')}>Market Place</h4>
           <h4 className="dasth3"> Settings</h4>
+          <h4 className="dasth3"> About</h4>
+          <h4 className="dasth3"> Contact us</h4>
           <h4 className="dasth3" onClick={() => navigate('/Addpage')}>Upload</h4>
           <h4 className="dasth3" onClick={() => navigate('/Password')}>Change password</h4>
           <h4 className="dasth3">LOG OUT</h4>
         </div>
-        <div className="dash_maincont"></div>
+        <div className="dash_maincont">
+          <div className="dash_mainCont_inside">
+
+          </div>
+        </div>
 
       </div>
 

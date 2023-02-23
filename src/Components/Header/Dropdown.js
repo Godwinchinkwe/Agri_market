@@ -2,6 +2,7 @@ import React from 'react'
 import "./Header.css"
 import {useNavigate} from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
+import { BiLogOutCircle } from "react-icons/bi";
 import "./Dropps.css"
 
 function Dropdown(prop) {
@@ -24,7 +25,7 @@ function Dropdown(prop) {
 
  
 { getResponse ? <> <p className='dipdrop' onClick={() => {props(); navigate('/Dashboard')}}>Dashboard</p> <br/>
-<p className='dipdrop' onClick={() => {logout(); navigate('/')}} > Log Out
+<p className='dipdrop' onClick={() => {logout(); navigate('/')}} > Logout < BiLogOutCircle/>
 </p> </>
  :
 

@@ -1,12 +1,13 @@
-import React, {useState, } from 'react'
+import React, {useState, useEffect } from 'react'
 import UserInput from '../User/UserInput'
 import "./User.css"
 // import Lg from '../../SignUp/Lg.png'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
 import ClipLoader from "react-spinners/ClipLoader";
+import Subhead from '../../../Subhead/Subhead';
 
-function User() {
+function User({props}) {
   const navigate = useNavigate()
   const [spin, setSpin] =useState(false)
 
@@ -122,9 +123,16 @@ const handleChange=(i)=>{
 
 console.log(value)
 
+useEffect(() => {
+  props()
+}, [props])
+
+
 
 
   return (
+    <>
+    <Subhead />
     <div className='sign_main'>
       <form  className='sign_form' onSubmit={handleSubmit}>
         {/* <img src={Lg} alt="" className='signlogo' /> */}
@@ -159,6 +167,7 @@ console.log(value)
       </form>
       <button className='back' onClick={() => navigate('/Choose')}>Go Back</button>
     </div>
+    </>
   )
 }
 

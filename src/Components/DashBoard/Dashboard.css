@@ -5,7 +5,7 @@
 }
 .Dashboard_origin{
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +36,7 @@
 } */
 .dash_sidebar{
     width:18%;
-    height: 100%;
+    height: 80%;
     background:#24835d;
     display: flex;
     align-items: center;
@@ -46,8 +46,17 @@
 }
 .dash_maincont{
     width:80%;
-    height:100%; 
+    height:80%; 
     background: tomato;
+    display: flex;
+    justify-content: center;
+}
+.dash_mainCont_inside{
+    width:85%;
+    height: 40%;
+    background: blue;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 .dash_icon{
     display: none;
@@ -96,7 +105,6 @@
     /* background: rgb(134, 132, 132); */
     background: white;
     color:#0C764C;
-
 }
 
 @media screen and (max-width: 768px) {

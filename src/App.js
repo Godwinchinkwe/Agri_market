@@ -43,8 +43,8 @@ function App() {
           <Route path='/Cart' element={<Cart/>} />
           <Route path='/Login' element={<Login props={toggle}/>} />
           <Route path='/Choose' element={<Choose/>} />
-          <Route path='/User' element={<User />}/>
-          <Route path='/Admin' element={<Admin />}/>
+          <Route path='/User' element={<User props={toggle} />}/>
+          <Route path='/Admin' element={<Admin props={toggle} />}/>
           <Route path='/Password' element={<Password/>} />
           <Route path='/Resetpassword' element={<Resetpassword/>} />
           <Route path='/About' element={<About/>} />

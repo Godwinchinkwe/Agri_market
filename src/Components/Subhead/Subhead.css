@@ -16,8 +16,8 @@
     height: 60px;
     display: flex;
     align-items:center;
-    justify-content:flex-start;
-    /* background: green; */
+    justify-content:space-between;
+    /* background: green;    */
 
 }
 .sunheader_test{
@@ -27,4 +27,11 @@
     color:#0C764C;
     gap:5px;
     cursor: pointer;
+}
+.getlocalinfo{
+    color:#0C764C;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor:pointer;
 }
