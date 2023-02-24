@@ -1,10 +1,22 @@
 import React, {useState} from 'react'
 import "./Password.css"
 import { useNavigate } from 'react-router-dom';
+// import axios from 'axios'
+// import { useRef } from 'react'
 // import Resetpassword from './Resetpassword';
-// import axios from 'axios';
+
 
 function Password() {
+
+  // const inputRef = useRef('')
+  // const email = { email: inputRef.current.value }
+  // console.log(email.email) 
+  // axios.post("https://agri-market.onrender.com/api/forgot", email )
+  // .then((res) => {
+  //   console.log(res)
+  // }) .catch((e) => {
+  //   console.log(e)
+  // })
 
 
   const [ passwordsent, openMail] = useState(false);

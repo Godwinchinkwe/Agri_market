@@ -29,6 +29,7 @@
     flex-direction: column;
     display: flex;
     justify-content: center;
+    margin-top: 120px;
     /* background: blueviolet; */
 }
 .about_img{

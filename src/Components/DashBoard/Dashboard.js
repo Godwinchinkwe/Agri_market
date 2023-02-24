@@ -6,6 +6,9 @@ import Dashsidemenu from "./Dashsidemenu"
 import { useNavigate } from "react-router-dom";
 import Subhead from "../Subhead/Subhead"
 import {useEffect} from "react"
+import Dashfooter from "./Dashfooter";
+import {FaUpload} from 'react-icons/fa'
+import Time from "../Time/Time";
 
 
 function Dashboard({props}) {
@@ -46,15 +49,37 @@ function Dashboard({props}) {
           <h4 className="dasth3" onClick={() => navigate('/Password')}>Change password</h4>
           <h4 className="dasth3">LOG OUT</h4>
         </div>
-        <div className="dash_maincont">
-          <div className="dash_mainCont_inside">
 
+        <div className="dash_maincont">
+         <div className="dash_elements">
+            <div className="ddt">customers</div>
+            <div className="ddt">average sales</div>
+            <div className="ddt"> average order</div>
+            <div className="ddt">daily visitors</div>
+           </div>
+          <div className="dash_mainCont_inside">
+            <div> <Time /> </div>
+            <div> <FaUpload/> <br/> upload </div>
+            <div></div>
+            <div></div>
           </div>
+
+          <div className="todays_order">
+          <h4>last top Orders</h4>
+          <div>
+            
+          </div>
+
         </div>
+
+        </div>
+
+        
 
       </div>
 
     </div>
+    <Dashfooter />
     </>
 
   );

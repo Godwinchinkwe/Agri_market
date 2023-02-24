@@ -4,56 +4,83 @@
     padding: 0px;
 }
 .detail-holder{
-    height: 85vh;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: greenyellow; */
+    /* background:rgb(20, 119, 20); */
     flex-direction: column;
 }
 .detail-card{
-    width: 70%;
-    min-height:60%;
-    /* background-color:grey; */
-    margin-top: 70px;
+    width: 55%;
+    height:50%;
     display: flex;
     gap: 10px; 
-    padding: 10px;
-    border-radius: 15px;
+    padding: 5px;
+    border-radius: 6px 0px 6px 0px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+ justify-content: space-between;
+ align-items: center;
+ background: white;
 }
 .detail-image{
     flex: 1;
     display: flex;
     flex-direction: column;
+    /* background-color: red; */
+    /* height: 90%; */
+    align-items: center;
+    margin-left: 10px;
+    justify-content: space-around;
     
 }
+.Details-image-holder {
+    width:50%;
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: brown; */
+}
 .detail-img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+   width: 100%;
+   height: 40vh;
+    object-fit: cover;
+    /* background-color: red; */
+}
+
+.image-div{
+    flex: 2
 }
 .detail-details{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 8px;
+    height: 50vh;
+    width: 50%;
+    text-align: flex-start;
+}
+.detail-details2 {
+    background-color: tomato;
+    height: 33vh;
+    margin-left: 12px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    padding: 6px;
-    flex: 1.5;
 }
 
-.image-div{
-   
-    flex: 2
-}
 .image-title{
     flex: 1;
 }
 .detail-desc{
-    font-size: 1.5rem;
-    font-weight: 600;
+    margin-top: 40px;
+    font-size: 1.3em;
+    font-weight: 400;
     color:black
 }
 .detail-desc span{
@@ -92,10 +119,19 @@
     color: black;
     opacity: .9;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .detail-card{
         width:80%;
+        margin-top: 80px;
         min-height:60%;
+        display: flex;
+        flex-direction: column;
 
-    }  
+    }
+    .detail-details{
+        width:95%;
+    }
+    detail-image{
+        margin-top: 25px;
+    }
 }

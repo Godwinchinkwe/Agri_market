@@ -30,20 +30,20 @@ const Detail = () => {
 
   return (
     <div className="detail-holder" > 
-    <h2>Detailed Page</h2>
+    <h2>Detailed Page</h2><br/>
         <div className="detail-card"  >
             <div className="detail-image">
                 <div  className="image-div">
                     <img className="detail-img" src={item.image} alt="iges"/>
                 </div>
                 <div  className="image-title">
-                    <h4>Name:{item.productName}</h4>
+                    <h3>Name:{item.productName}</h3>
                 </div>
             </div>
             <div className="detail-details">
-                <p className="detail-desc">Description: {item.decs}</p>
-                <p className="detail-cat" > Category: {item.categories}</p><br/>
-                <p className="detail-cat"> Price:₦{item.price}</p>
+                <p className="detail-desc">Description: <span>{item.decs}</span> </p><br/>
+                <p className="detail-cat" > Category: <span> {item.categories} </span> </p><br/>
+                <p className="detail-rat"> Price:₦{item.price}</p>
               
                 <div className="detail-button" onClick={()=>{dispatch(addToCart(item)); dispatch(total());
                 Swal.fire({

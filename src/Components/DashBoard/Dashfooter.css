@@ -1,0 +1,31 @@
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.Dashfooter_main{
+    width: 100%;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: tomato; */
+    position:relative;
+    position: fixed;
+    bottom: 0%;
+    /* top:100%; */
+}
+.dashfooter_wrap{
+    width: 95%;
+    height: 45px;
+    background: purple;
+}
+.Dashfooter_main{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .Dashfooter_main{
+        display:flex;
+    }
+}

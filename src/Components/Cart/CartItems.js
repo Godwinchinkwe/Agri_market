@@ -2,14 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 import { useDispatch } from "react-redux";
 import { removeItem, addToCart, minusItem, total } from "../../Redux/Features";
+import { MdDelete } from "react-icons/md";
 
 const CartItems =(props)=>{
   const [change, setChange] = useState(false)
+
+  const dispatch = useDispatch()
   
   useEffect(()=>{
     dispatch(total())
-}, [change])
-  const dispatch = useDispatch()
+}, [change, dispatch])
+
+  
     return(
        
           <div className="Cart-Item">
@@ -21,7 +25,7 @@ const CartItems =(props)=>{
               <button onClick={()=> {dispatch(minusItem(props.item)); setChange(!change)}}>-</button>
             </div>
             <h3>₦{props.price * props.QTY}</h3>
-            <button onClick={()=>{ dispatch(removeItem(props.item)); setChange(!change)}}>Del</button>
+            <button className="delete" onClick={()=>{ dispatch(removeItem(props.item)); setChange(!change)}}>< MdDelete/></button>
          
         </div>
     )
