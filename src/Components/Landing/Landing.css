@@ -192,8 +192,8 @@
   .about_button:hover{
     transform: scale(1.1);
     opacity: 9;
-    background-color:#0C764C;
-    color: whitesmoke;
+    /* background-color:#0C764C; */
+    /* color: whitesmoke; */
     border-radius: 12px;
   }
 

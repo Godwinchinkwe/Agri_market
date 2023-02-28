@@ -17,9 +17,9 @@ function Time() {
   return (
     <div className="main">
        
-       <h1>{time}</h1>
+       <b>{time}</b>
       <b>{date}</b>
-      <button  className="btn" onClick={update}></button>
+      {/* <button  className="btn" onClick={update}></button> */}
        
     </div>
   )

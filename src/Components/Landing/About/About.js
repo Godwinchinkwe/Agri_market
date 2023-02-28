@@ -26,7 +26,7 @@ function About() {
                 </div>
 
                 <div className='shopnow_about'>
-                <button className='about_shopnow' onClick={()=> navigate('/Dashboard')}>Shop Now</button>
+                <button className='about_shopnow' onClick={()=> navigate('/')}>Home</button>
                 </div>
             </div>
 

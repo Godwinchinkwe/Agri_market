@@ -27,7 +27,7 @@
    height: 90vh;
     display: flex;
     justify-content: space-between;
-    background: paleturquoise;
+    /* background: paleturquoise; */
     margin-top: 10px;
     /* flex-direction: column; */
 }
@@ -37,7 +37,7 @@
 } */
 .dash_sidebar{
     width:20%;
-    height: 80%;
+    height: 95%;
     background:#24835d;
     display: flex;
     align-items: center;
@@ -49,20 +49,36 @@
 .dash_maincont{
     width:78%;
     min-height:80%; 
-    background: tomato;
+    /* background: tomato; */
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .dash_mainCont_inside{
     width:85%;
-    height: 40%;
-    background: blue;
+    height: fit-content;
+    /* background: blue; */
+    display: flex;
     /* margin-top: 20px; */
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    align-items: center;
+    justify-content: space-between;
+    /* gap:30px; */
+}
+.faupload{              
+    width:65%;
+    display: flex;
+    justify-content: center;
+    /* background:powderblue; */
+}
+.dashupload{
+    font-size: 50px;
+    cursor: pointer;
+    color: aqua;
 }
 .dash_icon{
     display: none;
@@ -96,21 +112,32 @@
     justify-content: space-around;
     align-items: center;
 }
+.dish_dish_name{
+    width:80%;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .dasth3{
-    
+    display: flex;
     cursor: pointer;
     padding: 10px;
     color:whitesmoke;
     /* color:black; */
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+    gap: 10px;
+    align-items: center;
+    width:90%;
+    justify-content: space-around;
 }
 .dasth3:hover{
     transform: scale(1.1);
     opacity: .9;
     /* background: rgb(134, 132, 132); */
-    background: white;
-    color:#0C764C;
+    background-color:#468f72;
+    /* color:#0C764C; */
 }
 .Dashfooter_main{
     display: none;
@@ -118,7 +145,7 @@
 .dash_elements{
     display:flex;
     justify-content: space-between;
-    width: 80%;
+    width: 80%;     
     margin-bottom: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
@@ -126,13 +153,46 @@
 .ddt{
     width:110px;
     height:80px;
-    background: yellowgreen;
+    /* background: whitesmoke; */
     margin: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    color: #24835d;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
+.timeshow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height: 100px;
+    border-radius:100px;
+    background: palevioletred;
+}
+.today_order{
+    /* background: yellowgreen; */
+    width:30%;
+    justify-content: space-around;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+}
+.order_name{
+    margin-left: 10px;
+}
+.order_content{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.order_condo{
+    margin-right:10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -156,6 +216,13 @@
     }
     .Dashfooter_mainp{
         display:flex;
+    }
+    .dash_mainCont_inside{
+        display:flex;
+        flex-direction: column;
+    }
+    .today_order{
+      width: 80%;
     }
 
 }

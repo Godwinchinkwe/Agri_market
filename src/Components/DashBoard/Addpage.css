@@ -7,10 +7,12 @@
     width: 100%;
    min-height: 90%;
     display: flex;
-    margin-top: 40px;
+    margin-top: 140px;
   }
   .products_image {
-    height:20vh;
+    height:180px;
+    width: 180px;
+    border-radius: 200px;
   }    
   .Addproduct_left {
     width: 50%;

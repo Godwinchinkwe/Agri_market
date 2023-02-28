@@ -111,8 +111,7 @@ span{
     padding-inline: 10px;
     max-height: 80%;
     overflow-y: scroll;
-    /* align-items: center; */
-    /* background-color: yellow; */
+    
 }
 .Cart-Item{
     width: 100%;

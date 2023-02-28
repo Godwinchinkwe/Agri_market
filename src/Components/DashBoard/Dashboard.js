@@ -7,8 +7,14 @@ import { useNavigate } from "react-router-dom";
 import Subhead from "../Subhead/Subhead"
 import {useEffect} from "react"
 import Dashfooter from "./Dashfooter";
-import {FaUpload} from 'react-icons/fa'
+import {FaUpload} from 'react-icons/fa';
 import Time from "../Time/Time";
+import {CgProfile} from 'react-icons/cg'
+import { BsCart4 } from "react-icons/bs";
+import { SiSalesforce } from "react-icons/si";
+import { IoMdSettings } from "react-icons/io";
+import { BiLogOutCircle } from "react-icons/bi";
+import { MdPassword } from "react-icons/md";
 
 
 function Dashboard({props}) {
@@ -35,32 +41,61 @@ function Dashboard({props}) {
          <ImMenu3 fontSize={"30px"} color="#0C764C" onClick={handlechange}/>} </div>
          {toggle ? <Dashsidemenu props={handlechange}/>: null}
 
-        <h4>Log out</h4>
+        <h4> </h4>
       </div>
       <div className="main_dash">
         <div className="dash_sidebar">
-          <h3 >Dashboard</h3>
-          {/* <h4 className="dasth3">HOME</h4> */}
-          <h4 className="dasth3" onClick={() => navigate('/MarketPlace')}>Market Place</h4>
-          <h4 className="dasth3"> Settings</h4>
-          <h4 className="dasth3"> About</h4>
-          <h4 className="dasth3"> Contact us</h4>
-          <h4 className="dasth3" onClick={() => navigate('/Addpage')}>Upload</h4>
-          <h4 className="dasth3" onClick={() => navigate('/Password')}>Change password</h4>
-          <h4 className="dasth3">LOG OUT</h4>
+         <div className="dish_dish_name">  <h3 >Dashboard</h3> </div>
+          
+         <div className="dasth3" onClick={() => navigate('/Addpage')}> <FaUpload font-size="25px"/> <h4 > Upload </h4> </div>
+         <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > Settings</h4> </div>
+         <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > About</h4> </div>
+         <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > Contact us</h4> </div>          
+         <div className="dasth3" onClick={() => navigate('/Resetpassword/1')}>  < MdPassword font-size="25px"/>  <h4 >Security</h4> </div> 
+         <div  className="dasth3"> <BiLogOutCircle font-size="25px"/> <h4>Logout</h4> </div>
+
+          <div className="timeshow">
+            <Time />
+          </div>
+
         </div>
 
         <div className="dash_maincont">
          <div className="dash_elements">
-            <div className="ddt">customers</div>
-            <div className="ddt">average sales</div>
-            <div className="ddt"> average order</div>
-            <div className="ddt">daily visitors</div>
+            <div className="ddt"> <h4>Customers</h4>
+            <CgProfile font-size="25px"/> <h4>9,324</h4> </div>
+            <div className="ddt"><h4>Average sales</h4>
+            <  SiSalesforce font-size="25px"/> <h4>1,924</h4></div>
+            <div className="ddt"> <h4>Average order</h4>
+            < BsCart4 font-size="25px"/> <h4>2,824</h4></div>
+            <div className="ddt"> <h4>Daily visitors</h4>
+            <CgProfile font-size="25px"/> <h4>3,728</h4></div>
            </div>
           <div className="dash_mainCont_inside">
-            <div> <Time /> </div>
-            <div> <FaUpload/> <br/> upload </div>
-            <div></div>
+
+            <div className="faupload"> <FaUpload onClick={() => navigate('/Addpage')} className="dashupload"/> <br/> upload </div>
+            <div className="today_order">
+              <h4>Today's Order</h4>
+              <div className="order_content">
+                <div className="order_name">
+                  <p>Esther Howard</p><br/>
+                  <p>Esther Howard</p><br/>
+                  <p>Esther Howard</p><br/>
+                  <p>Esther Howard</p><br/>
+                  <p>Esther Howard</p>
+                </div>
+
+                <div className="order_condo">
+                <p>Poultry</p><br/>
+                  <p>Poultry</p><br/>
+                  <p>Poultry</p><br/>
+                  <p>Poultry</p><br/>
+                  <p>Poultry</p><br/>
+                </div>
+
+              </div>
+
+            </div>
             <div></div>
           </div>
 

@@ -18,7 +18,8 @@ function MarketPlace() {
       <input type="text" placeholder='  search' className='marketsearch'/> <button className="marketbutt">Search</button>
       </div>
       <h2>Livestock at your finger tips</h2>
-    <p>Forget the hustle, lets go to the market for you!!!</p>
+    <marquee direction="left" width="40%"
+    >Forget the hustle, lets go to the market for you!!!</marquee>
       <div className='market_load'>
       <Landcont
       ftext="Chicken  based on their breeds"

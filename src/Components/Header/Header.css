@@ -171,21 +171,24 @@
   }
 
 @media screen and (max-width: 760px) {
-    /* .NavTab{
+    .NavTab{
       display: none;
-    } */
+    }
     .new{
         display:none;
     }
     .Burger {
       display: flex;
     }
-}
-@media screen and (max-width: 700px){
-    .NavTab{
-        display: none;
-    }
     .login_response{
         display: none;
     }
 }
+/* @media screen and (max-width: 700px){ */
+    /* .NavTab{
+        display: none;
+    } */
+    /* .login_response{
+        display: none;
+    } */
+/* } */

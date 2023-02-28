@@ -72,7 +72,7 @@ function Landing({props}) {
      <div className='land_delivery'>
       <div className='land_delivery_text'>
         <h2>We Deliver All Your livestock Products
-        to your location in 24 Hours</h2>
+        to your location in 24 Hours </h2>
       </div>
 
 

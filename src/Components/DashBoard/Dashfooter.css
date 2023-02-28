@@ -17,8 +17,16 @@
 }
 .dashfooter_wrap{
     width: 95%;
-    height: 45px;
-    background: purple;
+    height: 49px;
+    background:#0C764C;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+}
+.dashfootdown{
+    font-size: 25px;
+    color:aliceblue;
 }
 .Dashfooter_main{
     display: none;

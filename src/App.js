@@ -18,6 +18,8 @@ import Detail from './Components/Details/Detail';
 import Emptycart from './Components/Cart/Emptycart';
 import Verify from './Components/Form/Decision/User/Verify';
 import Subhead from './Components/Subhead/Subhead';
+import Footer from './Components/Landing/Footer/Footer';
+import Category from './Components/Category/Category';
 // import { ThemeContext } from "../src/Components/API/Context"
 
 
@@ -39,21 +41,24 @@ function App() {
       {/* <Header /> */}
     <Routes>
           <Route path='/' element={<Landing props={changeToggle}/>} />
-          <Route path='/MarketPlace' element={<MarketPlace/>} />
+          <Route path='/MarketPlace' element={<MarketPlace />} />
           <Route path='/Cart' element={<Cart/>} />
           <Route path='/Login' element={<Login props={toggle}/>} />
           <Route path='/Choose' element={<Choose/>} />
           <Route path='/User' element={<User props={toggle} />}/>
           <Route path='/Admin' element={<Admin props={toggle} />}/>
           <Route path='/Password' element={<Password/>} />
-          <Route path='/Resetpassword' element={<Resetpassword/>} />
+          <Route path='/Resetpassword/:id' element={<Resetpassword/>} />
           <Route path='/About' element={<About/>} />
           <Route path='/Dashboard' element={<Dashboard props={toggle}/>} />
           <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
-          <Route path='/Addpage' element={<Addpage/>} />
+          <Route path='/Addpage' element={<Addpage props={changeToggle}/>} />
           <Route path='/Verify/:id' element={<Verify/>} />
           <Route path='/Subhead' element={<Subhead/>} />
+          <Route path='/Footer' element={<Footer/>} />
+          <Route path='/Category/:cs' element={<Category/>} />
+
         </Routes>
       </Router>
     </div>
