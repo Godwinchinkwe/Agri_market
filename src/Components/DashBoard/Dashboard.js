@@ -15,6 +15,7 @@ import { SiSalesforce } from "react-icons/si";
 import { IoMdSettings } from "react-icons/io";
 import { BiLogOutCircle } from "react-icons/bi";
 import { MdPassword } from "react-icons/md";
+import pic from "../DashBoard/godwin.jpg"
 
 
 function Dashboard({props}) {
@@ -109,12 +110,39 @@ function Dashboard({props}) {
           </div>
           <div className="todays_order2update">
             <div className="update1">
-              <div className="update1name"></div>
-              <div className="update2name"></div>
+              <div className="update1name">
+                <img className="godwin" src={pic} alt=" " />
+                <p>Godwin Chinkwe</p>
+              </div>
+              <div className="update2name">
+              <img className="godwin" src={pic} alt=" " />
+              <p>Onah Destiny</p>
+              </div>
             </div>
-            <div className="update2"></div>
-            <div className="update3"></div>
-            <div className="update4"></div>
+            <div className="update2">
+            <div className="update1date">
+               <p>01/03/2023</p>
+              </div>
+              <div className="update2date">
+              <p>01/03/2023</p>
+              </div>
+            </div>
+            <div className="update3">
+            <div className="update1amt">
+               <p>₦25,000</p>
+              </div>
+              <div className="update2amt">
+              <p>₦30,000</p>
+              </div>
+            </div>
+            <div className="update4">
+            <div className="update1receive">
+               <button className="cmpt1">Completed</button>
+              </div>
+              <div className="update2receive">
+              <button className="cmpt1">Completed</button>
+              </div>
+            </div>
            
           </div>
 

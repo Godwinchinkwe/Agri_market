@@ -228,26 +228,97 @@
     width: 30%;
     height: 80px;
     background-color: sienna;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
 }
 .update3 {
     width: 30%;
     height: 80px;
     background-color:salmon ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
 }
 .update4 {
     width: 30%;
     height: 80px;
     background-color: royalblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
 }
 .update1name {
     width: 100%;
     height: 35px;
     background-color: palegreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .update2name {
     width: 100%;
     height: 35px;
     background-color: palegreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.godwin {
+    width:35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.update1date {
+    width: 100%;
+    height: 35px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update2date {
+    width: 100%;
+    height: 35px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update1amt {
+    width: 100%;
+    height: 35px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update2amt {
+    width: 100%;
+    height: 35px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update1receive {
+    width: 100%;
+    height: 35px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update2receive {
+    width: 100%;
+    height: 35px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
