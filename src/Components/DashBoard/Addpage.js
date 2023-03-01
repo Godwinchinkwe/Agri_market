@@ -2,14 +2,14 @@ import React, { useState, useEffect, } from 'react'
 import './Addpage.css'
 import { FaUserCircle } from "react-icons/fa";
 import axios from 'axios'
-import { Dispatch,useDispatch, useSelector } from 'react-redux'
+import { Dispatch, useDispatch, useSelector } from 'react-redux'
 
 
-export default function Addpage({props}) {
+export default function Addpage({ props }) {
   const [image, setImage] = useState(null)
   const [mageDB, setImageDB] = useState({ image: "" })
   const user = useSelector((state) => state.Commerce.user)
-  // console.log(user)
+  console.log(user[0]._id)
   const [product, setProduct] = useState(
     {
       productName: "",
@@ -24,8 +24,8 @@ export default function Addpage({props}) {
     const file = event.target.files[0];
     const save = URL.createObjectURL(file);
     setImageDB({ image: save });
-      setProduct({ ...product, image:  file });
-    
+    setProduct({ ...product, image: file });
+
   };
 
   useEffect(() => {
@@ -34,35 +34,34 @@ export default function Addpage({props}) {
 
   useEffect(() => {
     props(true)
-  }, [props ])
+  }, [props])
 
   return (
     <div className='Addproduct'>
       <form className='Addproduct_left'
-      onSubmit={(e)=>{
-        e.preventDefault()
-        console.log('cliked')
-        const formData = new FormData();
-        formData.append('title', product.title);
-        formData.append('description', product.description);
-        formData.append('image', product.image);
-        formData.append('price', product.price);
-        formData.append('stockQuantity', product.stockQuantity);
-        formData.append('categories', product.categories);
-        console.log(localStorage.getItem(''))
-        // axios.post(`https://agri-market.onrender.com/api/product/:userId`, formData, {
-        //   headers: {
-        //     'Content-Type': 'multipart/form-data'
-        //   }
-        // })
-        //   .then(response => {
-        //     console.log(response);
-           
-        //   })
-        //   .catch(error => {
-        //     console.log(error);
-        //   });
-      }}
+        onSubmit={(e) => {
+          e.preventDefault()
+          console.log('cliked')
+          const formData = new FormData();
+          formData.append('productName', product.productName);
+          formData.append('Desc', product.Desc);
+          formData.append('image', product.image);
+          formData.append('price', product.price);
+          formData.append('productQuantity', product.productQuantity);
+          formData.append('categories', product.categories);
+          axios.post(`https://agri-market.onrender.com/api/product/${user[0]._id}`, formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+          })
+            .then(response => {
+              console.log(response);
+
+            })
+            .catch(error => {
+              console.log(error);
+            });
+        }}
       >
 
         <div className='Addproduct_left_top'>
@@ -70,7 +69,6 @@ export default function Addpage({props}) {
             <p>Title</p>
             <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productName" type="text" placeholder='Title' />
           </div>
-
 
           <p className='textarea'>description</p>
           <textarea onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} type="text" id="w3review" name="Desc" maxLength="40%" rows="10" cols="50">
@@ -97,13 +95,13 @@ export default function Addpage({props}) {
             <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" />
           </div>
         </div>
-        <button onClick={() =>{console.log(product)}} className='Addproduct_right_buttom_button'>Upload</button>
+        <button onClick={() => { console.log(product) }} className='Addproduct_right_buttom_button'>Upload</button>
       </form>
 
       <div className='Addproduct_right'>
         <div className='Addproduct_right_top'>
           <div className='Addproduct_right_top_image1'>
-            {product.image ? <img className='products_image' src={mageDB.image}  alt=""/> : < FaUserCircle fontSize={200} color="#0C764C"
+            {product.image ? <img className='products_image' src={mageDB.image} alt="" /> : < FaUserCircle fontSize={200} color="#0C764C"
             />}
           </div>
         </div>
@@ -115,6 +113,6 @@ export default function Addpage({props}) {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

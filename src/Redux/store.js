@@ -10,7 +10,6 @@ const persistConfig = {
   storage
 }
 
-
 const reducer = combineReducers({
   Commerce: e_Commerce,
 })

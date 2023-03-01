@@ -16,7 +16,6 @@ const Cart = () => {
   const dispatch = useDispatch()
   // const [clear, setClear] = useState(false)
 
-  
 
   return (
    
