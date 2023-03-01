@@ -194,6 +194,62 @@
 .order_condo{
     margin-right:10px;
 }
+.todays_order {
+    width: 90%;
+    height: 70%;
+    background-color: chartreuse;
+}
+.todays_order2 {
+    width: 100%;
+    height: 35px;
+    background-color: tomato;
+    display:flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.todays_order2update {
+    width: 100%;
+    height: 80px;
+    background-color: slateblue;
+    display:flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.update1 {
+    width: 30%;
+    height: 80px;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+.update2 {
+    width: 30%;
+    height: 80px;
+    background-color: sienna;
+}
+.update3 {
+    width: 30%;
+    height: 80px;
+    background-color:salmon ;
+}
+.update4 {
+    width: 30%;
+    height: 80px;
+    background-color: royalblue;
+}
+.update1name {
+    width: 100%;
+    height: 35px;
+    background-color: palegreen;
+}
+.update2name {
+    width: 100%;
+    height: 35px;
+    background-color: palegreen;
+}
+
 
 @media screen and (max-width: 768px) {
     .dash_sidebar{

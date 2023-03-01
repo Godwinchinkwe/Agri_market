@@ -70,13 +70,21 @@ function Goods() {
     <div className='Goods_decision'>
     <button className='goods_cart' 
      onClick={()=>{dispatch(addToCart(i)); dispatch(total());
-      Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'item has been added',
-          showConfirmButton: false,
-          timer: 1500,
-        })
+      const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+Toast.fire({
+  icon: 'success',
+  title: 'Item added successfully'
+})
       }}> Add to <BsCart4/> </button>
     <button className='goods_details' onClick={()=> navigate(`/Detail/${i._id}`)} >Details</button>  
     </div>

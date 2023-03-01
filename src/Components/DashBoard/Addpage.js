@@ -1,33 +1,30 @@
 import React, { useState, useEffect, } from 'react'
 import './Addpage.css'
-// import add from './add.png'
 import { FaUserCircle } from "react-icons/fa";
-// import { useDispatch } from 'react-redux'
-// import { addProduct } from '../../REDUX/features'
+// import axios from 'axios'
+
+
+
 export default function Addpage({props}) {
-  // const dispach = useDispatch()
-  // const [state, setState] = useState(false)
-  // const [image, setImage] = useState(null)
+  const [image, setImage] = useState(null)
+  const [mageDB, setImageDB] = useState({ image: "" })
+
   const [product, setProduct] = useState(
     {
-      title: "",
-      description: "",
+      productName: "",
+      Desc: "",
       image: "",
       price: "",
       productQuantity: "",
       categories: "",
-      brand: "" ,
     }
   )
   const handleChange = (event) => {
     const file = event.target.files[0];
-    const reader = new FileReader();
-   
-    reader.onloadend = () => {
-      setProduct(reader.result);
-      setProduct({ ...product, image: reader.result });
-    }
-    reader.readAsDataURL(file);
+    const save = URL.createObjectURL(file);
+    setImageDB({ image: save });
+      setProduct({ ...product, image:  file });
+    
   };
 
   useEffect(() => {
@@ -39,7 +36,17 @@ export default function Addpage({props}) {
 
   return (
     <div className='Addproduct'>
-      <div className='Addproduct_left'>
+      <form className='Addproduct_left'
+      onSubmit={(e)=>{
+          e.preventDefault()
+      const FormData= new FormData()
+          
+
+
+
+
+      }}
+      >
 
         <div className='Addproduct_left_top'>
           <div className='Addproduct_left_top_input'>
@@ -73,7 +80,9 @@ export default function Addpage({props}) {
             <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" />
           </div>
         </div>
-      </div>
+        <button onClick={() =>
+            (product)} className='Addproduct_right_buttom_button'>Upload</button>
+      </form>
 
       <div className='Addproduct_right'>
         <div className='Addproduct_right_top'>
@@ -88,8 +97,6 @@ export default function Addpage({props}) {
             <h3>{product.price}</h3>
             <p>{product.description}</p>
           </div>
-          <button onClick={() =>
-            (product)} className='Addproduct_right_buttom_button'>Upload</button>
         </div>
       </div>
     </div>

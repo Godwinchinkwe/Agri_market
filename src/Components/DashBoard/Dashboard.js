@@ -52,7 +52,7 @@ function Dashboard({props}) {
          <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > About</h4> </div>
          <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > Contact us</h4> </div>          
          <div className="dasth3" onClick={() => navigate('/Resetpassword/1')}>  < MdPassword font-size="25px"/>  <h4 >Security</h4> </div> 
-         <div  className="dasth3"> <BiLogOutCircle font-size="25px"/> <h4>Logout</h4> </div>
+         <div  className="dasth3" onClick={() =>{}} > <BiLogOutCircle font-size="25px"/> <h4>Logout</h4> </div>
 
           <div className="timeshow">
             <Time />
@@ -101,8 +101,21 @@ function Dashboard({props}) {
 
           <div className="todays_order">
           <h4>last top Orders</h4>
-          <div>
-            
+          <div className="todays_order2">
+            <p>Name</p>
+            <p>Date</p>
+            <p>Amount</p>
+            <p>Received</p>
+          </div>
+          <div className="todays_order2update">
+            <div className="update1">
+              <div className="update1name"></div>
+              <div className="update2name"></div>
+            </div>
+            <div className="update2"></div>
+            <div className="update3"></div>
+            <div className="update4"></div>
+           
           </div>
 
         </div>
