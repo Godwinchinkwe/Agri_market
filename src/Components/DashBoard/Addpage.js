@@ -1,36 +1,35 @@
 import React, { useState, useEffect, } from 'react'
 import './Addpage.css'
-// import add from './add.png'
 import { FaUserCircle } from "react-icons/fa";
-// import { useDispatch } from 'react-redux'
-// import { addProduct } from '../../REDUX/features'
+import axios from 'axios'
+import { Dispatch,useDispatch, useSelector } from 'react-redux'
+
+
 export default function Addpage({props}) {
-  // const dispach = useDispatch()
-  // const [state, setState] = useState(false)
-  // const [image, setImage] = useState(null)
+  const [image, setImage] = useState(null)
+  const [mageDB, setImageDB] = useState({ image: "" })
+  const user = useSelector((state) => state.Commerce.user)
+  // console.log(user)
   const [product, setProduct] = useState(
     {
-      title: "",
-      description: "",
+      productName: "",
+      Desc: "",
       image: "",
       price: "",
       productQuantity: "",
       categories: "",
-      brand: "" ,
     }
   )
   const handleChange = (event) => {
     const file = event.target.files[0];
-    const reader = new FileReader();
-   
-    reader.onloadend = () => {
-      setProduct(reader.result);
-      setProduct({ ...product, image: reader.result });
-    }
-    reader.readAsDataURL(file);
+    const save = URL.createObjectURL(file);
+    setImageDB({ image: save });
+      setProduct({ ...product, image:  file });
+    
   };
 
   useEffect(() => {
+    console.log(product)
   }, [product])
 
   useEffect(() => {
@@ -39,17 +38,42 @@ export default function Addpage({props}) {
 
   return (
     <div className='Addproduct'>
-      <div className='Addproduct_left'>
+      <form className='Addproduct_left'
+      onSubmit={(e)=>{
+        e.preventDefault()
+        console.log('cliked')
+        const formData = new FormData();
+        formData.append('title', product.title);
+        formData.append('description', product.description);
+        formData.append('image', product.image);
+        formData.append('price', product.price);
+        formData.append('stockQuantity', product.stockQuantity);
+        formData.append('categories', product.categories);
+        console.log(localStorage.getItem(''))
+        // axios.post(`https://agri-market.onrender.com/api/product/:userId`, formData, {
+        //   headers: {
+        //     'Content-Type': 'multipart/form-data'
+        //   }
+        // })
+        //   .then(response => {
+        //     console.log(response);
+           
+        //   })
+        //   .catch(error => {
+        //     console.log(error);
+        //   });
+      }}
+      >
 
         <div className='Addproduct_left_top'>
           <div className='Addproduct_left_top_input'>
             <p>Title</p>
-            <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="title" type="text" placeholder='Title' />
+            <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productName" type="text" placeholder='Title' />
           </div>
 
 
           <p className='textarea'>description</p>
-          <textarea onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} type="text" id="w3review" name="description" maxLength="40%" rows="10" cols="50">
+          <textarea onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} type="text" id="w3review" name="Desc" maxLength="40%" rows="10" cols="50">
           </textarea>
 
         </div>
@@ -73,12 +97,13 @@ export default function Addpage({props}) {
             <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" />
           </div>
         </div>
-      </div>
+        <button onClick={() =>{console.log(product)}} className='Addproduct_right_buttom_button'>Upload</button>
+      </form>
 
       <div className='Addproduct_right'>
         <div className='Addproduct_right_top'>
           <div className='Addproduct_right_top_image1'>
-            {product.image ? <img className='products_image' src={product.image}  alt=""/> : < FaUserCircle fontSize={200} color="#0C764C"
+            {product.image ? <img className='products_image' src={mageDB.image}  alt=""/> : < FaUserCircle fontSize={200} color="#0C764C"
             />}
           </div>
         </div>
@@ -88,8 +113,6 @@ export default function Addpage({props}) {
             <h3>{product.price}</h3>
             <p>{product.description}</p>
           </div>
-          <button onClick={() =>
-            (product)} className='Addproduct_right_buttom_button'>Upload</button>
         </div>
       </div>
     </div>

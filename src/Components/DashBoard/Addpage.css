@@ -10,9 +10,9 @@
     margin-top: 140px;
   }
   .products_image {
-    height:180px;
-    width: 180px;
-    border-radius: 200px;
+    height:160px;
+    width: 160px;
+    border-radius: 160px;
   }    
   .Addproduct_left {
     width: 50%;
@@ -39,6 +39,7 @@
   
   .Addproduct_left_top_input {
     width: 95%;
+    margin-bottom: 10px;
   }
   
   .Addproduct_left_top_input input {
@@ -87,6 +88,7 @@
   
   .Addproduct_left_bottom_input {
     width: 90%;
+    margin-bottom: 10px;
   }
   
   .Addproduct_left_bottom_input input {
@@ -117,6 +119,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 50px;
     /* background-color: rgb(202, 199, 199); */
   }
   
@@ -213,5 +216,6 @@
   
     .Addproduct_right {
       width: 100%;
+      margin-bottom:50px;
     }
   }

@@ -7,9 +7,12 @@ import axios from 'axios'
 import ClipLoader from "react-spinners/ClipLoader";
 // import { ThemeContext } from "../../API/Context"
 import Subhead from "../../Subhead/Subhead"
-
+import { Dispatch,useDispatch,useSelector } from 'react-redux'
+import { addUser} from '../../../Redux/Features'
 
 function Login({props}) {
+  const dispatch= useDispatch()
+  // const user = useSelector((state) => state.Commerce.user)
   const [spin, setSpin] =useState(false)
   const [view, setView] = useState(false)
 
@@ -54,6 +57,8 @@ try{
         }
       }
    const response = await axios.post("https://agri-market.onrender.com/api/login", value, config)
+   console.log(response.data.data)
+   dispatch(addUser(response.data.data))
    localStorage.setItem("response", JSON.stringify(response));
       console.log(response);
       if(response.status === 200) {

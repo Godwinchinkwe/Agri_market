@@ -6,13 +6,17 @@ import {clearCart} from "../../Redux/Features";
 import {ThemeContext} from "../API/Context"
 import { BsCart4 } from "react-icons/bs";
 import Emptycart from "./Emptycart"
+import Swal from 'sweetalert2'
+// import { useState } from 'react';
 
 
 const Cart = () => {
   const {totalAmount}=useContext(ThemeContext)
   const cart = useSelector((state) => state.Commerce.cart);
-  
   const dispatch = useDispatch()
+  // const [clear, setClear] = useState(false)
+
+  
 
   return (
    
@@ -23,7 +27,24 @@ const Cart = () => {
       <div className="Cart-Title">
        
         <h3>Total= ₦{totalAmount}</h3>
-        <h4 onClick={()=> {dispatch(clearCart())}}>Clear<BsCart4/></h4>
+        {/* <h4 onClick={()=> {dispatch(clearCart());Swal.fire({ */}
+        <h4 onClick={()=> {;Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, Clear All!'
+}).then((result) => {
+  if (result.isConfirmed) {dispatch(clearCart());
+    Swal.fire(
+      'Cleared!',
+      'Your cart has been Cleared.',
+      'success'
+    )
+  }
+})}} >Clear<BsCart4/></h4>
       </div>
       <div className="Cart-Items">
       {
@@ -55,3 +76,22 @@ const Cart = () => {
 }
 
 export default Cart
+
+
+
+// const Toast = Swal.mixin({
+//   toast: true,
+//   position: 'top-end',
+//   showConfirmButton: false,
+//   timer: 3000,
+//   timerProgressBar: true,
+//   didOpen: (toast) => {
+//     toast.addEventListener('mouseenter', Swal.stopTimer)
+//     toast.addEventListener('mouseleave', Swal.resumeTimer)
+//   }
+// })
+
+// Toast.fire({
+//   icon: 'success',
+//   title: 'Signed in successfully'
+// })

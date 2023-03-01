@@ -5,7 +5,7 @@
 }
 .emptycart_main{
     width:100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@
     padding: 10px;
     color: aliceblue;
     border-radius: 8px;
-    margin-top: 130px;
+    /* margin-top: 20px; */
 
 }
 .emptybotton{
@@ -64,32 +64,37 @@ span{
 }
 .Cart-Holder{
     width: 100%;
-    height: calc(100vh - 70px);
+    height:90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 40px;
+    /* background: pink; */
 }
-.Cart-Box h2{
+/* .Cart-Box h2{
     color:#0C764C
-}
+} */
 .Cart-Box{
     width: 60%;
     min-height: 40%;
     text-align: center;
-    /* border: 1px solid; */
+    border: 1px solid;
     display: flex;
     flex-direction: column;
     background-color: white;
     color:#0C764C;
     border-radius: 8px;
     /* background: grey; */
+    margin-top: 80px;
+    /* position: fixed; */
     box-shadow:0 0 1px rgba(0, 0, 0, 24)0px 3px 8px ;
+    /* margin-bottom: 40px; */
 }
 .Cart-Title{
     display: flex;
     padding: 5px;
-    position: sticky;
+    /* position: sticky; */
     top: 150px;
     justify-content: space-between;
     background-color:#0C764C;
@@ -109,7 +114,7 @@ span{
     justify-content: center;
     flex-direction: column;
     padding-inline: 10px;
-    max-height: 80%;
+    max-height: 60%;
     overflow-y: scroll;
     
 }
@@ -175,7 +180,8 @@ span{
     border-radius: 5px;
     cursor: pointer;
     transition: all 350ms;
-    transform: scale(1)
+    transform: scale(1);
+    height:35px;
 }
 .Cart-Check button:hover{
     background-color: rgb(83, 8, 117);

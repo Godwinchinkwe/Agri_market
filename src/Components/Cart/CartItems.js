@@ -25,7 +25,7 @@ const CartItems =(props)=>{
               <button onClick={()=> {dispatch(minusItem(props.item)); setChange(!change)}}>-</button>
             </div>
             <h3>₦{props.price * props.QTY}</h3>
-            <button className="delete" onClick={()=>{ dispatch(removeItem(props.item)); setChange(!change)}}>< MdDelete/></button>
+            <button className="delete" onClick={()=>{ dispatch(removeItem(props.item)); setChange(!change)}}>< MdDelete font-size="25px"/></button>
          
         </div>
     )

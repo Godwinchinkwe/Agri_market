@@ -15,7 +15,7 @@ function Nav() {
   const cart = useSelector((state) => state.Commerce.cart);
   
   // const amount = useSelector((state) => state.commerce.amount);
-  // console.log(cart[0] === undefined ? 0 : cart[0].QTY, "My nav")
+  console.log(cart, "My nav")
 
   return (
     <div className="NavTab">
@@ -41,7 +41,7 @@ function Nav() {
         <p className="headercenter">  
         
           CART
-         <BsCart4 />{cart[0] === undefined ? 0 : cart[0].QTY}
+         <BsCart4 />{cart.length}
         </p>
       </NavLink>
     </div>
