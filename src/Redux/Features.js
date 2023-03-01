@@ -5,6 +5,7 @@ const initialState = {
     cart: [],
     total : 0,
     amount: 0,
+    user:[]
 }
 
 const features = createSlice({
@@ -14,9 +15,17 @@ const features = createSlice({
         bringProducts: (state, {payload})=>{
             state.products = payload;
         },
+       addUser: (state, {payload})=>{
+            state.user =[payload];
+        },
+        removeUser: (state, {payload})=>{
+            state.user = [];
+        },
         addToCart: (state, {payload})=>{
+            // console.log(payload, "payload")
+            // console.log(state.cart, "state.cart")
             const check = state.cart.findIndex((i) => i._id === payload._id);
-            // console,log
+            console.log(check)
             if(check >= 0){
                 state.cart[check].QTY += 1;
             } else {
@@ -25,19 +34,17 @@ const features = createSlice({
             }
         },
         minusItem: (state, { payload }) =>{
-            // console.log(state.amount)
-            // console.log(state.cart)
-            // console.log(payload)
+            
             const checkCart = state.cart.findIndex((el) => el._id === payload._id);
-            // console.log(state.cart[checkCart].QTY)
+            console.log(state.cart[checkCart].QTY)
             const check = state.cart[checkCart].QTY
-            // state.amount -= 1
+            state.amount -= 1
             if(check > 1){
                 state.cart[checkCart].QTY -= 1
             }
             else if (check === 1){
                 const remove = state.cart.filter(el => el._id !== payload._id)
-            // console.log(remove)
+            console.log(remove)
             state.cart = remove
             }
         },
@@ -71,6 +78,6 @@ const features = createSlice({
     },
 });
 
-export const {bringProducts, addToCart, removeItem, clearCart, total, minusItem} = features.actions
+export const {bringProducts, addToCart, removeItem, clearCart, total, minusItem, addUser, removeUser} = features.actions
 
 export default features.reducer

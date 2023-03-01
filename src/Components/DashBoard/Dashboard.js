@@ -101,7 +101,7 @@ function Dashboard({props}) {
           </div>
 
           <div className="todays_order">
-          <h4>last top Orders</h4>
+          <h4>Last top Orders</h4>
           <div className="todays_order2">
             <p>Name</p>
             <p>Date</p>
@@ -116,7 +116,7 @@ function Dashboard({props}) {
               </div>
               <div className="update2name">
               <img className="godwin" src={pic} alt=" " />
-              <p>Onah Destiny</p>
+              <p>Godwin Chinkwe</p>
               </div>
             </div>
             <div className="update2">
