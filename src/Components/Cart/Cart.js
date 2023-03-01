@@ -10,7 +10,7 @@ import Emptycart from "./Emptycart"
 
 const Cart = () => {
   const {totalAmount}=useContext(ThemeContext)
-  const cart = useSelector((state) => state.commerce.cart);
+  const cart = useSelector((state) => state.Commerce.cart);
   
   const dispatch = useDispatch()
 

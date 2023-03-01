@@ -12,7 +12,7 @@ function Nav() {
     fontWeight:"700"
     
   };
-  const cart = useSelector((state) => state.commerce.cart);
+  const cart = useSelector((state) => state.Commerce.cart);
   
   // const amount = useSelector((state) => state.commerce.amount);
   // console.log(cart[0] === undefined ? 0 : cart[0].QTY, "My nav")

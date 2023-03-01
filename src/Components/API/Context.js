@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 export const ThemeContext = createContext();
 
 export const ThemeProvider=({children})=>{
-    const totalAmount = useSelector((state) => state.commerce.total); 
+    const totalAmount = useSelector((state) => state.Commerce.total); 
     // const [display, setDisplay] = useState(JSON.parse(localStorage.getItem('state')))
 
     // const changeTheme = () => {
