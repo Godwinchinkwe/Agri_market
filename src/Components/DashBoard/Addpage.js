@@ -4,9 +4,11 @@ import { FaUserCircle } from "react-icons/fa";
 import axios from 'axios'
 import { Dispatch, useDispatch, useSelector } from 'react-redux'
 import ClipLoader from "react-spinners/ClipLoader";
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Addpage({ props }) {
+  const navigate = useNavigate()
   const [spin, setSpin] =useState(false)
   const [image, setImage] = useState(null)
   const [mageDB, setImageDB] = useState({ image: "" })
@@ -23,7 +25,7 @@ export default function Addpage({ props }) {
     }
   )
   const handleChange = (event) => {
-    setSpin(true)
+    
     const file = event.target.files[0];
     const save = URL.createObjectURL(file);
     setImageDB({ image: save });
@@ -39,11 +41,16 @@ export default function Addpage({ props }) {
     props(true)
   }, [props])
 
+  // if(response.status === 200) {
+  //   navigate('/')
+  // }
+
   return (
     <div className='Addproduct'>
       <form className='Addproduct_left'
         onSubmit={(e) => {
           e.preventDefault()
+          setSpin(true)
           console.log('cliked')
           const formData = new FormData();
           formData.append('productName', product.productName);
@@ -56,11 +63,18 @@ export default function Addpage({ props }) {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-          })
+            
+          }) 
+
+          
             .then(response => {
               console.log(response);
+              if(response.status === 200) {
+                navigate('/')
+              }
 
             })
+            
             .catch(error => {
               console.log(error);
             });
@@ -79,10 +93,10 @@ export default function Addpage({ props }) {
 
         </div>
 
-        <label className='Addproduct_left_middle'>
+        {/* <label className='Addproduct_left_middle'>
          <h3  className='mage'> Select Upload Image </h3> 
           <input style={{ display: 'none' }} onChange={handleChange} type='file' />
-        </label>
+        </label> */}
 
         <div className='Addproduct_left_bottom'>
           <div className='Addproduct_left_bottom_input'>
@@ -99,7 +113,7 @@ export default function Addpage({ props }) {
                
           </div>
         </div>
-        <button onClick={() => { console.log(product) }} className='Addproduct_right_buttom_button'>{spin ? (
+        <button onClick={() => { console.log(product) }} className='Addproduct_right_buttom_button'> {spin ? (
  <ClipLoader
  color='#ffffff'
  loading={spin}
@@ -124,6 +138,10 @@ export default function Addpage({ props }) {
             <p>{product.description}</p>
           </div>
         </div>
+        <label className='Addproduct_left_middle'>
+         <h3  className='mage'> Select Upload Image </h3> 
+          <input style={{ display: 'none' }} onChange={handleChange} type='file' />
+        </label>
       </div>
     </div >
   )
