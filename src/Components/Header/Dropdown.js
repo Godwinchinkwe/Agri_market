@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
 import { BiLogOutCircle } from "react-icons/bi";
 import "./Dropps.css"
+import { useSelector } from "react-redux";  
 
 function Dropdown(prop) {
 
@@ -14,13 +15,15 @@ function Dropdown(prop) {
      const logout = () => {
       localStorage.removeItem("response" );
      }
+
+     const cart = useSelector((state) => state.Commerce.cart);
      
   return (
     <div className='drop_main'>
      <div className='drop_wrap'>
 <p className='dipdrop' onClick={() => {props(); navigate('/')}}>Home</p><br/>
 <p className='dipdrop' onClick={() => {props(); navigate('/MarketPlace')}}>Market Place</p><br/>
-<p className='dipdrop' onClick={() => {props(); navigate('/Cart')}}>Cart <BsCart4 /></p><br/>
+<p className='dipdrop' onClick={() => {props(); navigate('/Cart')}}>Cart <BsCart4 /> {cart.length} </p><br/>
 
 
  

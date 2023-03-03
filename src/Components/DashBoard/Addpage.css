@@ -8,11 +8,12 @@
    min-height: 90%;
     display: flex;
     margin-top: 140px;
+    flex-wrap: wrap;
   }
   .products_image {
-    height:160px;
-    width: 160px;
-    border-radius: 160px;
+    height:100px;
+    width: 100px;
+    /* border-radius: 160px; */
   }    
   .Addproduct_left {
     width: 50%;
@@ -61,7 +62,7 @@
     border: 1px solid #d4d1d1;
   }
   .mage {
-    width: 20%;
+    width: 60%;
     height: 25px;
     border: none;
     background-color: #24835d;
@@ -72,6 +73,7 @@
     display: flex;
     justify-content: center;
     align-items:center ;
+
   }
   
   .Addproduct_left_bottom {

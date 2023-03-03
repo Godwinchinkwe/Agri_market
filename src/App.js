@@ -20,6 +20,7 @@ import Verify from './Components/Form/Decision/User/Verify';
 import Subhead from './Components/Subhead/Subhead';
 import Footer from './Components/Landing/Footer/Footer';
 import Category from './Components/Category/Category';
+import Checkout from './Components/Checkout/Checkout';
 // import { ThemeContext } from "../src/Components/API/Context"
 
 
@@ -58,6 +59,7 @@ function App() {
           <Route path='/Subhead' element={<Subhead/>} />
           <Route path='/Footer' element={<Footer/>} />
           <Route path='/Category/:cs' element={<Category/>} />
+          <Route path='/Checkout' element={<Checkout/>} />
 
         </Routes>
       </Router>

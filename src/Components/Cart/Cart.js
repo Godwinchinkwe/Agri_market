@@ -7,16 +7,34 @@ import {ThemeContext} from "../API/Context"
 import { BsCart4 } from "react-icons/bs";
 import Emptycart from "./Emptycart"
 import Swal from 'sweetalert2'
+// import Checkout from '../Checkout/Checkout';
+import {useNavigate} from "react-router-dom"
 // import { useState } from 'react';
 
 
 const Cart = () => {
+  const navigate = useNavigate()
   const {totalAmount}=useContext(ThemeContext)
   const cart = useSelector((state) => state.Commerce.cart);
   const dispatch = useDispatch()
   // const [clear, setClear] = useState(false)
 
+  const getResponse = JSON.parse(localStorage.getItem("response"));
+// console.log(typeof(totalAmount))
 
+// function payKorapay() {
+//   window.Korapay.initialize({
+//       key: "pk_test_Rt9cMuchWeNGeBw6Dbiawd2GBJJ4yFNZvznRx3NZ",
+//       reference: "uruuekflufrlfe",
+//       amount: (totalAmount), 
+//       currency: "NGN",
+//       customer: {
+//         name: (getResponse.data.data.firstName).concat(getResponse.data.data.lastName),
+//         email: (getResponse.data.data.email)
+//       },
+//       notification_url: "https://example.com/webhook"
+//   });
+// }
   return (
    
     <div className="Cart-Holder">
@@ -27,7 +45,7 @@ const Cart = () => {
        
         <h3>Total= ₦{totalAmount}</h3>
         {/* <h4 onClick={()=> {dispatch(clearCart());Swal.fire({ */}
-        <h4 onClick={()=> {;Swal.fire({
+        <button onClick={()=> {;Swal.fire({
   title: 'Are you sure?',
   text: "You won't be able to revert this!",
   icon: 'warning',
@@ -43,7 +61,7 @@ const Cart = () => {
       'success'
     )
   }
-})}} >Clear<BsCart4/></h4>
+})}} >Clear<BsCart4/></button>
       </div>
       <div className="Cart-Items">
       {
@@ -51,23 +69,10 @@ const Cart = () => {
           <CartItems key={props._id} image={props.image} title={props.title} price={props.price} item={props} QTY={props.QTY} />
         ))
       } 
-      </div>
+      </div><br/> <br/>
       <div className="Cart-Check">
-      <button onClick={
-            function payKorapay() {
-              window.Korapay.initialize({
-                  key: "pk_test_hvmxqvX6y7hefdRtdc6ncX316GUbD37FLfazLUvC",
-                  reference: "your-unique",
-                  amount: 22000, 
-                  currency: "NGN",
-                  customer: {
-                    name: "John Doe",
-                    email: "john@doe.com"
-                  },
-                  notification_url: "https://example.com/webhook"
-              });
-          }
-      }> Check Out </button>
+        
+      <button onClick={()=> navigate('/Checkout')} > Check Out </button>
       </div>
       </div>}
     </div>

@@ -5,7 +5,7 @@
 }
 .Dashboard_origin{
     width: 100%;
-   min-height: 90vh;
+   height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@
 }
 .main_dash{
     width:95%;
-   height: 90vh;
+   height: 85vh;
     display: flex;
     justify-content: space-between;
     /* background: paleturquoise; */
@@ -37,7 +37,7 @@
 } */
 .dash_sidebar{
     width:20%;
-    height: 95%;
+    height: 100%;
     background:#24835d;
     display: flex;
     align-items: center;
@@ -48,13 +48,14 @@
 }
 .dash_maincont{
     width:78%;
-    min-height:80%; 
+     height:90%; 
     /* background: tomato; */
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow-y: scroll;
 }
 .dash_mainCont_inside{
     width:85%;
@@ -68,6 +69,7 @@
     align-items: center;
     justify-content: space-between;
     /* gap:30px; */
+    /* overflow-y: scroll; */
 }
 .faupload{              
     width:65%;

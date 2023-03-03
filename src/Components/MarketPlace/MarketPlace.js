@@ -7,15 +7,17 @@ import katti from "../Landing/pie/katti.jpg"
 import hen from "../Landing/pie/hen.jpeg"
 import Goods from './Goods'
 import Footer from "../Landing/Footer/Footer"
+import {useNavigate} from "react-router-dom"
 
 
 function MarketPlace() {
+  const navigate = useNavigate()
   return (  
                                
     <div className='Market_main'>
       <div className='Market_wrap'>
       <div className='Market_top'>
-      <input type="text" placeholder='  search' className='marketsearch'/> <button className="marketbutt">Search</button>
+      <input type="text" placeholder='  search' className='marketsearch'/> <button className="marketbutt"onClick={() => navigate('/Checkout')}>Search</button>
       </div>
       <h2>Livestock at your finger tips</h2>
     <marquee direction="left" width="40%"

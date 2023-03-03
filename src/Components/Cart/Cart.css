@@ -170,9 +170,11 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background: peru; */
+    /* margin-top: 15px; */
 }
 .Cart-Check button{
-    background-color: rgb(189, 29, 189);
+    background-color:#24835d;
     color: white;
     width: 30%;
     border: none;
@@ -184,7 +186,7 @@ span{
     height:35px;
 }
 .Cart-Check button:hover{
-    background-color: rgb(83, 8, 117);
+    background-color: #469978;
     transition: all 350ms;
     transform: scale(1.005);
 }

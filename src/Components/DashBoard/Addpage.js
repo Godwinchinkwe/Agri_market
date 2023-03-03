@@ -3,9 +3,11 @@ import './Addpage.css'
 import { FaUserCircle } from "react-icons/fa";
 import axios from 'axios'
 import { Dispatch, useDispatch, useSelector } from 'react-redux'
+import ClipLoader from "react-spinners/ClipLoader";
 
 
 export default function Addpage({ props }) {
+  const [spin, setSpin] =useState(false)
   const [image, setImage] = useState(null)
   const [mageDB, setImageDB] = useState({ image: "" })
   const user = useSelector((state) => state.Commerce.user)
@@ -21,6 +23,7 @@ export default function Addpage({ props }) {
     }
   )
   const handleChange = (event) => {
+    setSpin(true)
     const file = event.target.files[0];
     const save = URL.createObjectURL(file);
     setImageDB({ image: save });
@@ -70,14 +73,14 @@ export default function Addpage({ props }) {
             <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productName" type="text" placeholder='Title' />
           </div>
 
-          <p className='textarea'>description</p>
-          <textarea onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} type="text" id="w3review" name="Desc" maxLength="40%" rows="10" cols="50">
+          <p className='textarea'>Description</p>
+          <textarea onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} type="text" id="w3review" name="Desc" maxLength="40%" rows="5" cols="70">
           </textarea>
 
         </div>
 
         <label className='Addproduct_left_middle'>
-          <h3 className='mage'>Image</h3>
+         <h3  className='mage'> Select Upload Image </h3> 
           <input style={{ display: 'none' }} onChange={handleChange} type='file' />
         </label>
 
@@ -93,9 +96,18 @@ export default function Addpage({ props }) {
           <div className='Addproduct_left_bottom_input'>
             <p>Categories</p>
             <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" />
+               
           </div>
         </div>
-        <button onClick={() => { console.log(product) }} className='Addproduct_right_buttom_button'>Upload</button>
+        <button onClick={() => { console.log(product) }} className='Addproduct_right_buttom_button'>{spin ? (
+ <ClipLoader
+ color='#ffffff'
+ loading={spin}
+ size={15}
+ aria-label="Loading Spinner"
+ data-testid="loader"
+/>
+              ) : 'UPLOAD'}</button>
       </form>
 
       <div className='Addproduct_right'>

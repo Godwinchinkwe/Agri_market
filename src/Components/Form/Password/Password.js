@@ -32,7 +32,7 @@ function Password() {
   return (
     <div className='password_main'>
         <div className='password-wrap'>
-          <h3>{passwordsent ? "Check Your Mail" :"Forgot password"}</h3><br/>
+          <h3> {passwordsent ? "Check Your Mail" :"Forgot password"}</h3><br/>
           <p className='password_text'>
             {passwordsent ? "We sent a password reset link to your mail" :"please Enter your email so we can send you reset instructions"}</p><br/>
             {passwordsent === false ? ( <input 
