@@ -173,6 +173,16 @@ span{
     /* background: peru; */
     /* margin-top: 15px; */
 }
+
+.clearcart{
+    background:none;
+    border: none;
+    color:white;
+    cursor: pointer;
+}
+.clearcart:hover{
+    color:rgb(189, 36, 36);
+}
 .Cart-Check button{
     background-color:#24835d;
     color: white;
