@@ -15,7 +15,7 @@ import { SiSalesforce } from "react-icons/si";
 import { IoMdSettings } from "react-icons/io";
 import { BiLogOutCircle } from "react-icons/bi";
 import { MdPassword } from "react-icons/md";
-import pic from "../DashBoard/godwin.jpg"
+// import pic from "../DashBoard/godwin.jpg"
 
 
 function Dashboard({props}) {
@@ -54,8 +54,8 @@ function Dashboard({props}) {
           
          <div className="dasth3" onClick={() => navigate('/Addpage')}> <FaUpload font-size="25px"/> <h4 > Upload </h4> </div>
          <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > Settings</h4> </div>
-         <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > About</h4> </div>
-         <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > Contact us</h4> </div>          
+         {/* <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > About</h4> </div> */}
+         {/* <div className="dasth3"> <IoMdSettings font-size="25px"/> <h4 > Contact us</h4> </div>           */}
          <div className="dasth3" onClick={() => navigate('/Resetpassword/1')}>  < MdPassword font-size="25px"/>  <h4 >Security</h4> </div> 
          <div  className="dasth3" onClick={() => {logout(); navigate('/')}} > <BiLogOutCircle font-size="25px"/> <h4>Logout</h4> </div>
 
@@ -78,8 +78,12 @@ function Dashboard({props}) {
            </div>
           <div className="dash_mainCont_inside">
 
-            <div className="faupload"> <FaUpload onClick={() => navigate('/Addpage')} className="dashupload"/> <br/> upload </div>
-            <div className="today_order">
+            <h3>All your uploaded products</h3>
+
+            <p>No Products have been uploaded</p>
+
+            {/* <div className="faupload"> <FaUpload onClick={() => navigate('/Addpage')} className="dashupload"/> <br/> upload </div> */}
+            {/* <div className="today_order">
               <h4>Today's Order</h4>
               <div className="order_content">
                 <div className="order_name">
@@ -100,11 +104,11 @@ function Dashboard({props}) {
 
               </div>
 
-            </div>
-            <div></div>
+            </div> */}
+          
           </div>
 
-          <div className="todays_order">
+          {/* <div className="todays_order">
           <h4>Last top Orders</h4>
           <div className="todays_order2">
             <p>Name</p>
@@ -150,7 +154,7 @@ function Dashboard({props}) {
            
           </div>
 
-        </div>
+        </div> */}
 
         </div>
 

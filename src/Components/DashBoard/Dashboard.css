@@ -116,10 +116,11 @@
 }
 .dish_dish_name{
     width:80%;
-    background: grey;
+    /* background: grey; */
     display: flex;
     justify-content: center;
     align-items: center;
+    color:white;
 }
 .dasth3{
     display: flex;
