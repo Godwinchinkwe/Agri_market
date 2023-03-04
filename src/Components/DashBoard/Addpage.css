@@ -7,7 +7,7 @@
     width: 100%;
    min-height: 90%;
     display: flex;
-    margin-top: 140px;
+    /* margin-top: 140px; */
     flex-wrap: wrap;
   }
   .products_image {
@@ -192,7 +192,7 @@
   }
   
   .Addproduct_right_buttom_button {
-    width: 100%;
+    width: 80%;
     height: 50px;
     margin-top: 5px;
     border-radius: 5px;

@@ -5,7 +5,7 @@
 }
 .Dashboard_origin{
     width: 100%;
-   height: 80vh;
+   height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,31 +27,13 @@
    height: 85vh;
     display: flex;
     justify-content: space-between;
-    /* background: paleturquoise; */
     margin-top: 10px;
-    /* flex-direction: column; */
 }
-/* h4{
-    color:white;
-    cursor: pointer;
-} */
-.dash_sidebar{
-    width:20%;
-    height: 100%;
-    background:#24835d;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-}
 .dash_maincont{
     width:78%;
      height:90%; 
-    /* background: tomato; */
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -60,28 +42,19 @@
 .dash_mainCont_inside{
     width:85%;
     height: fit-content;
-    /* background: blue; */
     display: flex;
-    /* margin-top: 20px; */
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     align-items: center;
     justify-content: space-between;
-    /* gap:30px; */
-    /* overflow-y: scroll; */
 }
-.faupload{              
+/* .faupload{              
     width:65%;
     display: flex;
     justify-content: center;
-    /* background:powderblue; */
-}
-.dashupload{
-    font-size: 50px;
-    cursor: pointer;
-    color: aqua;
-}
+} */
+
 .dash_icon{
     display: none;
 }
@@ -108,40 +81,14 @@
 .Dashsidemenu_wrap{
     width:200px;
     height:250px;
-    /* background: greenyellow; */
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-.dish_dish_name{
-    width:80%;
-    /* background: grey; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-}
-.dasth3{
-    display: flex;
-    cursor: pointer;
-    padding: 10px;
-    color:whitesmoke;
-    /* color:black; */
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    gap: 10px;
-    align-items: center;
-    width:90%;
-    justify-content: space-around;
-}
-.dasth3:hover{
-    transform: scale(1.1);
-    opacity: .9;
-    /* background: rgb(134, 132, 132); */
-    background-color:#468f72;
-    /* color:#0C764C; */
-}
+
+
+
 .Dashfooter_main{
     display: none;
 }
@@ -156,7 +103,6 @@
 .ddt{
     width:110px;
     height:80px;
-    /* background: whitesmoke; */
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -173,18 +119,14 @@
     width:100px;
     height: 100px;
     border-radius:100px;
-    background: palevioletred;
 }
 .today_order{
-    /* background: yellowgreen; */
     width:30%;
     justify-content: space-around;
     margin-top: 30px;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 20px;
-    /* margin-left: 10px; */
-    /* margin-right: 10px; */
 }
 .order_name{
     margin-left: 10px;
@@ -204,135 +146,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
 }
-.todays_order2 {
-    width: 100%;
-    height: 35px;
-    /* background-color: tomato; */
-    display:flex;
-    justify-content: space-around;
-    align-items: center ;
-}
-.todays_order2update {
-    width: 100%;
-    height: 80px;
-    /* background-color: slateblue; */
-    display:flex;
-    justify-content: space-between;
-    align-items: center ;
-}
-.update1 {
-    width: 30%;
-    height: 80px;
-    /* background-color: teal; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-}
-.update2 {
-    width: 30%;
-    height: 80px;
-    /* background-color: sienna; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-}
-.update3 {
-    width: 30%;
-    height: 80px;
-    /* background-color:salmon ; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-}
-.update4 {
-    width: 30%;
-    height: 80px;
-    /* background-color: royalblue; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-}
-.update1name {
-    width: 100%;
-    height: 35px;
-    /* background-color: palegreen; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.update2name {
-    width: 100%;
-    height: 35px;
-    /* background-color: palegreen; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.godwin {
-    width:35px;
-    height: 35px;
-    border-radius: 50%;
-}
-.update1date {
-    width: 100%;
-    height: 35px;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.update2date {
-    width: 100%;
-    height: 35px;
-    /* background-color: brown; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.update1amt {
-    width: 100%;
-    height: 35px;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.update2amt {
-    width: 100%;
-    height: 35px;
-    /* background-color: brown; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.update1receive {
-    width: 100%;
-    height: 35px;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.update2receive {
-    width: 100%;
-    height: 35px;
-    /* background-color: brown; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.cmpt1 {
-    width: 70%;
-    height:30px;
-    background-color: #0C764C;
-    color:white;
-    border: none;
-    border-radius: 6px;
-}
+
 
 
 @media screen and (max-width: 768px) {
@@ -345,9 +159,9 @@
     .dash_icon{
         display: flex;
     }
-    .wc{
+    /* .barsides{
         display: none;
-    }
+    } */
     .Dashsidemenu_main{
         display:flex
     }

@@ -13,7 +13,7 @@ function Dashfooter() {
         <div className='dashfooter_wrap'>
           <FaUpload className='dashfootdown' onClick={() => navigate('/Addpage')}/>|
            <MdPassword className='dashfootdown' onClick={() => navigate('/Addpage')}/> |
-         <IoMdSettings className='dashfootdown' onClick={() => navigate('/Addpage')}/> |
+         <IoMdSettings className='dashfootdown' onClick={() => navigate('/Settings')}/> |
           <BiLogOutCircle className='dashfootdown'/>
 
         </div>

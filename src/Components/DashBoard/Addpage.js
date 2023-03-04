@@ -2,15 +2,15 @@ import React, { useState, useEffect, } from 'react'
 import './Addpage.css'
 import { FaUserCircle } from "react-icons/fa";
 import axios from 'axios'
-import { Dispatch, useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import ClipLoader from "react-spinners/ClipLoader";
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 
-export default function Addpage({ props }) {
-  const navigate = useNavigate()
+export default function Addpage() {
+  // const navigate = useNavigate()
   const [spin, setSpin] =useState(false)
-  const [image, setImage] = useState(null)
+  // const [image, setImage] = useState(null)
   const [mageDB, setImageDB] = useState({ image: "" })
   const user = useSelector((state) => state.Commerce.user)
   console.log(user[0]._id)
@@ -22,6 +22,7 @@ export default function Addpage({ props }) {
       price: "",
       productQuantity: "",
       categories: "",
+      required: true,
     }
   )
   const handleChange = (event) => {
@@ -37,9 +38,9 @@ export default function Addpage({ props }) {
     console.log(product)
   }, [product])
 
-  useEffect(() => {
-    props(true)
-  }, [props])
+  // useEffect(() => {
+  //   props(true)
+  // }, [props])
 
   // if(response.status === 200) {
   //   navigate('/')
@@ -63,17 +64,14 @@ export default function Addpage({ props }) {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
-            
-          }) 
+             }) 
+            //  setSpin(false)
 
-          
             .then(response => {
               console.log(response);
-              if(response.status === 200) {
-                navigate('/')
-              }
-
-            })
+              })
+              
+            
             
             .catch(error => {
               console.log(error);
@@ -83,7 +81,7 @@ export default function Addpage({ props }) {
 
         <div className='Addproduct_left_top'>
           <div className='Addproduct_left_top_input'>
-            <p>Title</p>
+            <p>Product Name</p>
             <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productName" type="text" placeholder='Title' />
           </div>
 

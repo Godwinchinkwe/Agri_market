@@ -13,7 +13,7 @@ import About from './Components/Landing/About/About';
 import User from './Components/Form/Decision/User/User';
 import Admin from './Components/Form/Decision/Admin/Admin'
 import Dashboard from './Components/DashBoard/Dashboard';
-import Addpage from './Components/DashBoard/Addpage';
+// import Addpage from './Components/DashBoard/Addpage';
 import Detail from './Components/Details/Detail';
 import Emptycart from './Components/Cart/Emptycart';
 import Verify from './Components/Form/Decision/User/Verify';
@@ -22,6 +22,8 @@ import Footer from './Components/Landing/Footer/Footer';
 import Category from './Components/Category/Category';
 import Checkout from './Components/Checkout/Checkout';
 // import { ThemeContext } from "../src/Components/API/Context"
+import Settings from './Components/Settings/Settings';
+import Deleteproducts from './Components/Uploadproduct/Uploadproduct';
 
 
 function App() {
@@ -54,12 +56,14 @@ function App() {
           <Route path='/Dashboard' element={<Dashboard props={toggle}/>} />
           <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
-          <Route path='/Addpage' element={<Addpage props={changeToggle}/>} />
+          {/* <Route path='/Addpage' element={<Addpage props={changeToggle}/>} /> */}
           <Route path='/Verify/:id' element={<Verify/>} />
           <Route path='/Subhead' element={<Subhead/>} />
           <Route path='/Footer' element={<Footer/>} />
-          <Route path='/Category/:cs' element={<Category/>} />
+          <Route path='/Category/:_id' element={<Category/>} />
           <Route path='/Checkout' element={<Checkout/>} />
+          <Route path='/Settings' element={<Settings  props={toggle}/>} />
+          <Route path='/Deleteproducts' element={<Deleteproducts  props={toggle}/>} />
 
         </Routes>
       </Router>
