@@ -11,9 +11,10 @@ function Dashfooter() {
   return (
     <div className='Dashfooter_main'>
         <div className='dashfooter_wrap'>
-          <FaUpload className='dashfootdown' onClick={() => navigate('/Addpage')}/>|
-           <MdPassword className='dashfootdown' onClick={() => navigate('/Addpage')}/> |
-         <IoMdSettings className='dashfootdown' onClick={() => navigate('/Settings')}/> |
+          <FaUpload className='dashfootdown' onClick={() => navigate('/Uploadproduct')}/>|
+          <IoMdSettings className='dashfootdown' onClick={() => navigate('/Settings')}/> |
+          <IoMdSettings className='dashfootdown' onClick={() => navigate('/Deleteproduct')}/> |
+           <MdPassword className='dashfootdown' onClick={() => navigate('/Resetpassword')}/> |
           <BiLogOutCircle className='dashfootdown'/>
 
         </div>

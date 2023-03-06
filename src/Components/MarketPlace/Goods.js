@@ -25,7 +25,6 @@ function Goods() {
           const res = await axios.get (`https://agri-market.onrender.com/api/product/`);
         console.log(res.data.data);
         setProducts(res.data.data)
-        // dispatch(bringProducts(res.data))
 
         setLoad(false)
 

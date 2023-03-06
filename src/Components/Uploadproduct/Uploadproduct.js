@@ -4,6 +4,7 @@ import Barside from '../Barside/Barside'
 import {useEffect} from "react"
 import Subhead from '../Subhead/Subhead'
 import Addpage from '../DashBoard/Addpage'
+import Dashfooter from '../DashBoard/Dashfooter'
 
 function Uploadproduct({props}) {
 
@@ -14,10 +15,10 @@ function Uploadproduct({props}) {
   return (
     <>
     <Subhead/>
-    <div className='deleteproducts_main'>
-        <div className='deleteproducts_wrap'>
+    <div className='uploadproducts_main'>
+        <div className='uploadproducts_wrap'>
             <Barside/>
-            <div className='delete_cont'>
+            <div className='upload_cont'>
                 <Addpage />
 
             </div>
@@ -25,6 +26,7 @@ function Uploadproduct({props}) {
         </div>
 
     </div>
+    <Dashfooter />
     </>
   )
 }

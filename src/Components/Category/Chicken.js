@@ -1,19 +1,18 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from "react-router-dom"
-import './Category.css'
+import { Link } from "react-router-dom"
+import './Chicken.css'
 import Loading from '../Loading/Loading';
 
 
-const Category = () => {
-  const { _id } = useParams()
+const Chicken = () => {
   const [catigory, setCategory] = useState()
   
 const [load, setLoad] = useState(false)
 
   async function getCategories() {
     setLoad(true)
-    const res = await axios.get(`https://agri-market.onrender.com/api/product/cat/${_id}`)
+    const res = await axios.get(`https://agri-market.onrender.com/api/product/cat/`)
     
     setLoad(false)
     
@@ -22,7 +21,7 @@ const [load, setLoad] = useState(false)
 
   useEffect(() => {
     getCategories()
-  },[_id] )
+  },[] )
   
 
   return (
@@ -44,4 +43,4 @@ const [load, setLoad] = useState(false)
     </div>
   )
 }
-export default Category
+export default Chicken

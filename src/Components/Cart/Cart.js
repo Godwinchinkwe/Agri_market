@@ -45,7 +45,7 @@ const Cart = () => {
        
         <h3>Total= ₦{totalAmount}</h3>
         {/* <h4 onClick={()=> {dispatch(clearCart());Swal.fire({ */}
-        <button className="clearcart" onClick={()=> {;Swal.fire({
+        <button className="clearcart" onClick={()=> {Swal.fire({
   title: 'Are you sure?',
   text: "You won't be able to revert this!",
   icon: 'warning',

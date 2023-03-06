@@ -1,10 +1,17 @@
 // import React from 'react'
 import "./Checkout.css"
-import {ThemeContext} from "../API/Context"
 import React, {useContext} from 'react'
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import {ThemeContext} from "../API/Context"
 import { v4 as uuidv4 } from 'uuid';
+import {clearCart} from "../../Redux/Features";
+
 
 function Checkout() {
+    const navigate = useNavigate()
+  const dispatch = useDispatch()
+
     const {totalAmount}=useContext(ThemeContext)
     const getResponse = JSON.parse(localStorage.getItem("response"));
 
@@ -20,6 +27,8 @@ function Checkout() {
             },
             notification_url: "https://example.com/webhook"
         });
+        navigate('/')
+        dispatch(clearCart())
       }
 
   return (

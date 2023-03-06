@@ -19,11 +19,12 @@ import Emptycart from './Components/Cart/Emptycart';
 import Verify from './Components/Form/Decision/User/Verify';
 import Subhead from './Components/Subhead/Subhead';
 import Footer from './Components/Landing/Footer/Footer';
-import Category from './Components/Category/Category';
+import Chicken from './Components/Category/Chicken';
 import Checkout from './Components/Checkout/Checkout';
-// import { ThemeContext } from "../src/Components/API/Context"
 import Settings from './Components/Settings/Settings';
-import Deleteproducts from './Components/Uploadproduct/Uploadproduct';
+import Uploadproduct from './Components/Uploadproduct/Uploadproduct';
+import Deleteproduct from './Components/Deleteproduct/Deleteproduct';
+import Catfish from './Components/Category/Catfish';
 
 
 function App() {
@@ -56,14 +57,15 @@ function App() {
           <Route path='/Dashboard' element={<Dashboard props={toggle}/>} />
           <Route path='/Detail/:_id' element={<Detail/>} />
           <Route path='/Emptycart' element={<Emptycart/>} />
-          {/* <Route path='/Addpage' element={<Addpage props={changeToggle}/>} /> */}
           <Route path='/Verify/:id' element={<Verify/>} />
           <Route path='/Subhead' element={<Subhead/>} />
           <Route path='/Footer' element={<Footer/>} />
-          <Route path='/Category/:_id' element={<Category/>} />
+          <Route path='/Chicken' element={<Chicken/>} />
+          <Route path='/Catfish' element={<Catfish/>} />
           <Route path='/Checkout' element={<Checkout/>} />
           <Route path='/Settings' element={<Settings  props={toggle}/>} />
-          <Route path='/Deleteproducts' element={<Deleteproducts  props={toggle}/>} />
+          <Route path='/Uploadproduct' element={<Uploadproduct  props={toggle}/>} />
+          <Route path='/Deleteproduct' element={<Deleteproduct  props={toggle}/>} />
 
         </Routes>
       </Router>

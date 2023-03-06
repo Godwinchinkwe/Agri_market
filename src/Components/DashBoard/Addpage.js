@@ -68,6 +68,7 @@ export default function Addpage() {
             //  setSpin(false)
 
             .then(response => {
+              
               console.log(response);
               })
               
@@ -82,11 +83,11 @@ export default function Addpage() {
         <div className='Addproduct_left_top'>
           <div className='Addproduct_left_top_input'>
             <p>Product Name</p>
-            <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productName" type="text" placeholder='Title' />
+            <input required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productName" type="text" placeholder='Title' />
           </div>
 
           <p className='textarea'>Description</p>
-          <textarea onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} type="text" id="w3review" name="Desc" maxLength="40%" rows="5" cols="70">
+          <textarea required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} type="text" id="w3review" name="Desc" maxLength="40%" rows="5" cols="70">
           </textarea>
 
         </div>
@@ -99,15 +100,15 @@ export default function Addpage() {
         <div className='Addproduct_left_bottom'>
           <div className='Addproduct_left_bottom_input'>
             <p>Price</p>
-            <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="price" />
+            <input required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="price" />
           </div>
           <div className='Addproduct_left_bottom_input'>
             <p>Stock Quantity</p>
-            <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productQuantity" />
+            <input required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="productQuantity" />
           </div>
           <div className='Addproduct_left_bottom_input'>
             <p>Categories</p>
-            <input onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" />
+            <input required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" />
                
           </div>
         </div>
