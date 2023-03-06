@@ -108,8 +108,11 @@ export default function Addpage() {
           </div>
           <div className='Addproduct_left_bottom_input'>
             <p>Categories</p>
-            <input required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" />
-               
+            {/* <input required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" /> */}
+             <select className="selectCati" name="categories" onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} >
+              <option>poultry</option>
+              <option>fishery</option>
+              </select>  
           </div>
         </div>
         <button onClick={() => { console.log(product) }} className='Addproduct_right_buttom_button'> {spin ? (

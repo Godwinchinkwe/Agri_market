@@ -27,7 +27,7 @@ function Checkout() {
             },
             notification_url: "https://example.com/webhook"
         });
-        navigate('/')
+        navigate('/Success')
         dispatch(clearCart())
       }
 

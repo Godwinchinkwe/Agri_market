@@ -14,9 +14,6 @@ function Resetpassword() {
       placeholder='  Set New Password'
       className='reset_input'
        />
-      <input 
-      placeholder='  Confirm New Password'
-      className='reset_input' />
 
       <button className='reset_button'> Reset Password </button>
 

@@ -60,7 +60,7 @@ function Goods() {
           <img src={i.image} className='wed' alt="" /> 
       </div>
       <div className='card-text'>
-        <h4>Product Name: {i.productName}</h4>
+        <h4>Product: {i.productName}</h4>
         {/* <h5> Qty: {i.quantity} </h5> */}
         {/* <h5> Description: {i.decs}</h5> */}
         <h5> Categories: {i.categories}</h5>  
