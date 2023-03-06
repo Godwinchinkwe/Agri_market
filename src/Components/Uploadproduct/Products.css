@@ -48,8 +48,8 @@
     
 }
 .wed{
-    height: 210px;
-    width:220px;
+    height: 180px;
+    width:180px;
     display: flex;
     justify-content: center;
     object-fit:fit;

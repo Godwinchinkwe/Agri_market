@@ -50,11 +50,11 @@ function Landing({props}) {
       ftext="Shop Different Species of Catfish"
       text="You can view our list of catfish species and shop for the species that suits your meals..."
       img={katti}
-      click="Shop Now" navigate="/MarketPlace"/>
+      click="Shop Now" navigate="/Cat fish"/>
       <Landcont 
       ftext="Chicken  based on their breeds"
       text="Your health is a priority to us and we  have a list of healthy food items that will help you manage certain health conditions"
-      click="Shop Now" navigate="/MarketPlace"
+      click="Shop Now" navigate="/Chickens"
       img={hen}/>
       
       <Landcont

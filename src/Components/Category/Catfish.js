@@ -56,7 +56,7 @@ const navigate = useNavigate()
     </div>
   </div> */}
 
-<div className='cards'>
+<div className='catfish_cards'>
         {/* Elements */}
     <div className='card-wrap'>
 
@@ -71,7 +71,7 @@ const navigate = useNavigate()
         <h4>Product: {i.productName}</h4>
         {/* <h5> Qty: {i.quantity} </h5> */}
         {/* <h5> Description: {i.decs}</h5> */}
-        <h5> Categories: {i.categories}</h5>  
+        {/* <h5> Categories: {i.categories}</h5>   */}
         <h4>Price :₦ {i.price}</h4>
     </div>
     <div className='Goods_decision'>

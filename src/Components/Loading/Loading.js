@@ -15,3 +15,6 @@ function Loading() {
 }
 
 export default Loading
+
+
+// {loading ? <p> loading </p> : (loading === false && isError)? <p>no item found </p> :<p> real thing </p>: null};

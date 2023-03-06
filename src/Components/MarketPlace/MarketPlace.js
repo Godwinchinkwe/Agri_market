@@ -28,14 +28,14 @@ function MarketPlace() {
           <Landcont
             ftext="Chicken  based on their breeds"
             text="Your health is a priority to us and we  have a list of healthy food items that will help you manage certain health conditions"
-            click="Poultry Categogy"
+            click="Chickens"
             navigate="/Chicken"
             img={hen}
           />
           <Landcont
             ftext="Shop Different Species of Catfish"
             text="You can view our list of catfish species and shop for the species that suits your meals..."
-            click="CatFish Category"
+            click="Cat fish"
             navigate="/Catfish"
             img={katti}
           />

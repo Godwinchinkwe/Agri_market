@@ -6,7 +6,7 @@
 
 
 .shadow{
-    width: 250px;
+    width: 200px;
     /* height: 360px; */
     color:#24835d;
     padding: 8px;
@@ -49,8 +49,8 @@
     padding: 15px;   
 }
 .wed{
-    height: 210px;
-    width:220px;
+    height: 180px;
+    width:180px;
     display: flex;
     justify-content: center;
     object-fit:fit;
