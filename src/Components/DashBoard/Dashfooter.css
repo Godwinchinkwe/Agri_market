@@ -16,7 +16,7 @@
     /* top:100%; */
 }
 .dashfooter_wrap{
-    width: 95%;
+    width: 100%;
     height: 49px;
     background:#0C764C;
     display: flex;
@@ -24,12 +24,12 @@
     align-items: center;
     color: whitesmoke;
 }
-/* .dashfootdown{
+.dashfootdown{
     font-size: 25px;
     color:aliceblue;
     display: flex;
     flex-direction: column;
-} */
+}
 
 .lgout{
     text-align: center;
@@ -42,7 +42,13 @@
     text-align: center;
     justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+.pegege{
+    color: white;
+    font-size: 13px;
 }
 
 @media screen and (max-width: 768px) {

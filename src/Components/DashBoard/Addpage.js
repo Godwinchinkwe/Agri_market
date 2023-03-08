@@ -112,6 +112,7 @@ export default function Addpage() {
             <p>Categories</p>
             {/* <input required onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} name="categories" /> */}
              <select className="selectCati" name="categories" onChange={(e) => { setProduct({ ...product, [e.target.name]: e.target.value }) }} >
+              <option></option>
               <option>poultry</option>
               <option>fishery</option>
               </select>  
