@@ -44,11 +44,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    width: 16.5%;
 
 }
 .pegege{
     color: white;
     font-size: 13px;
+}
+.dahsfutz:hover{
+    transform: scale(1.1);
+    opacity: 9;
+    background-color:#468f72;
+
 }
 
 @media screen and (max-width: 768px) {

@@ -159,8 +159,10 @@
     transform: scale(1.1);
     opacity: .9;
     /* background: rgb(134, 132, 132); */
-    background: white;
-    color:#0C764C;
+    /* background: white; */
+    background-color:#468f72;
+
+    color:#f5f7f6;
   }
   .login_response{
     color:#0C764C;
