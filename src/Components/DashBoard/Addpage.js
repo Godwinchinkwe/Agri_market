@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function Addpage() {
+  // const [upload, setUpload] = useState(false)
   const navigate = useNavigate()
   const [spin, setSpin] =useState(false)
   // const [image, setImage] = useState(null)

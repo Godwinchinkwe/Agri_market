@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { useDispatch } from 'react-redux'
-// import { Link } from 'react-router-dom'
 import axios from 'axios'
 import './Products.css'
 import { bringProducts } from '../../Redux/Features'
 import Loading from '../Loading/Loading'
-// import Swal from 'sweetalert2' 
+// import Swal from 'sweetalert2'
+import { removeItem } from '../../Redux/Features' 
 
 function Products() {
     const dispatch = useDispatch()
@@ -33,6 +33,15 @@ function Products() {
    
     }
   }
+
+  const deleteProduct = async (_id) => {
+    console.log( _id)
+    const res = await axios.delete(`https://agri-market.onrender.com/api/delProduct/${getUser.data.data._id}/${res.data.data.products_id}`)
+    (res.status)
+    // res.status === 200 ? dispatch(removeItem()) : null
+    // getAllStudent()
+    console.log(res)
+  }
   
     useEffect(() => {
       getProducts()
@@ -56,7 +65,7 @@ load? <Loading /> :
     </div>
     <div className='prod_option'>
       <button className='prod_update'>Edit</button>
-      <button className='prod_delete'>Delete</button>
+      <button className='prod_delete' onClick={()=> (deleteProduct(removeItem))}>Delete</button>
     </div> 
     </div>
       ))}

@@ -16,7 +16,7 @@ function MarketPlace() {
       <div className="Market_wrap">
         <div className="Market_top">
           <input type="text" placeholder="  search" className="marketsearch" />{" "}
-          <button className="marketbutt" onClick={() => navigate("/Success")}>
+          <button className="marketbutt" onClick={() => navigate(" ")}>
             Search
           </button>
         </div>
