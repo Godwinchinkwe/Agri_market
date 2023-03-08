@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import axios from 'axios'
 import './Products.css'
 import { bringProducts } from '../../Redux/Features'
 import Loading from '../Loading/Loading'
+// import Swal from 'sweetalert2' 
 
 function Products() {
     const dispatch = useDispatch()
@@ -43,16 +44,21 @@ function Products() {
       {
 load? <Loading /> :
       products?.map((i)=>(
-        <Link key={i._id}
-         className='shad' to={`/Detail/${i._id}`} >
+        <div key={i._id}
+         className='shad'  >
+         {/* className='shad' to={`/Detail/${i._id}`} > */}
       <div className='image-card'>
           <img src={i.image} className='wed' alt="" /> 
       </div>
       <div className='card-text'>
-        <p>{i.ProductName}</p>
-        <h4># {i.price}</h4>
+        <p>{i.productName}</p>
+        {/* <h4># {i.price}</h4> */}
     </div>
-    </Link>
+    <div className='prod_option'>
+      <button className='prod_update'>Edit</button>
+      <button className='prod_delete'>Delete</button>
+    </div> 
+    </div>
       ))}
      </div>
     </div>

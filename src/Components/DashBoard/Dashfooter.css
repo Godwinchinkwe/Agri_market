@@ -24,12 +24,25 @@
     align-items: center;
     color: whitesmoke;
 }
-.dashfootdown{
+/* .dashfootdown{
     font-size: 25px;
     color:aliceblue;
+    display: flex;
+    flex-direction: column;
+} */
+
+.lgout{
+    text-align: center;
 }
 .Dashfooter_main{
     display: none;
+}
+.dahsfutz{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 @media screen and (max-width: 768px) {

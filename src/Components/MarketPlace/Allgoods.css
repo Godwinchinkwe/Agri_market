@@ -1,0 +1,25 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.goods_details123{
+    width:85px;
+    height:28px;
+    background-color:white;
+    color:#24835d;
+    background: none;
+    border: 1px solid #0C764C;
+    border-radius: 6px;
+    font-size: 15px;
+    position: relative;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    cursor: pointer; 
+}
+.goods_details123:hover{
+    transform: scale(1.1);
+    opacity: 9;
+    background-color:red;
+    color: whitesmoke; 
+}

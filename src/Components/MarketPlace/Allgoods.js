@@ -1,16 +1,16 @@
+// import React from 'react'
 import React, {useState, useEffect} from 'react'
-import "./Goods.css"
+import "./Goods.css";
+import './Allgoods.css'
 import axios from 'axios'
 import Loading from "../Loading/Loading"
 import Swal from 'sweetalert2'
 import { addToCart, total } from "../../Redux/Features";
 import { useDispatch } from 'react-redux';
 import {useNavigate} from "react-router-dom"
-import { BsCart4 } from "react-icons/bs";
+// import { BsCart4 } from "react-icons/bs";
 
-
-
-function Goods() {
+function Allgoods() {
     const [products, setProducts] = useState([])
     const [load, setLoad] =useState(false)
     const dispatch = useDispatch()
@@ -45,8 +45,7 @@ function Goods() {
       }, [])
 
    
-    
-  return (  
+  return (
     <div className='cards'>
     <div className='card-wrap'>
 
@@ -80,16 +79,14 @@ Toast.fire({
   icon: 'success',
   title: 'Item added successfully'
 })
-      }}> Add to <BsCart4/> </button>
-    <button className='goods_details' onClick={()=> navigate(`/Detail/${i._id}`)} >Details</button>  
+      }}> Update </button>
+    <button className='goods_details123' onClick={()=> navigate(`/Detail/${i._id}`)} >Delete</button>  
     </div>
     </div>
       ))}
      </div>
-    </div>    
-
-    
+    </div> 
   )
 }
 
-export default Goods
+export default Allgoods

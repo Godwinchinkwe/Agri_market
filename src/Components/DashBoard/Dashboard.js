@@ -11,7 +11,7 @@ import {CgProfile} from 'react-icons/cg'
 import { BsCart4 } from "react-icons/bs";
 import { SiSalesforce } from "react-icons/si";
 import Barside from "../Barside/Barside";
-import Products from "../Uploadproduct/Products";
+// import Products from "../Uploadproduct/Products";
 
 function Dashboard({props}) {
   const [toggle, setToggle] = useState(false);
@@ -59,7 +59,7 @@ function Dashboard({props}) {
           <br/>  <h3 className="da1">All your uploaded products</h3>
 
             <p className="da1">No Products have been uploaded</p>
-            <Products />
+            {/* <Products /> */}
           
           </div>
         </div>

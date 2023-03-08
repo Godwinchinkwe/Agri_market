@@ -26,6 +26,7 @@ import Uploadproduct from './Components/Uploadproduct/Uploadproduct';
 import Deleteproduct from './Components/Deleteproduct/Deleteproduct';
 import Catfish from './Components/Category/Catfish';
 import Success from './Components/Checkout/Success';
+import Allgoods from './Components/MarketPlace/Allgoods';
 
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
           <Route path='/Uploadproduct' element={<Uploadproduct  props={toggle}/>} />
           <Route path='/Deleteproduct' element={<Deleteproduct  props={toggle}/>} />
           <Route path='/Success' element={<Success/>} />
+          <Route path='/Allgoods' element={<Allgoods/>} />
 
         </Routes>
       </Router>

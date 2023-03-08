@@ -17,6 +17,9 @@
      justify-content: space-between;
      margin-top: 10px;
 }
+.all_products{
+    margin-top:20px;
+}
 .delete_cont{
     width:78%;
     height:90%; 

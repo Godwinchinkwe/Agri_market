@@ -5,10 +5,11 @@ import axios from 'axios'
 import { useSelector } from 'react-redux'
 import ClipLoader from "react-spinners/ClipLoader";
 // import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Addpage() {
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
   const [spin, setSpin] =useState(false)
   // const [image, setImage] = useState(null)
   const [mageDB, setImageDB] = useState({ image: "" })
@@ -69,7 +70,8 @@ export default function Addpage() {
 
             .then(response => {
               
-              console.log(response);
+              console.log(response); 
+              if (response) navigate('/')
               })
               
             
