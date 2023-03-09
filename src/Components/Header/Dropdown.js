@@ -4,7 +4,9 @@ import {useNavigate} from "react-router-dom"
 import { BsCart4 } from "react-icons/bs";
 import { BiLogOutCircle } from "react-icons/bi";
 import "./Dropps.css"
-import { useSelector } from "react-redux";  
+import { useSelector } from "react-redux";
+import Swal from 'sweetalert2'
+
 
 function Dropdown(prop) {
 
@@ -28,7 +30,17 @@ function Dropdown(prop) {
 
  
 { getResponse ? <> <p className='dipdrop' onClick={() => {props(); navigate('/Dashboard')}}>Dashboard</p> <br/>
-<p className='dipdrop' onClick={() => {logout(); navigate('/')}} > Logout < BiLogOutCircle/>
+<p className='dipdrop' onClick={() => {Swal.fire({
+  title: 'You are Login Out?',
+  text: "Pls. confirm your Action",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Log Out'
+}).then((result) => {
+  if (result.isConfirmed)  {logout(); navigate('/');}
+})}} > Logout < BiLogOutCircle/>
 </p> </>
  :
 

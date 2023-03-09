@@ -7,6 +7,8 @@ import {FaUpload} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { MdDashboard } from "react-icons/md";
 import { RiProductHuntFill } from "react-icons/ri";
+import Swal from 'sweetalert2'
+
 
 
 
@@ -26,7 +28,17 @@ function Dashfooter() {
           <div className='dahsfutz' onClick={() => navigate('/Settings')} > <IoMdSettings className='dashfootdown' /> <p className='pegege'>settings </p> </div> |
           <div className='dahsfutz'  onClick={() => navigate('/Deleteproduct')}> <RiProductHuntFill className='dashfootdown'/> <p className='pegege'> Products</p> </div>  |
           <div className='dahsfutz' onClick={() => navigate('/Password')} > <MdPassword className='dashfootdown' /> <p className='pegege'> password</p> </div>  |
-         <div className='dahsfutz' onClick={() => {logout(); navigate('/')}} > <BiLogOutCircle  className='dashfootdown'/> <p className='pegege'>Logout</p> </div> 
+         <div className='dahsfutz' onClick={() => {Swal.fire({
+  title: 'You are Login Out?',
+  text: "Pls. confirm your Action",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Log Out'
+}).then((result) => {
+  if (result.isConfirmed)  {logout(); navigate('/');}
+})}} > <BiLogOutCircle  className='dashfootdown'/> <p className='pegege'>Logout</p> </div> 
 
         </div>
     </div>

@@ -57,10 +57,10 @@ function Landing({props}) {
       click="Shop Now" navigate="/Chickens"
       img={hen}/>
       
-      <Landcont
+      {/* <Landcont
       img={catti}
       click="Buy Now" navigate="/MarketPlace"
-       />
+       /> */}
      </div>
 
      
